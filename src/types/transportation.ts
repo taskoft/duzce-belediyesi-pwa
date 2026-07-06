@@ -14,3 +14,29 @@ export interface BusLine {
 }
 
 export type TransportationTab = "bus" | "card";
+
+export interface TaxiStand {
+  id: string;
+  name: string;
+  phone: string;
+  distance: string;
+}
+
+export interface LostItem {
+  id: string;
+  name: string;
+  icon: string;
+  location: string;
+  date: string;
+  status: string;
+}
+
+export interface TransportationData {
+  busLines: BusLine[];
+  cardBalance: number;
+  quickTopUpAmounts: number[];
+  defaultOrigin: string;
+  destinationSuggestions: string[];
+  taxiStands: TaxiStand[];
+  lostItems: LostItem[];
+}

@@ -17,24 +17,92 @@
   "destinations": [
     {
       "id": "guzeldere",
-      "title": "Güzeldere Şelalesi",
+      "name": "Güzeldere Şelalesi",
+      "category": "Doğa & Şelaleler",
       "description": "Doğanın kalbinde huzur dolu bir kaçış noktası.",
       "rating": 4.8,
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD51VLcxwHYjvrQpGYh6essCWV4rYBpcqJVvqNuDHtdYrCSp6glNeHYDTIjlGa697RSaU4ltCWbE0FxXsGMBQwcHHuIQ_20Snz8u0ZismITPErzug_4U8aYfUe38Pval9olNUwvEOAlyXw-di4ZSLeyaiORB9mqM5hq5dx9JS4rLkFCSEtNpN1XpaYA6s51rn_w7CxogMlgQhPuoCNgqoMhMH1zQ0vjxNPMl2u7pgM5eQtCnxPjy70QcQ"
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD51VLcxwHYjvrQpGYh6essCWV4rYBpcqJVvqNuDHtdYrCSp6glNeHYDTIjlGa697RSaU4ltCWbE0FxXsGMBQwcHHuIQ_20Snz8u0ZismITPErzug_4U8aYfUe38Pval9olNUwvEOAlyXw-di4ZSLeyaiORB9mqM5hq5dx9JS4rLkFCSEtNpN1XpaYA6s51rn_w7CxogMlgQhPuoCNgqoMhMH1zQ0vjxNPMl2u7pgM5eQtCnxPjy70QcQ",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 523 10 10",
+      "address": "Aydınpınar Köyü, Düzce",
+      "coordinates": { "lat": 40.7861, "lng": 31.0956 }
     },
     {
       "id": "purenli",
-      "title": "Pürenli Yaylası",
+      "name": "Pürenli Yaylası",
+      "category": "Doğa & Şelaleler",
       "description": "Eşsiz kamp deneyimi ve temiz hava.",
       "rating": 4.7,
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuA_9htRjxlOLZWcykWrovPzfgeTYfdP7GJBKW9Wgh-arxPWi9lKTcCGRTbH61O6vZgyx1UehFAmKAUrJwYowkvVXYdkABkStC-BoPT_Actq0M1wMtU_77IVd-FHFNXNRrz3h0ukNFrQcGtRuz6-uGxUaQiNxTAzhAKa5n26PKvW0sqpQlOBYNCCZjjpcOOpsd9qPe4yZWlXkug61NFAkP1bmjsqkBNSMC2Hed3wQ5nik4BNNQCMuX374Q"
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuA_9htRjxlOLZWcykWrovPzfgeTYfdP7GJBKW9Wgh-arxPWi9lKTcCGRTbH61O6vZgyx1UehFAmKAUrJwYowkvVXYdkABkStC-BoPT_Actq0M1wMtU_77IVd-FHFNXNRrz3h0ukNFrQcGtRuz6-uGxUaQiNxTAzhAKa5n26PKvW0sqpQlOBYNCCZjjpcOOpsd9qPe4yZWlXkug61NFAkP1bmjsqkBNSMC2Hed3wQ5nik4BNNQCMuX374Q",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 523 20 20",
+      "address": "Pürenli Yaylası, Kaynaşlı, Düzce",
+      "coordinates": { "lat": 40.8763, "lng": 31.2841 }
     },
     {
       "id": "samandere",
-      "title": "Samandere Şelalesi",
+      "name": "Samandere Şelalesi",
+      "category": "Doğa & Şelaleler",
       "description": "Anıt ağaçlar ve suyun dinlendirici sesi.",
       "rating": 4.6,
-      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBqu0ZFd6e6KW1h8K4YXgE250JypxtF5oywkjxT2lEFhWLXPsDuB3KWQtriMM-jhNTILNAsczF2N54UH-wnLf6p0kXqbijvOr9KzcSvaqDSS1AcorIXRgXgr13LS_oYGbbSeNO6lgZGsr-r3gsOZWUv8bO6cfvmsGPuheKYFEC1qSM6rJ0U6gLVsb4xoGTESyh9tU3ng2NMnFN8NSRpLwoMy73zXjC0wwB4jkXXL7RY2atzQ_SJ-GmviQ"
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBqu0ZFd6e6KW1h8K4YXgE250JypxtF5oywkjxT2lEFhWLXPsDuB3KWQtriMM-jhNTILNAsczF2N54UH-wnLf6p0kXqbijvOr9KzcSvaqDSS1AcorIXRgXgr13LS_oYGbbSeNO6lgZGsr-r3gsOZWUv8bO6cfvmsGPuheKYFEC1qSM6rJ0U6gLVsb4xoGTESyh9tU3ng2NMnFN8NSRpLwoMy73zXjC0wwB4jkXXL7RY2atzQ_SJ-GmviQ",
+      "openingHours": "08:00 - 20:00",
+      "phone": "0380 523 30 30",
+      "address": "Samandere Köyü, Gölyaka, Düzce",
+      "coordinates": { "lat": 40.7452, "lng": 31.0327 }
+    },
+    {
+      "id": "konuralp",
+      "name": "Konuralp Antik Kenti",
+      "category": "Tarihi Mekanlar",
+      "description": "Roma dönemine ait sütunlar ve tarihi kalıntılarıyla açık hava müzesi.",
+      "rating": 4.5,
+      "imageUrl": "https://placehold.co/600x400/0f4c81/ffffff?text=Konuralp+Antik+Kenti",
+      "openingHours": "08:00 - 18:00",
+      "phone": "0380 512 40 40",
+      "address": "Konuralp Mah., Düzce",
+      "coordinates": { "lat": 40.8677, "lng": 31.1144 }
+    }
+  ],
+  "bungalows": [
+    {
+      "id": "bungalow-1",
+      "name": "Efteni Göl Manzaralı Bungalov",
+      "category": "Konaklama",
+      "description": "Efteni Gölü kıyısında doğayla iç içe, aile dostu ahşap bungalov.",
+      "imageUrl": "https://placehold.co/600x400/2d6197/ffffff?text=Efteni+Gol+Bungalov",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 523 40 40",
+      "address": "Efteni Gölü Kenarı, Düzce",
+      "coordinates": { "lat": 40.8283, "lng": 31.0764 },
+      "pricePerNight": 1450,
+      "availabilityStatus": true
+    },
+    {
+      "id": "bungalow-2",
+      "name": "Aydınpınar Orman Evleri",
+      "category": "Konaklama",
+      "description": "Güzeldere Şelalesi'ne yürüme mesafesinde şömineli orman evi.",
+      "imageUrl": "https://placehold.co/600x400/2d6197/ffffff?text=Aydinpinar+Orman+Evleri",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 523 50 50",
+      "address": "Aydınpınar Köyü, Düzce",
+      "coordinates": { "lat": 40.7842, "lng": 31.0981 },
+      "pricePerNight": 1800,
+      "availabilityStatus": true
+    },
+    {
+      "id": "bungalow-3",
+      "name": "Pürenli Yayla Kamp Evleri",
+      "category": "Konaklama",
+      "description": "Yüksek rakımda serin havada konaklama, doğa yürüyüşüne yakın konum.",
+      "imageUrl": "https://placehold.co/600x400/2d6197/ffffff?text=Purenli+Yayla+Kamp",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 523 60 60",
+      "address": "Pürenli Yaylası, Kaynaşlı, Düzce",
+      "coordinates": { "lat": 40.8751, "lng": 31.2822 },
+      "pricePerNight": 1200,
+      "availabilityStatus": false
     }
   ]
 }

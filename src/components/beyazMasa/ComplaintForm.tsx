@@ -1,7 +1,7 @@
 import { Icon } from "@/components/common/Icon";
 import { Button } from "@/components/common/Button";
 import { Spinner } from "@/components/common/Spinner";
-import { FileUploadBox } from "@/components/beyazMasa/FileUploadBox";
+import { FileUploadBox } from "@/components/common/FileUploadBox";
 import type { ComplaintCategory, ComplaintSubmissionStatus } from "@/types/beyazMasa";
 
 interface ComplaintFormProps {

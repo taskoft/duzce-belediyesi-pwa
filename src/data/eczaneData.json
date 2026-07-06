@@ -1,0 +1,40 @@
+{
+  "pharmacies": [
+    {
+      "id": "eczane-1",
+      "name": "Merkez Eczanesi",
+      "address": "Cedidiye Mah. Cumhuriyet Cad. No:12",
+      "distanceKm": 0.45,
+      "phone": "0380 524 11 11",
+      "lat": 40.8378,
+      "lng": 31.1611
+    },
+    {
+      "id": "eczane-2",
+      "name": "Şifa Eczanesi",
+      "address": "Aziziye Mah. İstanbul Cad. No:5",
+      "distanceKm": 0.9,
+      "phone": "0380 524 22 22",
+      "lat": 40.8395,
+      "lng": 31.1595
+    },
+    {
+      "id": "eczane-3",
+      "name": "Yıldız Eczanesi",
+      "address": "Fevzi Çakmak Mah. Bolu Cad. No:34",
+      "distanceKm": 2.15,
+      "phone": "0380 524 33 33",
+      "lat": 40.841,
+      "lng": 31.165
+    },
+    {
+      "id": "eczane-4",
+      "name": "Güven Eczanesi",
+      "address": "Burhaniye Mah. Anadolu Cad. No:8",
+      "distanceKm": 5.08,
+      "phone": "0380 524 44 44",
+      "lat": 40.8462,
+      "lng": 31.1723
+    }
+  ]
+}

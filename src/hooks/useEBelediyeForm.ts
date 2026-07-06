@@ -1,13 +1,13 @@
 import { useCallback, useMemo, useState } from "react";
 import { useToast } from "@/hooks/useToast";
 import { sanitizeNumericInput, formatCardNumber, formatExpiryDate } from "@/utils/formatters";
-import invoicesData from "@/data/ebelediyeInvoices.json";
+import { fetchWithFallback } from "@/services/apiClient";
+import invoicesDataFallback from "@/data/ebelediyeInvoices.json";
 import type { MunicipalInvoice, PaymentStatus } from "@/types/ebelediye";
 
 const TC_ID_LENGTH = 11;
 const CARD_NUMBER_DIGIT_LENGTH = 16;
 const CVV_LENGTH = 3;
-const QUERY_SIMULATION_MS = 600;
 const PAYMENT_PROCESSING_MS = 2000;
 const SUCCESS_DISPLAY_MS = 1500;
 
@@ -40,19 +40,15 @@ export function useEBelediyeForm() {
     }
 
     setIsQuerying(true);
-    try {
-      await new Promise((resolve) => window.setTimeout(resolve, QUERY_SIMULATION_MS));
-      const results = invoicesData as MunicipalInvoice[];
-      setInvoices(results);
-      setSelectedIds(new Set(results.map((invoice) => invoice.id)));
-    } catch {
-      showToast("Borç bilgileri alınamadı, lütfen tekrar deneyin.", "error");
-      setInvoices([]);
-    } finally {
-      setIsQuerying(false);
-      setHasQueried(true);
-    }
-  }, [isTcIdValid, showToast]);
+    const results = await fetchWithFallback<MunicipalInvoice[]>(
+      `/api/ebelediye/invoices?tcId=${tcId}`,
+      invoicesDataFallback as MunicipalInvoice[],
+    );
+    setInvoices(results);
+    setSelectedIds(new Set(results.map((invoice) => invoice.id)));
+    setIsQuerying(false);
+    setHasQueried(true);
+  }, [isTcIdValid, tcId, showToast]);
 
   const toggleInvoiceSelection = useCallback((id: string) => {
     setSelectedIds((prev) => {
@@ -94,17 +90,21 @@ export function useEBelediyeForm() {
     setIsPaymentOpen(true);
   }, [selectedTotal, showToast]);
 
-  const closePayment = useCallback(() => {
-    if (paymentStatus === "processing") {
-      return;
-    }
+  const resetPaymentFields = useCallback(() => {
     setIsPaymentOpen(false);
     setCardName("");
     setCardNumberRaw("");
     setExpiryDateRaw("");
     setCvvRaw("");
     setPaymentStatus("idle");
-  }, [paymentStatus]);
+  }, []);
+
+  const closePayment = useCallback(() => {
+    if (paymentStatus === "processing") {
+      return;
+    }
+    resetPaymentFields();
+  }, [paymentStatus, resetPaymentFields]);
 
   const submitPayment = useCallback(() => {
     if (paymentStatus === "processing" || selectedTotal <= 0) {
@@ -119,15 +119,10 @@ export function useEBelediyeForm() {
       window.setTimeout(() => {
         setInvoices((prev) => prev.filter((invoice) => !selectedIds.has(invoice.id)));
         setSelectedIds(new Set());
-        setIsPaymentOpen(false);
-        setCardName("");
-        setCardNumberRaw("");
-        setExpiryDateRaw("");
-        setCvvRaw("");
-        setPaymentStatus("idle");
+        resetPaymentFields();
       }, SUCCESS_DISPLAY_MS);
     }, PAYMENT_PROCESSING_MS);
-  }, [paymentStatus, selectedTotal, selectedIds, showToast]);
+  }, [paymentStatus, selectedTotal, selectedIds, showToast, resetPaymentFields]);
 
   return {
     tcId,

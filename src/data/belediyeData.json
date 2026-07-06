@@ -1,0 +1,49 @@
+{
+  "mayor": {
+    "name": "Dr. Faruk Özlü",
+    "title": "T.C. Düzce Belediyesi Başkanı",
+    "message": "Düzce'mizi daha yaşanabilir, daha yeşil ve daha modern bir kent yapmak için tüm gücümüzle çalışıyoruz. Şeffaf, katılımcı ve insan odaklı belediyecilik anlayışımızla her bir vatandaşımızın hayatına dokunmayı hedefliyoruz. Birlikte başaracağız."
+  },
+  "corporateStructure": [
+    { "id": "meclis", "label": "Meclis Üyeleri", "sublabel": "31 Üye", "icon": "groups" },
+    { "id": "encumen", "label": "Encümen Şeması", "sublabel": "Yönetim Yapısı", "icon": "account_balance" },
+    { "id": "mudurlukler", "label": "Müdürlükler", "sublabel": "24 Birim", "icon": "corporate_fare" }
+  ],
+  "vefatEdenler": [
+    {
+      "id": "v1",
+      "name": "Ahmet Yılmaz",
+      "location": "Öğle Namazı - Merkez Cami",
+      "date": "Bugün",
+      "lat": 40.8378,
+      "lng": 31.1611
+    },
+    {
+      "id": "v2",
+      "name": "Ayşe Demir",
+      "location": "İkindi Namazı - Kalıcı Konutlar",
+      "date": "Bugün",
+      "lat": 40.8395,
+      "lng": 31.172
+    }
+  ],
+  "ihaleIlanlari": [
+    {
+      "id": "ihale-1",
+      "category": "Açık İhale",
+      "title": "Park ve Bahçeler Müdürlüğü Mal Alımı İşi",
+      "date": "24 Ekim 2026, 10:30",
+      "urgencyLabel": "Son 3 Gün"
+    },
+    {
+      "id": "ihale-2",
+      "category": "Doğrudan Temin",
+      "title": "Kültür Merkezi Çatı Onarım İşi",
+      "date": "28 Ekim 2026, 14:00",
+      "urgencyLabel": null
+    }
+  ],
+  "eGazete": [
+    { "id": "eg-1", "title": "Ekim Sayısı Yayında", "subtitle": "Düzce Belediyesi Aylık Bülten" }
+  ]
+}

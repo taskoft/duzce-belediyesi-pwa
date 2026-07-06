@@ -24,3 +24,9 @@ export interface MatchHistoryEntry {
   outcome: MatchOutcome;
   date: string;
 }
+
+export interface DuzcesporData {
+  standings: StandingsRow[];
+  nextMatch: NextMatch;
+  matchHistory: MatchHistoryEntry[];
+}

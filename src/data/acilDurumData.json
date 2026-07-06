@@ -1,0 +1,14 @@
+{
+  "assemblyPoints": [
+    { "id": "ap-1", "name": "Kültür Park", "lat": 40.837, "lng": 31.16, "distanceLabel": "450m" },
+    { "id": "ap-2", "name": "Anıtpark Toplanma Alanı", "lat": 40.8395, "lng": 31.1595, "distanceLabel": "900m" },
+    { "id": "ap-3", "name": "Cedidiye Meydanı", "lat": 40.841, "lng": 31.165, "distanceLabel": "1.4km" }
+  ],
+  "nearestAssemblyPointId": "ap-1",
+  "hotlines": [
+    { "id": "112", "label": "112 Acil Çağrı Merkezi", "sublabel": "Sağlık, Polis, Jandarma", "phone": "112" },
+    { "id": "110", "label": "110 İtfaiye", "phone": "110" },
+    { "id": "153", "label": "153 Beyaz Masa", "phone": "153" }
+  ],
+  "filterChips": ["Afet Toplanma Alanları", "Güvenli Rotalar", "Eczaneler"]
+}

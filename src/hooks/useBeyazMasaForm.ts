@@ -1,14 +1,19 @@
 import { useCallback, useState } from "react";
 import { useToast } from "@/hooks/useToast";
-import beyazMasaData from "@/data/beyazMasaData.json";
-import type { ComplaintSubmissionStatus, TrackedComplaint } from "@/types/beyazMasa";
+import { useAsyncData } from "@/hooks/useAsyncData";
+import { fetchWithFallback } from "@/services/apiClient";
+import beyazMasaDataFallback from "@/data/beyazMasaData.json";
+import type { ComplaintCategory, ComplaintSubmissionStatus, TrackedComplaint } from "@/types/beyazMasa";
 
 const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024;
 const SUBMIT_SIMULATION_MS = 1200;
-const trackedComplaints = beyazMasaData.trackedComplaints as TrackedComplaint[];
 
 export function useBeyazMasaForm() {
   const { show: showToast } = useToast();
+  const { data: categories, isLoading } = useAsyncData<ComplaintCategory[]>(
+    "/api/beyaz-masa/categories",
+    beyazMasaDataFallback.categories,
+  );
 
   const [categoryId, setCategoryId] = useState("");
   const [details, setDetails] = useState("");
@@ -59,14 +64,19 @@ export function useBeyazMasaForm() {
     setSubmittedCode(null);
   }, []);
 
-  const trackComplaint = useCallback(() => {
+  const trackComplaint = useCallback(async () => {
     const normalizedCode = trackingCode.trim().toUpperCase();
-    const match = trackedComplaints.find((complaint) => complaint.code.toUpperCase() === normalizedCode);
+    const complaints = await fetchWithFallback<TrackedComplaint[]>(
+      `/api/beyaz-masa/complaints/${normalizedCode}`,
+      beyazMasaDataFallback.trackedComplaints as TrackedComplaint[],
+    );
+    const match = complaints.find((complaint) => complaint.code.toUpperCase() === normalizedCode);
     setTrackedResult(match ?? null);
   }, [trackingCode]);
 
   return {
-    categories: beyazMasaData.categories,
+    categories,
+    isLoading,
     categoryId,
     setCategoryId,
     details,

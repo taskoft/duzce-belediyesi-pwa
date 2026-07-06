@@ -1,16 +1,17 @@
 import { Header } from "@/components/common/Header";
 import { ProfileLink } from "@/components/common/ProfileLink";
+import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { ProjectCard } from "@/components/projeler/ProjectCard";
 import { ProjectDetailModal } from "@/components/projeler/ProjectDetailModal";
 import { useModal } from "@/hooks/useModal";
-import projectsData from "@/data/projectsData.json";
+import { useAsyncData } from "@/hooks/useAsyncData";
+import projectsDataFallback from "@/data/projectsData.json";
 import type { MunicipalProject } from "@/types/projects";
-
-const projects = projectsData as MunicipalProject[];
 
 export function Projeler() {
   const { open, close } = useModal();
+  const { data: projects, isLoading } = useAsyncData("/api/projects", projectsDataFallback as MunicipalProject[]);
 
   const handleSelect = (project: MunicipalProject) => {
     open(<ProjectDetailModal project={project} onClose={close} />);
@@ -26,11 +27,15 @@ export function Projeler() {
           <p className="font-body-md text-body-md text-on-surface-variant">Devam eden ve tamamlanan çalışmalar</p>
         </div>
 
-        <div className="flex flex-col gap-stack-md px-container-margin pb-stack-lg">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} onSelect={handleSelect} />
-          ))}
-        </div>
+        {isLoading ? (
+          <PageLoader />
+        ) : (
+          <div className="flex flex-col gap-stack-md px-container-margin pb-stack-lg">
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} onSelect={handleSelect} />
+            ))}
+          </div>
+        )}
       </main>
 
       <BottomNav />

@@ -1,5 +1,6 @@
 import { Header } from "@/components/common/Header";
 import { ProfileLink } from "@/components/common/ProfileLink";
+import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { ComplaintForm } from "@/components/beyazMasa/ComplaintForm";
 import { ComplaintTracker } from "@/components/beyazMasa/ComplaintTracker";
@@ -18,26 +19,32 @@ export function BeyazMasa() {
           <p className="font-body-md text-body-md text-on-surface-variant">Talep ve şikayetlerinizi iletin</p>
         </div>
 
-        <ComplaintForm
-          categories={form.categories}
-          categoryId={form.categoryId}
-          onCategoryChange={form.setCategoryId}
-          details={form.details}
-          onDetailsChange={form.setDetails}
-          attachment={form.attachment}
-          onFileSelect={form.attachFile}
-          status={form.status}
-          submittedCode={form.submittedCode}
-          onSubmit={form.submitComplaint}
-          onReset={form.resetForm}
-        />
+        {form.isLoading ? (
+          <PageLoader />
+        ) : (
+          <>
+            <ComplaintForm
+              categories={form.categories}
+              categoryId={form.categoryId}
+              onCategoryChange={form.setCategoryId}
+              details={form.details}
+              onDetailsChange={form.setDetails}
+              attachment={form.attachment}
+              onFileSelect={form.attachFile}
+              status={form.status}
+              submittedCode={form.submittedCode}
+              onSubmit={form.submitComplaint}
+              onReset={form.resetForm}
+            />
 
-        <ComplaintTracker
-          trackingCode={form.trackingCode}
-          onTrackingCodeChange={form.setTrackingCode}
-          trackedResult={form.trackedResult}
-          onTrack={form.trackComplaint}
-        />
+            <ComplaintTracker
+              trackingCode={form.trackingCode}
+              onTrackingCodeChange={form.setTrackingCode}
+              trackedResult={form.trackedResult}
+              onTrack={form.trackComplaint}
+            />
+          </>
+        )}
 
         <div className="h-2" />
       </main>

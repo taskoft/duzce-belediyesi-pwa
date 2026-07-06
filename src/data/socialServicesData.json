@@ -27,5 +27,13 @@
       "category": "gida",
       "spotsAvailable": 15
     }
-  ]
+  ],
+  "askidaFatura": {
+    "pendingCount": 142,
+    "paidThisMonth": 850,
+    "invoices": [
+      { "id": "fatura-1", "type": "Su Faturası", "icon": "water_drop", "neighborhood": "Merkez Mah.", "amount": 120 },
+      { "id": "fatura-2", "type": "Su Faturası", "icon": "water_drop", "neighborhood": "Kalıcı Konutlar", "amount": 85 }
+    ]
+  }
 }

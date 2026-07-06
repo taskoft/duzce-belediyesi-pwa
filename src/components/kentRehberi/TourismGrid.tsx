@@ -1,37 +1,72 @@
-import { Icon } from "@/components/common/Icon";
-import type { Destination } from "@/types/cityGuide";
+import { TourismCard } from "@/components/kentRehberi/TourismCard";
+import { BungalowBookingWidget } from "@/components/kentRehberi/BungalowBookingWidget";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useModal } from "@/hooks/useModal";
+import type { BungalowFacility, Destination } from "@/types/cityGuide";
 
 interface TourismGridProps {
   destinations: Destination[];
+  bungalows: BungalowFacility[];
 }
 
-export function TourismGrid({ destinations }: TourismGridProps) {
+export function TourismGrid({ destinations, bungalows }: TourismGridProps) {
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const { open, close } = useModal();
+
+  const openBooking = (bungalow: BungalowFacility) => {
+    open(<BungalowBookingWidget bungalow={bungalow} onClose={close} />);
+  };
+
   return (
-    <div className="flex flex-col gap-stack-md">
-      {destinations.map((destination) => (
-        <article key={destination.id} className="overflow-hidden rounded-2xl bg-surface shadow-sm">
-          <div className="relative h-48 w-full">
-            <img src={destination.imageUrl} alt={destination.title} className="h-full w-full object-cover" />
-            <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-surface/90 px-2 py-1 shadow-sm backdrop-blur-sm">
-              <Icon name="star" filled className="text-[14px] text-tertiary-container" />
-              <span className="font-label-sm text-label-sm text-on-surface">{destination.rating}</span>
+    <div className="flex flex-col gap-stack-lg">
+      <div className="flex flex-col gap-stack-md">
+        {destinations.map((destination) => (
+          <TourismCard
+            key={destination.id}
+            destination={destination}
+            isFavorite={isFavorite(destination.id)}
+            onToggleFavorite={toggleFavorite}
+          />
+        ))}
+      </div>
+
+      <section className="flex flex-col gap-stack-sm">
+        <h3 className="font-headline-md text-headline-md text-on-surface">Bungalov Tesisleri</h3>
+        <div className="flex flex-col gap-stack-sm">
+          {bungalows.map((bungalow) => (
+            <div key={bungalow.id} className="flex items-center gap-3 rounded-2xl bg-surface p-3 shadow-sm">
+              <img
+                src={bungalow.imageUrl}
+                alt={bungalow.name}
+                className="h-16 w-16 shrink-0 rounded-xl object-cover"
+              />
+              <div className="min-w-0 flex-1">
+                <h4 className="font-label-lg text-label-lg truncate text-on-surface">{bungalow.name}</h4>
+                <p className="font-label-sm text-label-sm text-on-surface-variant">
+                  {bungalow.pricePerNight} TL / gece
+                </p>
+                <span
+                  className={`font-label-sm inline-block rounded-full px-2 py-0.5 text-[10px] ${
+                    bungalow.availabilityStatus
+                      ? "bg-primary-container text-on-primary-container"
+                      : "bg-surface-container-high text-on-surface-variant"
+                  }`}
+                >
+                  {bungalow.availabilityStatus ? "Müsait" : "Dolu"}
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => openBooking(bungalow)}
+                disabled={!bungalow.availabilityStatus}
+                className="scale-98 h-component-height-md shrink-0 rounded-xl bg-primary px-4 font-label-sm text-label-sm text-on-primary transition-transform disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Rezervasyon
+              </button>
             </div>
-          </div>
-          <div className="p-4">
-            <h3 className="font-headline-md text-headline-md mb-1 text-on-surface">{destination.title}</h3>
-            <p className="font-body-md text-body-md mb-4 text-on-surface-variant">{destination.description}</p>
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${destination.title} Düzce`)}`}
-              target="_blank"
-              rel="noreferrer"
-              className="scale-98 flex h-10 w-full items-center justify-center gap-2 rounded-xl border-2 border-primary font-label-lg text-label-lg text-primary transition-transform hover:bg-primary-fixed/30"
-            >
-              <Icon name="directions" className="text-[18px]" />
-              Yol Tarifi Al
-            </a>
-          </div>
-        </article>
-      ))}
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

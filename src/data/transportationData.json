@@ -24,5 +24,15 @@
     }
   ],
   "cardBalance": 45.5,
-  "quickTopUpAmounts": [20, 50, 100]
+  "quickTopUpAmounts": [20, 50, 100],
+  "defaultOrigin": "Anıtpark",
+  "destinationSuggestions": ["Kalıcı Konutlar", "Otogar", "Üniversite Kampüsü", "Cedidiye Mahallesi"],
+  "taxiStands": [
+    { "id": "taksi-1", "name": "Anıtpark Taksi Durağı", "phone": "0380 524 11 22", "distance": "200m" },
+    { "id": "taksi-2", "name": "Otogar Taksi Durağı", "phone": "0380 524 33 44", "distance": "1.2km" }
+  ],
+  "lostItems": [
+    { "id": "kayip-1", "name": "Siyah Cüzdan", "icon": "wallet", "location": "Hat 14", "date": "Dün", "status": "İnceleniyor" },
+    { "id": "kayip-2", "name": "Mavi Şemsiye", "icon": "umbrella", "location": "Hat 1", "date": "2 gün önce", "status": "Sahibini Bekliyor" }
+  ]
 }

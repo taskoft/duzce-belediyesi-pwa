@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Header } from "@/components/common/Header";
 import { ProfileLink } from "@/components/common/ProfileLink";
+import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { DirectoryList } from "@/components/kentRehberi/DirectoryList";
 import { PharmacyWidget } from "@/components/kentRehberi/PharmacyWidget";
 import { TourismGrid } from "@/components/kentRehberi/TourismGrid";
-import cityGuideData from "@/data/cityGuideData.json";
-import type { KentRehberiTab } from "@/types/cityGuide";
+import { useAsyncData } from "@/hooks/useAsyncData";
+import cityGuideDataFallback from "@/data/cityGuideData.json";
+import type { CityGuideData, KentRehberiTab } from "@/types/cityGuide";
 
 const TABS: { id: KentRehberiTab; label: string }[] = [
   { id: "corporate", label: "Kurumsal Rehber" },
@@ -15,6 +17,10 @@ const TABS: { id: KentRehberiTab; label: string }[] = [
 
 export function KentRehberi() {
   const [activeTab, setActiveTab] = useState<KentRehberiTab>("corporate");
+  const { data: cityGuideData, isLoading } = useAsyncData<CityGuideData>(
+    "/api/city-guide",
+    cityGuideDataFallback as CityGuideData,
+  );
 
   return (
     <>
@@ -43,16 +49,20 @@ export function KentRehberi() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-stack-md px-container-margin pb-stack-lg">
-          {activeTab === "corporate" ? (
-            <>
-              <DirectoryList emergencyNumbers={cityGuideData.emergencyNumbers} entries={cityGuideData.directory} />
-              <PharmacyWidget pharmacies={cityGuideData.pharmacies} />
-            </>
-          ) : (
-            <TourismGrid destinations={cityGuideData.destinations} />
-          )}
-        </div>
+        {isLoading ? (
+          <PageLoader />
+        ) : (
+          <div className="flex flex-col gap-stack-md px-container-margin pb-stack-lg">
+            {activeTab === "corporate" ? (
+              <>
+                <DirectoryList emergencyNumbers={cityGuideData.emergencyNumbers} entries={cityGuideData.directory} />
+                <PharmacyWidget pharmacies={cityGuideData.pharmacies} />
+              </>
+            ) : (
+              <TourismGrid destinations={cityGuideData.destinations} bungalows={cityGuideData.bungalows} />
+            )}
+          </div>
+        )}
       </main>
 
       <BottomNav />

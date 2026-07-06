@@ -18,3 +18,9 @@ export interface WorkflowHistoryEntry {
   detail: string;
   date: string;
 }
+
+export interface ProfileData {
+  citizen: CitizenProfile;
+  savedCards: SavedCard[];
+  workflowHistory: WorkflowHistoryEntry[];
+}

@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { MobileViewport } from "@/components/common/MobileViewport";
 import { Modal } from "@/components/common/Modal";
 import { Toast } from "@/components/common/Toast";
+import { Sidebar } from "@/components/common/Sidebar";
 import { Dashboard } from "@/pages/Dashboard";
 import { EBelediye } from "@/pages/EBelediye";
 import { Transportation } from "@/pages/Transportation";
@@ -11,6 +12,9 @@ import { SosyalHizmetler } from "@/pages/SosyalHizmetler";
 import { BeyazMasa } from "@/pages/BeyazMasa";
 import { Duzcespor } from "@/pages/Duzcespor";
 import { Profil } from "@/pages/Profil";
+import { Belediye } from "@/pages/Belediye";
+import { AcilDurum } from "@/pages/AcilDurum";
+import { Eczane } from "@/pages/Eczane";
 
 export function App() {
   return (
@@ -25,9 +29,13 @@ export function App() {
         <Route path="/beyaz-masa" element={<BeyazMasa />} />
         <Route path="/duzcespor" element={<Duzcespor />} />
         <Route path="/profil" element={<Profil />} />
+        <Route path="/belediye" element={<Belediye />} />
+        <Route path="/acil" element={<AcilDurum />} />
+        <Route path="/eczane" element={<Eczane />} />
       </Routes>
       <Modal />
       <Toast />
+      <Sidebar />
     </MobileViewport>
   );
 }

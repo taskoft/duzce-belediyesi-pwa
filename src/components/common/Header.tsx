@@ -1,12 +1,18 @@
 import type { ReactNode } from "react";
 import { Button } from "@/components/common/Button";
 import { Icon } from "@/components/common/Icon";
+import { useSidebar } from "@/hooks/useSidebar";
+import { useWeather } from "@/hooks/useWeather";
 
 interface HeaderProps {
+  leading?: ReactNode;
   trailing?: ReactNode;
+  title?: string;
 }
 
-function DefaultWeatherTrailing({ temperatureCelsius = 21, weatherIcon = "partly_cloudy_day" }) {
+function DefaultWeatherTrailing() {
+  const { temperatureCelsius, weatherIcon } = useWeather();
+
   return (
     <Button variant="icon" className="-mr-2 rounded-lg" aria-label="Hava durumu">
       <span className="font-label-lg text-label-lg mr-1">{temperatureCelsius}°C</span>
@@ -15,16 +21,28 @@ function DefaultWeatherTrailing({ temperatureCelsius = 21, weatherIcon = "partly
   );
 }
 
-export function Header({ trailing = <DefaultWeatherTrailing /> }: HeaderProps) {
+function DefaultMenuLeading() {
+  const { toggle } = useSidebar();
+
   return (
-    <header className="absolute top-0 z-50 w-full bg-surface shadow-sm dark:bg-inverse-surface">
+    <Button variant="icon" className="-ml-2" aria-label="Menüyü aç" onClick={toggle}>
+      <Icon name="menu" />
+    </Button>
+  );
+}
+
+export function Header({
+  leading = <DefaultMenuLeading />,
+  trailing = <DefaultWeatherTrailing />,
+  title = "Düzce Belediyesi",
+}: HeaderProps) {
+  return (
+    <header className="absolute top-0 z-40 w-full bg-surface shadow-sm dark:bg-inverse-surface">
       <div className="flex h-component-height-lg items-center justify-between px-container-margin">
-        <Button variant="icon" className="-ml-2" aria-label="Menüyü aç">
-          <Icon name="menu" />
-        </Button>
+        {leading}
 
         <h1 className="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary-fixed">
-          Düzce Belediyesi
+          {title}
         </h1>
 
         {trailing}

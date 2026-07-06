@@ -1,10 +1,15 @@
 import { useCallback, useState } from "react";
 import { useToast } from "@/hooks/useToast";
-import socialServicesData from "@/data/socialServicesData.json";
-import type { VolunteerOpportunity } from "@/types/socialServices";
+import { useAsyncData } from "@/hooks/useAsyncData";
+import socialServicesDataFallback from "@/data/socialServicesData.json";
+import type { SocialCatalog, VolunteerOpportunity } from "@/types/socialServices";
 
 export function useSocialVolunteering() {
   const { show: showToast } = useToast();
+  const { data: catalog, isLoading } = useAsyncData<SocialCatalog>("/api/social-services/catalog", {
+    categories: socialServicesDataFallback.categories,
+    opportunities: socialServicesDataFallback.opportunities as VolunteerOpportunity[],
+  });
 
   const [appliedIds, setAppliedIds] = useState<Set<string>>(new Set());
 
@@ -38,9 +43,23 @@ export function useSocialVolunteering() {
     setSuggestionDetail("");
   }, [suggestionTitle, suggestionDetail, showToast]);
 
+  const [patiDescription, setPatiDescription] = useState("");
+  const [patiPhoto, setPatiPhoto] = useState<File | null>(null);
+
+  const submitPatiDestek = useCallback(() => {
+    if (!patiDescription.trim()) {
+      showToast("Lütfen durumu kısaca açıklayın.", "error");
+      return;
+    }
+    showToast("Pati Destek bildiriminiz alındı.", "success");
+    setPatiDescription("");
+    setPatiPhoto(null);
+  }, [patiDescription, showToast]);
+
   return {
-    categories: socialServicesData.categories,
-    opportunities: socialServicesData.opportunities as VolunteerOpportunity[],
+    isLoading,
+    categories: catalog.categories,
+    opportunities: catalog.opportunities,
     appliedIds,
     applyToOpportunity,
     suggestionTitle,
@@ -49,5 +68,10 @@ export function useSocialVolunteering() {
     setSuggestionDetail,
     isSuggestionSubmitted,
     submitSuggestion,
+    patiDescription,
+    setPatiDescription,
+    patiPhoto,
+    setPatiPhoto,
+    submitPatiDestek,
   };
 }
