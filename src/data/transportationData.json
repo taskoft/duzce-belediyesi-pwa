@@ -1,0 +1,28 @@
+{
+  "busLines": [
+    {
+      "id": "hat-1",
+      "lineNumber": "Hat 1",
+      "name": "Üniversite - Şehir Merkezi",
+      "scheduleHours": ["07:00", "07:30", "08:00", "08:30", "09:00", "12:00", "17:00", "17:30", "18:00"],
+      "stops": [
+        { "id": "kampus", "name": "Kampüs", "lat": 40.8438, "lng": 31.1565 },
+        { "id": "anitpark", "name": "Anıtpark", "lat": 40.8395, "lng": 31.1595 },
+        { "id": "belediye", "name": "Belediye", "lat": 40.8365, "lng": 31.1633 }
+      ]
+    },
+    {
+      "id": "hat-2",
+      "lineNumber": "Hat 2",
+      "name": "Otogar - Sanayi Sitesi",
+      "scheduleHours": ["06:45", "07:15", "07:45", "08:15", "13:00", "16:30", "19:00"],
+      "stops": [
+        { "id": "otogar", "name": "Otogar", "lat": 40.8412, "lng": 31.1502 },
+        { "id": "cumhuriyet", "name": "Cumhuriyet Meydanı", "lat": 40.8378, "lng": 31.1611 },
+        { "id": "sanayi", "name": "Sanayi Sitesi", "lat": 40.8341, "lng": 31.1687 }
+      ]
+    }
+  ],
+  "cardBalance": 45.5,
+  "quickTopUpAmounts": [20, 50, 100]
+}

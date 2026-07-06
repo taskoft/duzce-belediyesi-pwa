@@ -1,0 +1,21 @@
+{
+  "standings": [
+    { "position": 3, "team": "Amed SK", "points": 45, "isHighlighted": false },
+    { "position": 4, "team": "Düzcespor", "points": 42, "isHighlighted": true },
+    { "position": 5, "team": "Iğdır FK", "points": 41, "isHighlighted": false }
+  ],
+  "nextMatch": {
+    "homeTeam": "Düzcespor",
+    "homeTeamAbbreviation": "DZ",
+    "awayTeam": "Vanspor",
+    "awayTeamAbbreviation": "VN",
+    "league": "TFF 2. Lig",
+    "kickoffLabel": "PAZAR 16:00",
+    "kickoffIso": "2026-07-12T16:00:00+03:00"
+  },
+  "matchHistory": [
+    { "id": "m1", "opponent": "Bandırmaspor", "result": "2-1", "outcome": "win", "date": "2026-06-15" },
+    { "id": "m2", "opponent": "Sivas Belediyespor", "result": "0-0", "outcome": "draw", "date": "2026-06-08" },
+    { "id": "m3", "opponent": "Kırşehir FSK", "result": "1-2", "outcome": "loss", "date": "2026-06-01" }
+  ]
+}

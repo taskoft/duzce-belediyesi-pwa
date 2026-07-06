@@ -1,0 +1,17 @@
+{
+  "citizen": {
+    "fullName": "Ahmet Yılmaz",
+    "maskedTcId": "1234*****01",
+    "neighborhood": "Cedidiye Mahallesi",
+    "memberSince": "2022"
+  },
+  "savedCards": [
+    { "id": "card-1", "label": "Düzce Kart", "maskedNumber": "**** 3456", "balance": 45.5 },
+    { "id": "card-2", "label": "Kredi Kartı", "maskedNumber": "**** 1111", "balance": null }
+  ],
+  "workflowHistory": [
+    { "id": "wf-1", "title": "E-Belediye Ödemesi", "detail": "Çevre Temizlik Vergisi ödendi", "date": "2026-06-20" },
+    { "id": "wf-2", "title": "Beyaz Masa Talebi", "detail": "#DX-1984 çözüldü olarak işaretlendi", "date": "2026-06-10" },
+    { "id": "wf-3", "title": "Gönüllülük Başvurusu", "detail": "Ders Desteği programına katıldı", "date": "2026-05-28" }
+  ]
+}

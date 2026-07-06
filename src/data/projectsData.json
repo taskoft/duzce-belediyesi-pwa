@@ -1,0 +1,30 @@
+[
+  {
+    "id": "millet-bahcesi-2",
+    "title": "Millet Bahçesi 2. Etap",
+    "summary": "Şehrimizin yeşil dokusunu güçlendiren Millet Bahçesi'nin 2. etabı vatandaşlarımızın hizmetine sunuldu.",
+    "status": "Tamamlandı",
+    "impactMetric": "12.000 m² yeşil alan"
+  },
+  {
+    "id": "akilli-kavsak",
+    "title": "Akıllı Kavşak Sistemi",
+    "summary": "Şehir genelinde trafik yoğunluğunu azaltmak için 14 kavşağa sensörlü sinyalizasyon sistemi kuruluyor.",
+    "status": "Devam Ediyor",
+    "impactMetric": "14 kavşak"
+  },
+  {
+    "id": "bisiklet-yolu",
+    "title": "Bisiklet Yolu Ağı",
+    "summary": "Kampüs ile şehir merkezini birbirine bağlayan güvenli bisiklet yolu projesi sürüyor.",
+    "status": "Devam Ediyor",
+    "impactMetric": "8 km yeni parkur"
+  },
+  {
+    "id": "kultur-merkezi",
+    "title": "Düzce Kültür Merkezi",
+    "summary": "Çok amaçlı salon, sergi alanı ve atölyeler barındıran kültür merkezi tamamlanarak açıldı.",
+    "status": "Tamamlandı",
+    "impactMetric": "1.200 kişilik salon"
+  }
+]

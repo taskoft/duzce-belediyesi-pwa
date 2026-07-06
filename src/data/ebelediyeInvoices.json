@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cevre-temizlik-vergisi",
+    "title": "Çevre Temizlik Vergisi",
+    "amount": 240,
+    "dueDate": "15.06.2024",
+    "isOverdue": false
+  },
+  {
+    "id": "e-imar-belge-ucreti",
+    "title": "E-İmar Belge Ücreti",
+    "amount": 150,
+    "dueDate": "20.06.2024",
+    "isOverdue": true
+  }
+]

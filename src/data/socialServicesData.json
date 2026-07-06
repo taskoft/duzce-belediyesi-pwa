@@ -1,0 +1,31 @@
+{
+  "categories": [
+    { "id": "egitim", "label": "Eğitim Desteği", "icon": "school" },
+    { "id": "gida", "label": "Gıda Yardımı", "icon": "volunteer_activism" },
+    { "id": "yaslilar", "label": "Yaşlı Bakım Desteği", "icon": "elderly" },
+    { "id": "afet", "label": "Afet Gönüllülüğü", "icon": "emergency" }
+  ],
+  "opportunities": [
+    {
+      "id": "kitap-okuma",
+      "title": "Yaşlılara Kitap Okuma Gönüllülüğü",
+      "description": "Huzurevi sakinleriyle haftalık kitap okuma buluşmaları düzenliyoruz.",
+      "category": "yaslilar",
+      "spotsAvailable": 6
+    },
+    {
+      "id": "ders-destek",
+      "title": "Ortaokul Öğrencilerine Ders Desteği",
+      "description": "Matematik ve fen derslerinde gönüllü öğretmen desteği aranıyor.",
+      "category": "egitim",
+      "spotsAvailable": 10
+    },
+    {
+      "id": "gida-paketleme",
+      "title": "İhtiyaç Sahiplerine Gıda Paketleme",
+      "description": "Belediye deposunda haftalık gıda kolisi hazırlama gönüllülüğü.",
+      "category": "gida",
+      "spotsAvailable": 15
+    }
+  ]
+}

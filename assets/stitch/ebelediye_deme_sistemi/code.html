@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>E-Belediye Ödeme Sistemi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdcc4",
+                      "inverse-primary": "#a0c9ff",
+                      "on-secondary-fixed-variant": "#93000b",
+                      "on-background": "#111c2d",
+                      "primary-fixed-dim": "#a0c9ff",
+                      "on-surface": "#111c2d",
+                      "surface-container-high": "#dee8ff",
+                      "surface-container": "#e7eeff",
+                      "secondary-fixed": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#0f4c81",
+                      "secondary-container": "#e02928",
+                      "background-subtle": "#F8FAFC",
+                      "surface-tint": "#2d6197",
+                      "on-tertiary-fixed": "#2f1400",
+                      "on-primary-fixed-variant": "#07497d",
+                      "ink-base": "#0F172A",
+                      "tertiary": "#532800",
+                      "error-container": "#ffdad6",
+                      "background": "#f9f9ff",
+                      "primary": "#00355f",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#cfdaf2",
+                      "error-vibrant": "#F73333",
+                      "on-secondary-container": "#fffbff",
+                      "inverse-on-surface": "#ecf1ff",
+                      "surface-container-highest": "#d8e3fb",
+                      "secondary": "#bb0112",
+                      "outline": "#727780",
+                      "on-tertiary-container": "#f9a767",
+                      "surface-variant": "#d8e3fb",
+                      "secondary-fixed-dim": "#ffb4ab",
+                      "on-primary-fixed": "#001c37",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#42474f",
+                      "on-secondary-fixed": "#410002",
+                      "primary-fixed": "#d2e4ff",
+                      "tertiary-container": "#743b00",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#ffb780",
+                      "on-primary-container": "#8ebdf9",
+                      "outline-variant": "#c2c7d1",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#263143",
+                      "surface": "#FFFFFF",
+                      "on-tertiary-fixed-variant": "#6f3800",
+                      "surface-bright": "#f9f9ff",
+                      "surface-container-low": "#f0f3ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "component-height-md": "48px",
+                      "stack-lg": "24px",
+                      "container-margin": "20px",
+                      "gutter": "16px",
+                      "component-height-lg": "56px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-lg": ["Inter"],
+                      "headline-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                      "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        body {
+            background-color: #F8FAFC;
+        }
+        
+        .mock-device {
+            width: 390px;
+            height: 844px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #F8FAFC;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex items-center justify-center min-h-screen bg-neutral-200 py-8">
+<div class="mock-device flex flex-col relative rounded-[40px] border-8 border-gray-900">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-[374px] z-50 shadow-sm bg-surface dark:bg-on-background flex justify-between items-center h-component-height-lg px-container-margin w-full">
+<button class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-colors active:scale-98 transition-transform duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md-mobile font-bold text-primary dark:text-primary-fixed">
+                Düzce Belediyesi
+            </h1>
+<button class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-colors active:scale-98 transition-transform duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto no-scrollbar pt-[80px] pb-[120px] px-container-margin flex flex-col gap-stack-lg">
+<!-- Search Form Card -->
+<section class="bg-surface rounded-2xl shadow-sm p-4 border border-outline-variant/30 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container opacity-10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md-mobile text-on-surface mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-weight="fill">search</span>
+                    Borç Sorgulama
+                </h2>
+<div class="space-y-stack-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-1">T.C. Kimlik / Sicil No</label>
+<div class="relative">
+<input class="w-full bg-background-subtle border border-outline-variant rounded-xl h-component-height-md px-4 font-body-lg text-body-lg text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="11 haneli T.C. Kimlik No" type="text" value="12345678901"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-success opacity-0 transition-opacity" id="tc-check">check_circle</span>
+</div>
+</div>
+<button class="w-full bg-[#0F4C81] text-on-primary rounded-xl h-component-height-md font-label-lg text-label-lg flex items-center justify-center gap-2 hover:-translate-y-0.5 active:scale-98 transition-all shadow-md hover:shadow-lg">
+<span class="material-symbols-outlined">search</span>
+                        Sorgula
+                    </button>
+</div>
+</section>
+<!-- Unpaid Invoices Section -->
+<section class="flex flex-col gap-stack-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md-mobile text-on-surface">Ödenmemiş Borçlar</h2>
+<span class="bg-[#DC2626] text-white font-label-sm text-[10px] px-2 py-1 rounded-full">2 Adet</span>
+</div>
+<!-- Invoice Card 1 -->
+<label class="bg-surface rounded-2xl shadow-sm p-4 border border-primary/20 flex items-start gap-4 cursor-pointer hover:bg-surface-container-low transition-colors group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-[#0F4C81]"></div>
+<div class="pt-1">
+<input checked="" class="w-5 h-5 rounded-full border-2 border-outline text-[#0F4C81] focus:ring-[#0F4C81] focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-label-lg text-label-lg text-on-surface">Çevre Temizlik Vergisi</h3>
+<span class="font-headline-md text-headline-md-mobile text-[#0F4C81]">240 TL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                            Son Ödeme: 15.06.2024
+                        </p>
+</div>
+</label>
+<!-- Invoice Card 2 -->
+<label class="bg-surface rounded-2xl shadow-sm p-4 border border-primary/20 flex items-start gap-4 cursor-pointer hover:bg-surface-container-low transition-colors group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-[#0F4C81]"></div>
+<div class="pt-1">
+<input checked="" class="w-5 h-5 rounded-full border-2 border-outline text-[#0F4C81] focus:ring-[#0F4C81] focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-label-lg text-label-lg text-on-surface">E-İmar Belge Ücreti</h3>
+<span class="font-headline-md text-headline-md-mobile text-[#0F4C81]">150 TL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 text-[#DC2626]">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+                            Son Ödeme: 20.06.2024
+                        </p>
+</div>
+</label>
+</section>
+<div class="h-8"></div> <!-- spacer -->
+</main>
+<!-- Sticky Checkout Bar -->
+<div class="absolute bottom-0 w-full bg-surface shadow-[0_-4px_20px_rgba(0,0,0,0.08)] rounded-t-3xl pt-4 pb-8 px-container-margin z-40 border-t border-outline-variant/20">
+<div class="flex items-center justify-between mb-4">
+<span class="font-body-lg text-body-lg text-on-surface-variant">Seçili Toplam</span>
+<span class="font-display-lg text-display-lg text-[#0F4C81]">390 TL</span>
+</div>
+<button class="w-full bg-[#0F4C81] text-on-primary rounded-xl h-component-height-lg font-label-lg text-label-lg flex items-center justify-center gap-2 hover:-translate-y-0.5 active:scale-98 transition-all shadow-lg" onclick="document.getElementById('payment-modal').classList.remove('translate-y-full'); document.getElementById('payment-backdrop').classList.remove('opacity-0', 'pointer-events-none');">
+<span class="material-symbols-outlined">lock</span>
+                Güvenli Ödeme Yap
+            </button>
+</div>
+<!-- 3D Secure Modal Overlay (Initially Hidden) -->
+<div class="absolute inset-0 bg-ink-base/40 backdrop-blur-sm z-[60] transition-opacity duration-300 opacity-0 pointer-events-none" id="payment-backdrop" onclick="closeModal()"></div>
+<div class="absolute bottom-0 w-full bg-surface rounded-t-[32px] z-[70] transition-transform duration-300 transform translate-y-full shadow-2xl flex flex-col max-h-[90%] overflow-hidden" id="payment-modal">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center pt-4 pb-2" onclick="closeModal()">
+<div class="w-12 h-1.5 bg-outline-variant rounded-full"></div>
+</div>
+<div class="px-container-margin pb-8 overflow-y-auto">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-lg text-headline-lg-mobile text-on-surface">Kredi Kartı ile Ödeme</h2>
+<div class="bg-surface-container-low text-[#0F4C81] px-2 py-1 rounded-md flex items-center gap-1 border border-[#0F4C81]/20">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+<span class="font-label-sm text-[10px] font-bold">3D SECURE</span>
+</div>
+</div>
+<!-- Credit Card Visual Mock -->
+<div class="w-full h-48 rounded-2xl p-6 mb-6 relative overflow-hidden shadow-lg text-white" style="background: linear-gradient(135deg, #0F4C81 0%, #0a365c 100%);">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-white opacity-5 rounded-full -ml-10 -mb-10 pointer-events-none"></div>
+<div class="flex justify-between items-start mb-8 relative z-10">
+<span class="material-symbols-outlined text-4xl opacity-80" data-weight="fill">contactless</span>
+<div class="flex gap-1">
+<div class="w-8 h-5 bg-red-500 rounded-sm opacity-80"></div>
+<div class="w-8 h-5 bg-orange-400 rounded-sm opacity-80 -ml-4 mix-blend-multiply"></div>
+</div>
+</div>
+<div class="font-headline-md tracking-widest mb-4 opacity-90 relative z-10" id="card-display">
+                        •••• •••• •••• ••••
+                    </div>
+<div class="flex justify-between items-end relative z-10">
+<div>
+<div class="text-[10px] opacity-60 uppercase tracking-wider mb-1">Kart Sahibi</div>
+<div class="font-label-sm uppercase truncate w-32" id="name-display">AD SOYAD</div>
+</div>
+<div>
+<div class="text-[10px] opacity-60 uppercase tracking-wider mb-1">SKT</div>
+<div class="font-label-sm" id="date-display">AA/YY</div>
+</div>
+</div>
+</div>
+<!-- Payment Form -->
+<form class="space-y-stack-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-1">Kart Üzerindeki İsim</label>
+<input class="w-full bg-background-subtle border border-outline-variant rounded-xl h-component-height-md px-4 font-body-lg text-body-lg text-on-surface focus:border-[#0F4C81] focus:ring-1 focus:ring-[#0F4C81] transition-colors" onkeyup="updateCard('name', this.value)" placeholder="Örn. Ahmet Yılmaz" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-1">Kart Numarası</label>
+<div class="relative">
+<input class="w-full bg-background-subtle border border-outline-variant rounded-xl h-component-height-md px-4 font-body-lg text-body-lg text-on-surface focus:border-[#0F4C81] focus:ring-1 focus:ring-[#0F4C81] transition-colors" maxlength="19" onkeyup="updateCard('number', this.value)" placeholder="0000 0000 0000 0000" type="tel"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant">credit_card</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-1">Son Kullanma</label>
+<input class="w-full bg-background-subtle border border-outline-variant rounded-xl h-component-height-md px-4 font-body-lg text-body-lg text-on-surface text-center focus:border-[#0F4C81] focus:ring-1 focus:ring-[#0F4C81] transition-colors" maxlength="5" onkeyup="updateCard('date', this.value)" placeholder="AA/YY" type="text"/>
+</div>
+<div class="flex-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 ml-1 flex items-center justify-between">
+                                CVV
+                                <span class="material-symbols-outlined text-[14px] cursor-help" title="Kartın arkasındaki 3 haneli kod">info</span>
+</label>
+<input class="w-full bg-background-subtle border border-outline-variant rounded-xl h-component-height-md px-4 font-body-lg text-body-lg text-on-surface text-center focus:border-[#0F4C81] focus:ring-1 focus:ring-[#0F4C81] transition-colors" maxlength="3" placeholder="•••" type="password"/>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 mt-6">
+<div class="flex justify-between items-center mb-4">
+<span class="font-body-lg text-body-lg text-on-surface-variant">Ödenecek Tutar</span>
+<span class="font-headline-lg text-headline-lg-mobile text-[#0F4C81]">390 TL</span>
+</div>
+<button class="w-full bg-[#0F4C81] text-on-primary rounded-xl h-component-height-lg font-label-lg text-label-lg flex items-center justify-center gap-2 hover:-translate-y-0.5 active:scale-98 transition-all shadow-md relative overflow-hidden group" type="button">
+<div class="absolute inset-0 w-0 bg-white/20 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+<span class="relative z-10 flex items-center gap-2">
+                                Ödemeyi Tamamla
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+        // Modal logic
+        function closeModal() {
+            document.getElementById('payment-modal').classList.add('translate-y-full');
+            document.getElementById('payment-backdrop').classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // Simple real-time card visual update
+        function updateCard(type, value) {
+            if(type === 'name') {
+                document.getElementById('name-display').innerText = value || 'AD SOYAD';
+            } else if (type === 'number') {
+                let formatted = value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ').trim();
+                document.getElementById('card-display').innerText = formatted || '•••• •••• •••• ••••';
+            } else if (type === 'date') {
+                document.getElementById('date-display').innerText = value || 'AA/YY';
+            }
+        }
+        
+        // Basic TC formatting visual feedback
+        const tcInput = document.querySelector('input[type="text"][value="12345678901"]');
+        if(tcInput) {
+            tcInput.addEventListener('input', function(e) {
+                if(e.target.value.length === 11) {
+                    document.getElementById('tc-check').classList.remove('opacity-0');
+                } else {
+                    document.getElementById('tc-check').classList.add('opacity-0');
+                }
+            });
+            // trigger initial state
+            if(tcInput.value.length === 11) document.getElementById('tc-check').classList.remove('opacity-0');
+        }
+    </script>
+</body></html>

@@ -1,0 +1,24 @@
+{
+  "categories": [
+    { "id": "fen", "label": "Fen İşleri" },
+    { "id": "temizlik", "label": "Temizlik" },
+    { "id": "zabita", "label": "Zabıta" },
+    { "id": "park", "label": "Park Bahçeler" }
+  ],
+  "trackedComplaints": [
+    {
+      "code": "DX-2026",
+      "category": "Fen İşleri",
+      "summary": "Sokak lambası arızası bildirimi",
+      "steps": ["Alındı", "İnceleniyor", "Ekip Yönlendirildi", "Çözüldü"],
+      "currentStep": 2
+    },
+    {
+      "code": "DX-1984",
+      "category": "Temizlik",
+      "summary": "Çöp konteyneri hasarlı",
+      "steps": ["Alındı", "İnceleniyor", "Ekip Yönlendirildi", "Çözüldü"],
+      "currentStep": 4
+    }
+  ]
+}

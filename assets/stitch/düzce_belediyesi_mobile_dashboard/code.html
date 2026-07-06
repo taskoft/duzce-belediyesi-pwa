@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Düzce Belediyesi - Ana Sayfa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#e7eeff",
+                        "on-secondary-fixed-variant": "#93000b",
+                        "outline-variant": "#c2c7d1",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "on-tertiary-container": "#f9a767",
+                        "background": "#f9f9ff",
+                        "surface": "#FFFFFF",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#0f4c81",
+                        "tertiary": "#532800",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#d8e3fb",
+                        "secondary-fixed": "#ffdad6",
+                        "tertiary-container": "#743b00",
+                        "surface-container-low": "#f0f3ff",
+                        "error-vibrant": "#F73333",
+                        "primary-fixed": "#d2e4ff",
+                        "inverse-surface": "#263143",
+                        "on-tertiary-fixed": "#2f1400",
+                        "on-error-container": "#93000a",
+                        "ink-base": "#0F172A",
+                        "surface-variant": "#d8e3fb",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "secondary": "#bb0112",
+                        "surface-dim": "#cfdaf2",
+                        "secondary-container": "#e02928",
+                        "surface-bright": "#f9f9ff",
+                        "on-primary-container": "#8ebdf9",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "inverse-primary": "#a0c9ff",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#00355f",
+                        "on-surface": "#111c2d",
+                        "on-background": "#111c2d",
+                        "on-primary-fixed-variant": "#07497d",
+                        "tertiary-fixed": "#ffdcc4",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#fffbff",
+                        "outline": "#727780",
+                        "on-primary-fixed": "#001c37",
+                        "error": "#ba1a1a",
+                        "background-subtle": "#F8FAFC",
+                        "surface-container-high": "#dee8ff",
+                        "primary-fixed-dim": "#a0c9ff",
+                        "on-secondary-fixed": "#410002",
+                        "surface-tint": "#2d6197",
+                        "on-surface-variant": "#42474f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "stack-lg": "24px",
+                        "stack-md": "16px",
+                        "gutter": "16px",
+                        "component-height-md": "48px",
+                        "component-height-lg": "56px",
+                        "stack-sm": "8px",
+                        "safe": "env(safe-area-inset-bottom)"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #F8FAFC;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .scale-98:active {
+            transform: scale(0.98);
+        }
+        /* Hide scrollbar for clean UI */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #onboarding-modal {
+            transition: opacity 0.3s ease;
+        }
+        #onboarding-modal.hidden-anim {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md text-on-background min-h-screen relative overflow-x-hidden pt-[56px] pb-[76px] antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface shadow-sm">
+<div class="flex justify-between items-center px-container-margin h-component-height-lg">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors scale-98 duration-200 active:opacity-80 p-2 -ml-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary-fixed">
+                Düzce Belediyesi
+            </h1>
+<button class="flex items-center gap-1 text-on-surface-variant hover:bg-surface-container-low transition-colors scale-98 duration-200 active:opacity-80 p-2 -mr-2 rounded-lg">
+<span class="font-label-lg text-label-lg mr-1">21°C</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">partly_cloudy_day</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full max-w-[390px] mx-auto flex flex-col gap-stack-lg mt-stack-md px-container-margin">
+<!-- Search Bar -->
+<div class="w-full relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="w-full h-component-height-md pl-10 pr-4 bg-background-subtle border border-outline-variant rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow text-body-lg font-body-lg" placeholder="Uygulamada Ara..." type="text"/>
+</div>
+<!-- Banner -->
+<div class="w-full bg-primary-container text-on-primary-container rounded-xl p-stack-md shadow-sm relative overflow-hidden flex items-center justify-between">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md font-bold mb-1">İyi Günler, Hemşehrim 👋</h2>
+<p class="font-body-md text-body-md opacity-90">Size nasıl yardımcı olabiliriz?</p>
+</div>
+<!-- Decorative circle -->
+<div class="absolute right-[-20px] top-[-20px] w-24 h-24 rounded-full bg-white/10 blur-xl"></div>
+</div>
+<!-- Bento Grid Services -->
+<section>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant mb-stack-sm uppercase tracking-wider pl-1">Hızlı Erişim</h3>
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Belediye -->
+<a class="bg-surface rounded-xl p-stack-md shadow-sm hover:shadow-md transition-shadow scale-98 active:bg-surface-container-low flex flex-col items-start gap-2 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Belediye</span>
+</a>
+<!-- E-Belediye -->
+<a class="bg-surface rounded-xl p-stack-md shadow-sm hover:shadow-md transition-shadow scale-98 active:bg-surface-container-low flex flex-col items-start gap-2 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">laptop_mac</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">E-Belediye</span>
+</a>
+<!-- Kent Rehberi -->
+<a class="bg-surface rounded-xl p-stack-md shadow-sm hover:shadow-md transition-shadow scale-98 active:bg-surface-container-low flex flex-col items-start gap-2 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Kent Rehberi</span>
+</a>
+<!-- Projeler -->
+<a class="bg-surface rounded-xl p-stack-md shadow-sm hover:shadow-md transition-shadow scale-98 active:bg-surface-container-low flex flex-col items-start gap-2 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Projeler</span>
+</a>
+<!-- Ulaşım -->
+<a class="bg-surface rounded-xl p-stack-md shadow-sm hover:shadow-md transition-shadow scale-98 active:bg-surface-container-low flex flex-col items-start gap-2 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions_bus</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Ulaşım</span>
+</a>
+<!-- Sosyal Hizmetler -->
+<a class="bg-surface rounded-xl p-stack-md shadow-sm hover:shadow-md transition-shadow scale-98 active:bg-surface-container-low flex flex-col items-start gap-2 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Sosyal Hizmetler</span>
+</a>
+</div>
+</section>
+<!-- Feed: Güncel Gelişmeler -->
+<section class="flex flex-col gap-stack-md pb-stack-lg">
+<div class="flex justify-between items-end pl-1 pr-1">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Güncel Gelişmeler</h3>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Tümünü Gör</a>
+</div>
+<!-- News Card with Image -->
+<div class="bg-surface rounded-xl shadow-sm overflow-hidden flex flex-col scale-98 transition-transform active:opacity-90 cursor-pointer">
+<div class="h-40 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A wide angle photograph of a modern, lush green public park in a city during a sunny day. The park features winding pathways, contemporary wooden benches, and newly planted trees. The lighting is bright and natural, casting soft shadows. The overall aesthetic is clean, inviting, and civic-minded, utilizing a color palette of vibrant greens and soft concrete tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv-Nd5Bqvc8qmV7JKBRt5ZAfpQVxDEJB0AIed9WV9Dh-V6jHIpFpJlMFHu9L5p0h35SxQfXukk1DI4jTA8y2SpGjokLvjwLO_KlEm_hUM2whxxib3ZLRENEAvMciibYlQmfh9mUurESZI9jLmhWmtJzWZ48Mkt9Mq73xM12XybtwaAFfFNJY9r30Vu7cxXNQU8X5GJwzzSOLC3lusa2MJ5eXHQnG1gLVqd75v77E2pOsSiUwNkUB7uTQ"/>
+<div class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-1 rounded-full shadow-sm">
+                        Haberler
+                    </div>
+</div>
+<div class="p-stack-md">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Millet Bahçesi 2. Etap Açıldı</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Şehrimizin yeşil dokusunu güçlendiren Millet Bahçesi'nin 2. etabı vatandaşlarımızın hizmetine sunuldu.</p>
+</div>
+</div>
+<!-- Alert Card -->
+<div class="bg-error-container border-l-4 border-error-vibrant rounded-xl p-stack-md shadow-sm flex items-start gap-3 scale-98 transition-transform active:opacity-90 cursor-pointer">
+<span class="material-symbols-outlined text-error-vibrant mt-1" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-error-container mb-1">Planlı Su Kesintisi Duyurusu</h4>
+<p class="font-body-sm text-body-sm text-on-error-container/80">Altyapı yenileme çalışmaları nedeniyle yarın 10:00 - 14:00 arası merkez mahallelerde su kesintisi yaşanacaktır.</p>
+</div>
+</div>
+<!-- Filler for bottom nav padding -->
+<div class="h-4"></div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-40 bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-md pb-safe">
+<div class="flex justify-around items-center h-component-height-lg bg-surface dark:bg-inverse-surface border-t border-outline-variant/20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold scale-98 transition-transform duration-150 hover:bg-surface-container-highest rounded-lg px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Ana Sayfa</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/40 scale-98 transition-transform duration-150 hover:bg-surface-container-highest rounded-lg px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">sports_soccer</span>
+<span class="font-label-sm text-label-sm">Düzcespor</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/40 scale-98 transition-transform duration-150 hover:bg-surface-container-highest rounded-lg px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">medical_services</span>
+<span class="font-label-sm text-label-sm">Eczane</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/40 scale-98 transition-transform duration-150 hover:bg-surface-container-highest rounded-lg px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">support_agent</span>
+<span class="font-label-sm text-label-sm">Beyaz Masa</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/40 scale-98 transition-transform duration-150 hover:bg-surface-container-highest rounded-lg px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label-sm text-label-sm">Profil</span>
+</a>
+</div>
+</nav>
+<!-- Onboarding Modal Overlay -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-ink-base/40 backdrop-blur-sm px-container-margin" id="onboarding-modal">
+<div class="bg-surface rounded-[24px] shadow-lg w-full max-w-[340px] p-stack-lg flex flex-col items-center text-center transform transition-all scale-100">
+<!-- Graphic/Icon -->
+<div class="w-20 h-20 bg-primary-fixed rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-[40px]" style="font-variation-settings: 'FILL' 1;">touch_app</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold mb-3">Şehriniz Cebinizde!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 px-2">E-Belediye ile işlemlerinizi saniyeler içinde halledin.</p>
+<!-- Dots -->
+<div class="flex gap-2 mb-8">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+<!-- Button -->
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg h-[56px] rounded-xl flex items-center justify-center shadow-sm hover:-translate-y-0.5 hover:shadow-md active:scale-98 transition-all duration-200" onclick="document.getElementById('onboarding-modal').classList.add('hidden-anim'); setTimeout(()=&gt;document.getElementById('onboarding-modal').remove(), 300)">
+                Hemen Başla
+            </button>
+</div>
+</div>
+</body></html>

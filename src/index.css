@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-subtle;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0;
+  }
+
+  .material-symbols-outlined.icon-filled {
+    font-variation-settings: "FILL" 1;
+  }
+}
+
+@layer utilities {
+  .hide-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scale-98:active {
+    transform: scale(0.98);
+  }
+}
