@@ -23,10 +23,13 @@ const CATEGORY_META: Record<InfrastructureCategory, { label: string; icon: strin
   otopark: { label: "Otoparklar", icon: "local_parking" },
 };
 
-export function InfrastructureDirectory({ locations }: InfrastructureDirectoryProps) {
-  const [selectedDistrict, setSelectedDistrict] = useState<District>("Merkez");
+type DistrictFilter = District | "all";
 
-  const filteredLocations = locations.filter((location) => location.district === selectedDistrict);
+export function InfrastructureDirectory({ locations }: InfrastructureDirectoryProps) {
+  const [selectedDistrict, setSelectedDistrict] = useState<DistrictFilter>("all");
+
+  const filteredLocations =
+    selectedDistrict === "all" ? locations : locations.filter((location) => location.district === selectedDistrict);
 
   return (
     <div className="flex flex-col gap-stack-md">
@@ -35,9 +38,10 @@ export function InfrastructureDirectory({ locations }: InfrastructureDirectoryPr
         <div className="relative">
           <select
             value={selectedDistrict}
-            onChange={(event) => setSelectedDistrict(event.target.value as District)}
+            onChange={(event) => setSelectedDistrict(event.target.value as DistrictFilter)}
             className="w-full appearance-none rounded-xl border border-outline-variant/50 bg-background-subtle px-4 py-3 font-body-md text-body-md text-on-surface transition-all focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50"
           >
+            <option value="all">Tümü</option>
             {DISTRICTS.map((district) => (
               <option key={district} value={district}>
                 {district}
