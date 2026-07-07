@@ -52,7 +52,7 @@ export interface BungalowFacility {
   availabilityStatus: boolean;
 }
 
-export type InfrastructureCategory = "hastane" | "taksi" | "otopark";
+export type InfrastructureCategory = "hastane" | "taksi" | "otopark" | "muhtarlik";
 
 export type District =
   | "Merkez"
@@ -75,6 +75,14 @@ export interface InfrastructureLocation {
   coordinates: GeoCoordinates;
 }
 
+export interface CulturalEvent {
+  id: string;
+  title: string;
+  category: string;
+  date: string;
+  location: string;
+}
+
 export interface CityGuideData {
   emergencyNumbers: EmergencyNumber[];
   directory: DirectoryEntry[];
@@ -82,6 +90,7 @@ export interface CityGuideData {
   destinations: Destination[];
   bungalows: BungalowFacility[];
   infrastructure: InfrastructureLocation[];
+  culturalEvents: CulturalEvent[];
 }
 
 export type KentRehberiTab = "corporate" | "tourism" | "infrastructure";

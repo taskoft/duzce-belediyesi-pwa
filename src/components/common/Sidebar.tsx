@@ -3,33 +3,26 @@ import { NavLink } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
 import { PrayerTimesTicker } from "@/components/common/PrayerTimesTicker";
 import { ExchangeRateTicker } from "@/components/common/ExchangeRateTicker";
+import { LegalInfoModal } from "@/components/common/LegalInfoModal";
 import { useSidebar } from "@/hooks/useSidebar";
-
-interface SidebarLink {
-  id: string;
-  label: string;
-  path: string;
-  icon: string;
-}
-
-const SIDEBAR_LINKS: SidebarLink[] = [
-  { id: "home", label: "Ana Sayfa", path: "/", icon: "home" },
-  { id: "belediye", label: "Belediye", path: "/belediye", icon: "account_balance" },
-  { id: "e-belediye", label: "E-Belediye", path: "/e-belediye", icon: "laptop_mac" },
-  { id: "kent-rehberi", label: "Kent Rehberi", path: "/kent-rehberi", icon: "map" },
-  { id: "projeler", label: "Projeler", path: "/projeler", icon: "architecture" },
-  { id: "ulasim", label: "Ulaşım", path: "/ulasim", icon: "directions_bus" },
-  { id: "sosyal-hizmetler", label: "Sosyal Hizmetler", path: "/sosyal-hizmetler", icon: "volunteer_activism" },
-  { id: "beyaz-masa", label: "Beyaz Masa", path: "/beyaz-masa", icon: "edit_document" },
-  { id: "duzcespor", label: "Düzcespor", path: "/duzcespor", icon: "sports_soccer" },
-  { id: "eczane", label: "Eczane", path: "/eczane", icon: "medical_services" },
-  { id: "acil", label: "Acil Durum", path: "/acil", icon: "emergency" },
-  { id: "profil", label: "Profil", path: "/profil", icon: "person" },
-];
+import { useModal } from "@/hooks/useModal";
+import { NAVIGATION_LINKS } from "@/data/navigationLinks";
+import { PRIVACY_POLICY_TEXT, TERMS_OF_USE_TEXT } from "@/data/legalContent";
 
 export function Sidebar() {
   const { isOpen, close } = useSidebar();
+  const { open: openModal, close: closeModal } = useModal();
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  const openPrivacyPolicy = () => {
+    close();
+    openModal(<LegalInfoModal title="Gizlilik Politikası" content={PRIVACY_POLICY_TEXT} onClose={closeModal} />);
+  };
+
+  const openTermsOfUse = () => {
+    close();
+    openModal(<LegalInfoModal title="Kullanım Şartları" content={TERMS_OF_USE_TEXT} onClose={closeModal} />);
+  };
 
   useEffect(() => {
     if (!isOpen) {
@@ -85,7 +78,7 @@ export function Sidebar() {
         </div>
 
         <div className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
-          {SIDEBAR_LINKS.map((link) => (
+          {NAVIGATION_LINKS.map((link) => (
             <NavLink
               key={link.id}
               to={link.path}
@@ -107,6 +100,23 @@ export function Sidebar() {
               )}
             </NavLink>
           ))}
+        </div>
+
+        <div className="flex shrink-0 items-center justify-center gap-4 border-t border-outline-variant/20 px-3 py-3">
+          <button
+            type="button"
+            onClick={openPrivacyPolicy}
+            className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary"
+          >
+            Gizlilik Politikası
+          </button>
+          <button
+            type="button"
+            onClick={openTermsOfUse}
+            className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary"
+          >
+            Kullanım Şartları
+          </button>
         </div>
 
         <div className="shrink-0 overflow-y-auto pb-safe">

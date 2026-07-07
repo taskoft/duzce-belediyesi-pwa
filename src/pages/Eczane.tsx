@@ -5,6 +5,7 @@ import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { PharmacyHeader } from "@/components/eczane/PharmacyHeader";
 import { PharmacyCardList } from "@/components/eczane/PharmacyCardList";
+import { WeeklyDutySchedule } from "@/components/eczane/WeeklyDutySchedule";
 import { useAsyncData } from "@/hooks/useAsyncData";
 import eczaneDataFallback from "@/data/eczaneData.json";
 import type { EczaneData } from "@/types/eczane";
@@ -35,7 +36,14 @@ export function Eczane() {
           onSearchChange={setSearchTerm}
           resultCount={filteredPharmacies.length}
         />
-        {isLoading ? <PageLoader /> : <PharmacyCardList pharmacies={filteredPharmacies} />}
+        {isLoading ? (
+          <PageLoader />
+        ) : (
+          <>
+            <WeeklyDutySchedule schedule={eczaneData.dutySchedule} />
+            <PharmacyCardList pharmacies={filteredPharmacies} />
+          </>
+        )}
       </main>
 
       <BottomNav />

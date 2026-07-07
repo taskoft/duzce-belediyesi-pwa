@@ -21,6 +21,7 @@ const CATEGORY_META: Record<InfrastructureCategory, { label: string; icon: strin
   hastane: { label: "Hastaneler", icon: "local_hospital" },
   taksi: { label: "Taksi Durakları", icon: "local_taxi" },
   otopark: { label: "Otoparklar", icon: "local_parking" },
+  muhtarlik: { label: "Muhtarlıklar", icon: "badge" },
 };
 
 type DistrictFilter = District | "all";

@@ -1,0 +1,5 @@
+[
+  { "id": "odeme-1", "title": "Çevre Temizlik Vergisi", "amount": 240, "date": "15.03.2026" },
+  { "id": "odeme-2", "title": "E-İmar Belge Ücreti", "amount": 150, "date": "20.01.2026" },
+  { "id": "odeme-3", "title": "Emlak Vergisi (1. Taksit)", "amount": 480, "date": "10.11.2025" }
+]

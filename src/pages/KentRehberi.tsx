@@ -66,7 +66,11 @@ export function KentRehberi() {
               </>
             )}
             {activeTab === "tourism" && (
-              <TourismGrid destinations={cityGuideData.destinations} bungalows={cityGuideData.bungalows} />
+              <TourismGrid
+                destinations={cityGuideData.destinations}
+                bungalows={cityGuideData.bungalows}
+                culturalEvents={cityGuideData.culturalEvents}
+              />
             )}
             {activeTab === "infrastructure" && (
               <InfrastructureDirectory locations={cityGuideData.infrastructure} />

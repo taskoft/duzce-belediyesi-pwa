@@ -1,0 +1,5 @@
+[
+  { "id": "elektrik", "label": "Elektrik Faturası", "icon": "bolt", "phone": "0380 524 70 70" },
+  { "id": "su", "label": "Su Faturası (DÜSKİ)", "icon": "water_drop", "phone": "0380 524 80 80" },
+  { "id": "dogalgaz", "label": "Doğalgaz Faturası", "icon": "local_fire_department", "phone": "0380 524 90 90" }
+]

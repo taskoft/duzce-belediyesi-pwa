@@ -8,3 +8,17 @@ export interface MunicipalInvoice {
 }
 
 export type PaymentStatus = "idle" | "processing" | "success";
+
+export interface PaymentHistoryEntry {
+  id: string;
+  title: string;
+  amount: number;
+  date: string;
+}
+
+export interface QuickPaymentLink {
+  id: string;
+  label: string;
+  icon: string;
+  phone: string;
+}

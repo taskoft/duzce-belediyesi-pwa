@@ -4,7 +4,11 @@ import { DebtInquiryForm } from "@/components/ebelediye/DebtInquiryForm";
 import { InvoiceList } from "@/components/ebelediye/InvoiceList";
 import { CheckoutBar } from "@/components/ebelediye/CheckoutBar";
 import { PaymentGateway } from "@/components/ebelediye/PaymentGateway";
+import { QuickPaymentLinks } from "@/components/ebelediye/QuickPaymentLinks";
+import { PaymentHistoryList } from "@/components/ebelediye/PaymentHistoryList";
 import { useEBelediyeForm } from "@/hooks/useEBelediyeForm";
+import quickPaymentLinksData from "@/data/quickPaymentLinksData.json";
+import paymentHistoryData from "@/data/paymentHistoryData.json";
 
 export function EBelediye() {
   const form = useEBelediyeForm();
@@ -28,6 +32,8 @@ export function EBelediye() {
           hasQueried={form.hasQueried}
           isQuerying={form.isQuerying}
         />
+        <QuickPaymentLinks links={quickPaymentLinksData} />
+        <PaymentHistoryList entries={paymentHistoryData} />
       </main>
 
       <CheckoutBar total={form.selectedTotal} isVisible={form.invoices.length > 0} onCheckout={form.openPayment} />

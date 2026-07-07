@@ -1,10 +1,12 @@
 import { Header } from "@/components/common/Header";
 import { ProfileLink } from "@/components/common/ProfileLink";
 import { PageLoader } from "@/components/common/PageLoader";
+import { FaqAccordion } from "@/components/common/FaqAccordion";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { ComplaintForm } from "@/components/beyazMasa/ComplaintForm";
 import { ComplaintTracker } from "@/components/beyazMasa/ComplaintTracker";
 import { useBeyazMasaForm } from "@/hooks/useBeyazMasaForm";
+import beyazMasaFaqData from "@/data/beyazMasaFaqData.json";
 
 export function BeyazMasa() {
   const form = useBeyazMasaForm();
@@ -45,6 +47,11 @@ export function BeyazMasa() {
               trackedResult={form.trackedResult}
               onTrack={form.trackComplaint}
             />
+
+            <div className="flex flex-col gap-stack-sm">
+              <h3 className="font-headline-md text-headline-md text-on-surface">Sık Sorulan Sorular</h3>
+              <FaqAccordion items={beyazMasaFaqData} />
+            </div>
           </>
         )}
 

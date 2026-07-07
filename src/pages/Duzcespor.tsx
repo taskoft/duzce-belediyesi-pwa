@@ -5,6 +5,8 @@ import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { StandingsTable } from "@/components/duzcespor/StandingsTable";
 import { MatchSchedule } from "@/components/duzcespor/MatchSchedule";
+import { TeamRoster } from "@/components/duzcespor/TeamRoster";
+import { StadiumInfoCard } from "@/components/duzcespor/StadiumInfoCard";
 import { useAsyncData } from "@/hooks/useAsyncData";
 import duzcesporDataFallback from "@/data/duzcesporData.json";
 import type { DuzcesporData } from "@/types/duzcespor";
@@ -33,6 +35,8 @@ export function Duzcespor() {
             <div className="pointer-events-none absolute right-0 top-0 -z-10 h-32 w-32 rounded-bl-full bg-[#DC2626]/5" />
             <MatchSchedule nextMatch={duzcesporData.nextMatch} matchHistory={duzcesporData.matchHistory} />
             <StandingsTable standings={duzcesporData.standings} />
+            <StadiumInfoCard stadium={duzcesporData.stadium} />
+            <TeamRoster players={duzcesporData.roster} />
           </div>
         )}
 

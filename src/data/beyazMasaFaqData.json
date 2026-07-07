@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faq-sure",
+    "question": "Talebim ne kadar sürede sonuçlanır?",
+    "answer": "Talepler kategoriye göre değişmekle birlikte ortalama 3-7 iş günü içinde ilgili müdürlük tarafından değerlendirilip sonuçlandırılır."
+  },
+  {
+    "id": "faq-takip",
+    "question": "Başvurumu nasıl takip edebilirim?",
+    "answer": "Talep oluşturduğunuzda size verilen takip numarasını bu sayfadaki \"Başvuru Sorgula\" alanına girerek başvurunuzun anlık durumunu görebilirsiniz."
+  },
+  {
+    "id": "faq-anonim",
+    "question": "Talebimi anonim olarak iletebilir miyim?",
+    "answer": "Şikayet ve talepler kimlik bilgisi paylaşılmadan iletilebilir; ancak geri bildirim alabilmeniz için iletişim bilgisi eklemeniz önerilir."
+  },
+  {
+    "id": "faq-dosya",
+    "question": "Talebime fotoğraf veya belge ekleyebilir miyim?",
+    "answer": "Evet, formda \"Fotoğraf/Belge Ekle\" alanından en fazla 5MB boyutunda görsel veya belge yükleyebilirsiniz."
+  }
+]

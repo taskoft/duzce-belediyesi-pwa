@@ -15,6 +15,7 @@ import { Profil } from "@/pages/Profil";
 import { Belediye } from "@/pages/Belediye";
 import { AcilDurum } from "@/pages/AcilDurum";
 import { Eczane } from "@/pages/Eczane";
+import { Favorilerim } from "@/pages/Favorilerim";
 
 export function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ export function App() {
           <Route path="/belediye" element={<Belediye />} />
           <Route path="/acil" element={<AcilDurum />} />
           <Route path="/eczane" element={<Eczane />} />
+          <Route path="/favorilerim" element={<Favorilerim />} />
         </Routes>
       </div>
       <Modal />

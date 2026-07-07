@@ -1,0 +1,12 @@
+[
+  { "id": "su", "label": "Kişi başı en az 3 günlük su" },
+  { "id": "kuru-gida", "label": "Kuru gıda ve konserve yiyecek" },
+  { "id": "ilk-yardim", "label": "İlk yardım çantası" },
+  { "id": "el-feneri", "label": "El feneri ve yedek pil" },
+  { "id": "duduk", "label": "Düdük" },
+  { "id": "belgeler", "label": "Kimlik ve tapu gibi belgelerin fotokopisi" },
+  { "id": "powerbank", "label": "Powerbank / şarj cihazı" },
+  { "id": "nakit", "label": "Nakit para" },
+  { "id": "giysi", "label": "Kalın giysi ve battaniye" },
+  { "id": "radyo", "label": "Pilli radyo" }
+]

@@ -1,4 +1,4 @@
-import { createContext, useCallback, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 
 export type ToastStatus = "success" | "error" | "info";
 
@@ -17,6 +17,8 @@ interface SidebarState {
   isOpen: boolean;
 }
 
+const TEXT_SCALE_STORAGE_KEY = "duzce-pwa:large-text";
+
 interface UIContextValue {
   toast: ToastState;
   showToast: (message: string, status?: ToastStatus) => void;
@@ -28,6 +30,8 @@ interface UIContextValue {
   showSidebar: () => void;
   hideSidebar: () => void;
   toggleSidebar: () => void;
+  isLargeText: boolean;
+  toggleTextScale: () => void;
 }
 
 const TOAST_AUTO_HIDE_MS = 3200;
@@ -53,6 +57,17 @@ export function UIProvider({ children }: { children: ReactNode }) {
   const [toast, setToast] = useState<ToastState>(initialToastState);
   const [modal, setModal] = useState<ModalState>(initialModalState);
   const [sidebar, setSidebar] = useState<SidebarState>(initialSidebarState);
+  const [isLargeText, setIsLargeText] = useState<boolean>(
+    () => window.localStorage.getItem(TEXT_SCALE_STORAGE_KEY) === "true",
+  );
+
+  useEffect(() => {
+    window.localStorage.setItem(TEXT_SCALE_STORAGE_KEY, String(isLargeText));
+  }, [isLargeText]);
+
+  const toggleTextScale = useCallback(() => {
+    setIsLargeText((prev) => !prev);
+  }, []);
 
   const hideToast = useCallback(() => {
     setToast((prev) => ({ ...prev, isOpen: false }));
@@ -98,8 +113,23 @@ export function UIProvider({ children }: { children: ReactNode }) {
       showSidebar,
       hideSidebar,
       toggleSidebar,
+      isLargeText,
+      toggleTextScale,
     }),
-    [toast, showToast, hideToast, modal, showModal, hideModal, sidebar, showSidebar, hideSidebar, toggleSidebar],
+    [
+      toast,
+      showToast,
+      hideToast,
+      modal,
+      showModal,
+      hideModal,
+      sidebar,
+      showSidebar,
+      hideSidebar,
+      toggleSidebar,
+      isLargeText,
+      toggleTextScale,
+    ],
   );
 
   return <UIContext.Provider value={value}>{children}</UIContext.Provider>;

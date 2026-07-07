@@ -1,15 +1,17 @@
 import { TourismCard } from "@/components/kentRehberi/TourismCard";
 import { BungalowBookingWidget } from "@/components/kentRehberi/BungalowBookingWidget";
+import { CulturalEventsList } from "@/components/kentRehberi/CulturalEventsList";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useModal } from "@/hooks/useModal";
-import type { BungalowFacility, Destination } from "@/types/cityGuide";
+import type { BungalowFacility, CulturalEvent, Destination } from "@/types/cityGuide";
 
 interface TourismGridProps {
   destinations: Destination[];
   bungalows: BungalowFacility[];
+  culturalEvents: CulturalEvent[];
 }
 
-export function TourismGrid({ destinations, bungalows }: TourismGridProps) {
+export function TourismGrid({ destinations, bungalows, culturalEvents }: TourismGridProps) {
   const { isFavorite, toggleFavorite } = useFavorites();
   const { open, close } = useModal();
 
@@ -67,6 +69,8 @@ export function TourismGrid({ destinations, bungalows }: TourismGridProps) {
           ))}
         </div>
       </section>
+
+      <CulturalEventsList events={culturalEvents} />
     </div>
   );
 }

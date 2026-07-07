@@ -63,5 +63,14 @@
       "lat": 40.8462,
       "lng": 31.1723
     }
+  ],
+  "dutySchedule": [
+    { "day": "Pazartesi", "pharmacyName": "Merkez Eczanesi" },
+    { "day": "Salı", "pharmacyName": "Şifa Eczanesi" },
+    { "day": "Çarşamba", "pharmacyName": "Yıldız Eczanesi" },
+    { "day": "Perşembe", "pharmacyName": "Güven Eczanesi" },
+    { "day": "Cuma", "pharmacyName": "Konuralp Eczanesi" },
+    { "day": "Cumartesi", "pharmacyName": "Anıtpark Eczanesi" },
+    { "day": "Pazar", "pharmacyName": "Kalıcı Konutlar Eczanesi" }
   ]
 }

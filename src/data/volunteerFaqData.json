@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faq-basvuru",
+    "question": "Gönüllü olmak için nasıl başvurabilirim?",
+    "answer": "Bu sayfadaki gönüllülük fırsatlarından size uygun olanı seçip \"Başvur\" butonuna tıklamanız yeterlidir. Başvurunuz alındıktan sonra ilgili birim sizinle iletişime geçecektir."
+  },
+  {
+    "id": "faq-yas-siniri",
+    "question": "Gönüllülük için yaş sınırı var mı?",
+    "answer": "Çoğu program 18 yaş ve üzeri gönüllüleri kabul eder. Öğrenci gönüllülük programlarında veli izniyle 15 yaşından itibaren katılım sağlanabilir."
+  },
+  {
+    "id": "faq-belge",
+    "question": "Gönüllülük sonunda belge alabilir miyim?",
+    "answer": "Evet, tamamlanan gönüllülük faaliyetleri için Düzce Belediyesi onaylı katılım belgesi düzenlenmektedir."
+  },
+  {
+    "id": "faq-birden-fazla",
+    "question": "Aynı anda birden fazla programa katılabilir miyim?",
+    "answer": "Evet, zaman çizelgeniz uygun olduğu sürece birden fazla gönüllülük programına aynı anda başvurabilirsiniz."
+  }
+]

@@ -19,3 +19,8 @@ export interface AcilDurumData {
   hotlines: EmergencyHotline[];
   filterChips: string[];
 }
+
+export interface ChecklistItem {
+  id: string;
+  label: string;
+}

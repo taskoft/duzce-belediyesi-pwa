@@ -1,0 +1,5 @@
+export const PRIVACY_POLICY_TEXT =
+  "Düzce Belediyesi olarak kişisel verilerinizin güvenliğine önem veriyoruz. Uygulama üzerinden topladığımız ad, T.C. kimlik numarası ve iletişim bilgileri yalnızca talep ettiğiniz belediye hizmetlerini sunmak amacıyla işlenir ve 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında üçüncü taraflarla paylaşılmaz. Verileriniz, yasal saklama süreleri boyunca güvenli sunucularda muhafaza edilir. Kişisel verilerinizin işlenmesine ilişkin haklarınızı kullanmak için Beyaz Masa üzerinden bizimle iletişime geçebilirsiniz.";
+
+export const TERMS_OF_USE_TEXT =
+  "Bu uygulamayı kullanarak Düzce Belediyesi tarafından sunulan dijital hizmetlerden faydalanmayı, güncel ve doğru bilgi paylaşmayı kabul etmiş sayılırsınız. Uygulama içerisindeki ödeme, başvuru ve bildirim işlemleri belediyemizin resmi süreçleriyle uyumlu şekilde yürütülür. Uygulamanın kötüye kullanımı, sahte bilgi girişi veya sistemin işleyişini bozacak eylemler tespit edildiğinde ilgili hesap ve işlemler askıya alınabilir. Hizmet kapsamı ve içerikler önceden haber verilmeksizin güncellenebilir.";

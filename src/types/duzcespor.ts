@@ -25,8 +25,27 @@ export interface MatchHistoryEntry {
   date: string;
 }
 
+export type PlayerPosition = "Kaleci" | "Defans" | "Orta Saha" | "Forvet";
+
+export interface Player {
+  id: string;
+  name: string;
+  number: number;
+  position: PlayerPosition;
+}
+
+export interface StadiumInfo {
+  name: string;
+  address: string;
+  capacity: string;
+  ticketInfo: string;
+  phone: string;
+}
+
 export interface DuzcesporData {
   standings: StandingsRow[];
   nextMatch: NextMatch;
   matchHistory: MatchHistoryEntry[];
+  roster: Player[];
+  stadium: StadiumInfo;
 }

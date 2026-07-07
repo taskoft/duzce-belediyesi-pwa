@@ -355,6 +355,116 @@
       "address": "Merkez Mah., Hükümet Cad., Yığılca, Düzce",
       "phone": "0380 471 16 05",
       "coordinates": { "lat": 40.9092, "lng": 31.3897 }
+    },
+    {
+      "id": "muhtarlik-merkez-cedidiye",
+      "name": "Cedidiye Mahallesi Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Merkez",
+      "openingHours": "09:00 - 17:00",
+      "address": "Cedidiye Mah. Muhtarlık Binası, Düzce",
+      "phone": "0380 524 10 10",
+      "coordinates": { "lat": 40.8378, "lng": 31.1611 }
+    },
+    {
+      "id": "muhtarlik-akcakoca-yali",
+      "name": "Yalı Mahallesi Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Akçakoca",
+      "openingHours": "09:00 - 17:00",
+      "address": "Yalı Mah. Muhtarlık Binası, Akçakoca, Düzce",
+      "phone": "0380 611 10 10",
+      "coordinates": { "lat": 41.0847, "lng": 31.1194 }
+    },
+    {
+      "id": "muhtarlik-golyaka-cumhuriyet",
+      "name": "Cumhuriyet Mahallesi Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Gölyaka",
+      "openingHours": "09:00 - 17:00",
+      "address": "Cumhuriyet Mah. Muhtarlık Binası, Gölyaka, Düzce",
+      "phone": "0380 411 10 10",
+      "coordinates": { "lat": 40.7735, "lng": 30.9962 }
+    },
+    {
+      "id": "muhtarlik-cumayeri-merkez",
+      "name": "Merkez Mahallesi Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Cumayeri",
+      "openingHours": "09:00 - 17:00",
+      "address": "Merkez Mah. Muhtarlık Binası, Cumayeri, Düzce",
+      "phone": "0380 741 10 10",
+      "coordinates": { "lat": 40.8508, "lng": 30.8709 }
+    },
+    {
+      "id": "muhtarlik-cilimli-merkez",
+      "name": "Merkez Mahallesi Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Çilimli",
+      "openingHours": "09:00 - 17:00",
+      "address": "Merkez Mah. Muhtarlık Binası, Çilimli, Düzce",
+      "phone": "0380 731 10 10",
+      "coordinates": { "lat": 40.9269, "lng": 31.0459 }
+    },
+    {
+      "id": "muhtarlik-gumusova-yeni",
+      "name": "Yeni Mahalle Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Gümüşova",
+      "openingHours": "09:00 - 17:00",
+      "address": "Yeni Mah. Muhtarlık Binası, Gümüşova, Düzce",
+      "phone": "0380 761 10 10",
+      "coordinates": { "lat": 40.859, "lng": 30.931 }
+    },
+    {
+      "id": "muhtarlik-kaynasli-merkez",
+      "name": "Merkez Mahallesi Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Kaynaşlı",
+      "openingHours": "09:00 - 17:00",
+      "address": "Merkez Mah. Muhtarlık Binası, Kaynaşlı, Düzce",
+      "phone": "0380 511 10 10",
+      "coordinates": { "lat": 40.7975, "lng": 31.3183 }
+    },
+    {
+      "id": "muhtarlik-yigilca-merkez",
+      "name": "Merkez Mahallesi Muhtarlığı",
+      "category": "muhtarlik",
+      "district": "Yığılca",
+      "openingHours": "09:00 - 17:00",
+      "address": "Merkez Mah. Muhtarlık Binası, Yığılca, Düzce",
+      "phone": "0380 471 10 10",
+      "coordinates": { "lat": 40.9089, "lng": 31.3903 }
+    }
+  ],
+  "culturalEvents": [
+    {
+      "id": "etkinlik-1",
+      "title": "Düzce Kültür Sanat Festivali",
+      "category": "Festival",
+      "date": "12-14 Eylül 2026",
+      "location": "Millet Bahçesi Amfitiyatro"
+    },
+    {
+      "id": "etkinlik-2",
+      "title": "Anadolu Ateşi Gösterisi",
+      "category": "Sahne Sanatları",
+      "date": "20 Eylül 2026, 20:00",
+      "location": "Düzce Kültür Merkezi"
+    },
+    {
+      "id": "etkinlik-3",
+      "title": "Geleneksel El Sanatları Sergisi",
+      "category": "Sergi",
+      "date": "1-10 Ekim 2026",
+      "location": "Şehir Kütüphanesi Sergi Salonu"
+    },
+    {
+      "id": "etkinlik-4",
+      "title": "Konuralp Antik Kent Tiyatro Günleri",
+      "category": "Tiyatro",
+      "date": "18 Ekim 2026, 19:30",
+      "location": "Konuralp Antik Tiyatrosu"
     }
   ]
 }

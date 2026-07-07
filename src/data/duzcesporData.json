@@ -23,5 +23,27 @@
     { "id": "m3", "opponent": "Kırşehir FSK", "result": "1-2", "outcome": "loss", "date": "2026-06-01" },
     { "id": "m4", "opponent": "Iğdır FK", "result": "3-1", "outcome": "win", "date": "2026-05-25" },
     { "id": "m5", "opponent": "Amed SK", "result": "1-1", "outcome": "draw", "date": "2026-05-18" }
-  ]
+  ],
+  "roster": [
+    { "id": "p1", "name": "Serkan Kırıntılı", "number": 1, "position": "Kaleci" },
+    { "id": "p2", "name": "Emre Duman", "number": 12, "position": "Kaleci" },
+    { "id": "p3", "name": "Barış Yardımcı", "number": 4, "position": "Defans" },
+    { "id": "p4", "name": "Okan Kavlak", "number": 5, "position": "Defans" },
+    { "id": "p5", "name": "Yusuf Çakır", "number": 15, "position": "Defans" },
+    { "id": "p6", "name": "Tolga Sezer", "number": 23, "position": "Defans" },
+    { "id": "p7", "name": "Mert Aydemir", "number": 6, "position": "Orta Saha" },
+    { "id": "p8", "name": "Kaan Uysal", "number": 8, "position": "Orta Saha" },
+    { "id": "p9", "name": "Burak Şener", "number": 10, "position": "Orta Saha" },
+    { "id": "p10", "name": "Emirhan Koç", "number": 17, "position": "Orta Saha" },
+    { "id": "p11", "name": "Onur Baştürk", "number": 9, "position": "Forvet" },
+    { "id": "p12", "name": "Alper Gündoğan", "number": 11, "position": "Forvet" },
+    { "id": "p13", "name": "Deniz Aktaş", "number": 19, "position": "Forvet" }
+  ],
+  "stadium": {
+    "name": "Düzce Anadolu Stadyumu",
+    "address": "Fevzi Çakmak Mah., Stadyum Cad., Düzce",
+    "capacity": "7.400 Kişi",
+    "ticketInfo": "Maç günü stadyum gişelerinden veya Passolig üzerinden bilet temin edilebilir.",
+    "phone": "0380 524 65 65"
+  }
 }

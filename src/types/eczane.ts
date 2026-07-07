@@ -8,6 +8,12 @@ export interface Pharmacy {
   lng: number;
 }
 
+export interface DutyScheduleEntry {
+  day: string;
+  pharmacyName: string;
+}
+
 export interface EczaneData {
   pharmacies: Pharmacy[];
+  dutySchedule: DutyScheduleEntry[];
 }
