@@ -40,17 +40,17 @@ export function EmergencyHotlines({ hotlines, nearestPoint }: EmergencyHotlinesP
             </div>
           </a>
         )}
-        <div className="flex gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {rest.map((hotline) => (
             <a
               key={hotline.id}
               href={`tel:${hotline.phone}`}
-              className="scale-98 flex flex-1 flex-col items-center justify-center rounded-2xl border border-primary-container/20 bg-primary-container/10 p-4 transition-all"
+              className="scale-98 flex flex-col items-center justify-center rounded-2xl border border-primary-container/20 bg-primary-container/10 p-3 text-center transition-all"
             >
               <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary-container text-on-primary-container">
                 <Icon name="support_agent" filled className="text-[20px]" />
               </div>
-              <h3 className="font-label-lg text-label-lg text-primary-container">{hotline.label}</h3>
+              <h3 className="font-label-sm text-label-sm leading-tight text-primary-container">{hotline.label}</h3>
             </a>
           ))}
         </div>

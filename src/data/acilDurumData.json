@@ -2,13 +2,19 @@
   "assemblyPoints": [
     { "id": "ap-1", "name": "Kültür Park", "lat": 40.837, "lng": 31.16, "distanceLabel": "450m" },
     { "id": "ap-2", "name": "Anıtpark Toplanma Alanı", "lat": 40.8395, "lng": 31.1595, "distanceLabel": "900m" },
-    { "id": "ap-3", "name": "Cedidiye Meydanı", "lat": 40.841, "lng": 31.165, "distanceLabel": "1.4km" }
+    { "id": "ap-3", "name": "Cedidiye Meydanı", "lat": 40.841, "lng": 31.165, "distanceLabel": "1.4km" },
+    { "id": "ap-4", "name": "Millet Bahçesi Toplanma Alanı", "lat": 40.8438, "lng": 31.1565, "distanceLabel": "1.8km" },
+    { "id": "ap-5", "name": "Kalıcı Konutlar Toplanma Alanı", "lat": 40.8462, "lng": 31.1723, "distanceLabel": "2.6km" },
+    { "id": "ap-6", "name": "Şehir Stadyumu Toplanma Alanı", "lat": 40.8341, "lng": 31.1687, "distanceLabel": "3.1km" }
   ],
   "nearestAssemblyPointId": "ap-1",
   "hotlines": [
     { "id": "112", "label": "112 Acil Çağrı Merkezi", "sublabel": "Sağlık, Polis, Jandarma", "phone": "112" },
     { "id": "110", "label": "110 İtfaiye", "phone": "110" },
-    { "id": "153", "label": "153 Beyaz Masa", "phone": "153" }
+    { "id": "153", "label": "153 Beyaz Masa", "phone": "153" },
+    { "id": "122", "label": "122 AFAD", "phone": "122" },
+    { "id": "su-ariza", "label": "DÜSKİ Su Arıza Hattı", "phone": "0380 524 80 80" },
+    { "id": "183", "label": "183 Kadın ve Aile Destek Hattı", "phone": "183" }
   ],
   "filterChips": ["Afet Toplanma Alanları", "Güvenli Rotalar", "Eczaneler"]
 }

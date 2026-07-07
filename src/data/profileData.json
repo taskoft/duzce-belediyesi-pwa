@@ -12,6 +12,9 @@
   "workflowHistory": [
     { "id": "wf-1", "title": "E-Belediye Ödemesi", "detail": "Çevre Temizlik Vergisi ödendi", "date": "2026-06-20" },
     { "id": "wf-2", "title": "Beyaz Masa Talebi", "detail": "#DX-1984 çözüldü olarak işaretlendi", "date": "2026-06-10" },
-    { "id": "wf-3", "title": "Gönüllülük Başvurusu", "detail": "Ders Desteği programına katıldı", "date": "2026-05-28" }
+    { "id": "wf-3", "title": "Gönüllülük Başvurusu", "detail": "Ders Desteği programına katıldı", "date": "2026-05-28" },
+    { "id": "wf-4", "title": "Ulaşım Kartı Yüklemesi", "detail": "Düzce Kart'a 50 TL bakiye yüklendi", "date": "2026-05-20" },
+    { "id": "wf-5", "title": "Askıda Fatura Ödemesi", "detail": "Merkez Mah. su faturası dayanışma kapsamında ödendi", "date": "2026-05-12" },
+    { "id": "wf-6", "title": "Kent Rehberi Favorisi", "detail": "Güzeldere Şelalesi favorilere eklendi", "date": "2026-04-30" }
   ]
 }

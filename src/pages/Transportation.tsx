@@ -4,6 +4,7 @@ import { Icon } from "@/components/common/Icon";
 import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { TransitTabs } from "@/components/transportation/TransitTabs";
+import { BusLineSelector } from "@/components/transportation/BusLineSelector";
 import { LiveBusMap } from "@/components/transportation/LiveBusMap";
 import { CardBalanceWidget } from "@/components/transportation/CardBalanceWidget";
 import { RoutePlanner } from "@/components/transportation/RoutePlanner";
@@ -37,6 +38,11 @@ export function Transportation() {
           <>
             {transportation.activeTab === "bus" && transportation.activeLine ? (
               <>
+                <BusLineSelector
+                  lines={transportation.busLines}
+                  activeLineId={transportation.activeLineId}
+                  onSelect={transportation.setActiveLineId}
+                />
                 <LiveBusMap line={transportation.activeLine} progress={transportation.routeProgress} />
                 <div className="px-container-margin py-stack-md">
                   <div className="flex items-center gap-2 rounded-xl border border-outline-variant/20 bg-surface-container-low p-3">

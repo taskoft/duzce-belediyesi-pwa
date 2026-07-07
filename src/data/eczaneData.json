@@ -35,6 +35,33 @@
       "phone": "0380 524 44 44",
       "lat": 40.8462,
       "lng": 31.1723
+    },
+    {
+      "id": "eczane-5",
+      "name": "Konuralp Eczanesi",
+      "address": "Konuralp Mah. Üniversite Cad. No:21",
+      "distanceKm": 6.4,
+      "phone": "0380 524 55 55",
+      "lat": 40.8677,
+      "lng": 31.1144
+    },
+    {
+      "id": "eczane-6",
+      "name": "Anıtpark Eczanesi",
+      "address": "Cedidiye Mah. Anıtpark Cad. No:3",
+      "distanceKm": 0.7,
+      "phone": "0380 524 66 66",
+      "lat": 40.8395,
+      "lng": 31.1595
+    },
+    {
+      "id": "eczane-7",
+      "name": "Kalıcı Konutlar Eczanesi",
+      "address": "Kalıcı Konutlar Mah. Fatih Cad. No:15",
+      "distanceKm": 3.9,
+      "phone": "0380 524 77 77",
+      "lat": 40.8462,
+      "lng": 31.1723
     }
   ]
 }

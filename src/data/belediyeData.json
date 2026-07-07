@@ -7,7 +7,10 @@
   "corporateStructure": [
     { "id": "meclis", "label": "Meclis Üyeleri", "sublabel": "31 Üye", "icon": "groups" },
     { "id": "encumen", "label": "Encümen Şeması", "sublabel": "Yönetim Yapısı", "icon": "account_balance" },
-    { "id": "mudurlukler", "label": "Müdürlükler", "sublabel": "24 Birim", "icon": "corporate_fare" }
+    { "id": "mudurlukler", "label": "Müdürlükler", "sublabel": "24 Birim", "icon": "corporate_fare" },
+    { "id": "baskan-yardimcilari", "label": "Başkan Yardımcıları", "sublabel": "4 Yardımcı", "icon": "supervisor_account" },
+    { "id": "istirakler", "label": "Belediye İştirakleri", "sublabel": "3 Şirket", "icon": "business" },
+    { "id": "stratejik-plan", "label": "Stratejik Plan", "sublabel": "2025-2029", "icon": "insights" }
   ],
   "vefatEdenler": [
     {
@@ -25,6 +28,22 @@
       "date": "Bugün",
       "lat": 40.8395,
       "lng": 31.172
+    },
+    {
+      "id": "v3",
+      "name": "Mehmet Kaya",
+      "location": "Cuma Namazı - Konuralp Camii",
+      "date": "Dün",
+      "lat": 40.8677,
+      "lng": 31.1144
+    },
+    {
+      "id": "v4",
+      "name": "Fatma Şahin",
+      "location": "Öğle Namazı - Aziziye Camii",
+      "date": "Dün",
+      "lat": 40.8395,
+      "lng": 31.1595
     }
   ],
   "ihaleIlanlari": [
@@ -41,9 +60,25 @@
       "title": "Kültür Merkezi Çatı Onarım İşi",
       "date": "28 Ekim 2026, 14:00",
       "urgencyLabel": null
+    },
+    {
+      "id": "ihale-3",
+      "category": "Açık İhale",
+      "title": "Fen İşleri Müdürlüğü Asfalt Kaplama İşi",
+      "date": "3 Kasım 2026, 11:00",
+      "urgencyLabel": null
+    },
+    {
+      "id": "ihale-4",
+      "category": "Doğrudan Temin",
+      "title": "Temizlik İşleri Müdürlüğü Araç Kiralama İşi",
+      "date": "7 Kasım 2026, 09:30",
+      "urgencyLabel": null
     }
   ],
   "eGazete": [
-    { "id": "eg-1", "title": "Ekim Sayısı Yayında", "subtitle": "Düzce Belediyesi Aylık Bülten" }
+    { "id": "eg-1", "title": "Ekim Sayısı Yayında", "subtitle": "Düzce Belediyesi Aylık Bülten" },
+    { "id": "eg-2", "title": "Eylül Sayısı", "subtitle": "Düzce Belediyesi Aylık Bülten" },
+    { "id": "eg-3", "title": "Ağustos Sayısı", "subtitle": "Düzce Belediyesi Aylık Bülten" }
   ]
 }

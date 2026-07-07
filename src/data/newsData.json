@@ -1,0 +1,47 @@
+[
+  {
+    "id": "haber-millet-bahcesi",
+    "category": "Haberler",
+    "title": "Millet Bahçesi 2. Etap Açıldı",
+    "summary": "Şehrimizin yeşil dokusunu güçlendiren Millet Bahçesi'nin 2. etabı vatandaşlarımızın hizmetine sunuldu.",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBv-Nd5Bqvc8qmV7JKBRt5ZAfpQVxDEJB0AIed9WV9Dh-V6jHIpFpJlMFHu9L5p0h35SxQfXukk1DI4jTA8y2SpGjokLvjwLO_KlEm_hUM2whxxib3ZLRENEAvMciibYlQmfh9mUurESZI9jLmhWmtJzWZ48Mkt9Mq73xM12XybtwaAFfFNJY9r30Vu7cxXNQU8X5GJwzzSOLC3lusa2MJ5eXHQnG1gLVqd75v77E2pOsSiUwNkUB7uTQ",
+    "date": "2 gün önce"
+  },
+  {
+    "id": "duyuru-su-kesintisi",
+    "category": "Duyuru",
+    "title": "Planlı Su Kesintisi Duyurusu",
+    "summary": "Altyapı yenileme çalışmaları nedeniyle yarın 10:00 - 14:00 arası merkez mahallelerde su kesintisi yaşanacaktır.",
+    "date": "Bugün"
+  },
+  {
+    "id": "haber-asar-deresi",
+    "category": "Haberler",
+    "title": "Asar Deresi Rekreasyon Projesinde Çalışmalar Hızlandı",
+    "summary": "Dere yatağı ıslahı tamamlanan proje kapsamında aydınlatmalı yürüyüş ve bisiklet yolu inşaatı sürüyor.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Winding_River_Park_%288525298644%29.jpg/500px-Winding_River_Park_%288525298644%29.jpg",
+    "date": "4 gün önce"
+  },
+  {
+    "id": "duyuru-kaldirim",
+    "category": "Duyuru",
+    "title": "Kaldırım Onarım Çalışması Duyurusu",
+    "summary": "Cumhuriyet Caddesi'nde yürütülen kaldırım yenileme çalışması nedeniyle yayalar geçici güzergâha yönlendirilecektir.",
+    "date": "1 hafta önce"
+  },
+  {
+    "id": "haber-konuralp-kazi",
+    "category": "Haberler",
+    "title": "Konuralp Antik Kentinde Yeni Kazı Sezonu Başladı",
+    "summary": "Üniversite iş birliğiyle yürütülen arkeolojik kazılarda bu sezon tiyatro kalıntıları çevresinde çalışmalar yoğunlaşıyor.",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Prusias_ad_Hypium_07.jpg/500px-Prusias_ad_Hypium_07.jpg",
+    "date": "1 hafta önce"
+  },
+  {
+    "id": "duyuru-ebelediye-bakim",
+    "category": "Duyuru",
+    "title": "E-Belediye Sisteminde Planlı Bakım Duyurusu",
+    "summary": "Sistem altyapısının güçlendirilmesi amacıyla bu gece 02:00 - 04:00 arasında E-Belediye hizmetlerine erişimde kesinti yaşanabilir.",
+    "date": "2 hafta önce"
+  }
+]

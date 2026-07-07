@@ -4,3 +4,14 @@ export interface MenuItem {
   icon: string;
   path: string;
 }
+
+export type NewsCategory = "Haberler" | "Duyuru";
+
+export interface NewsItem {
+  id: string;
+  category: NewsCategory;
+  title: string;
+  summary: string;
+  imageUrl?: string;
+  date: string;
+}

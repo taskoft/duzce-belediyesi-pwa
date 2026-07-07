@@ -21,6 +21,17 @@
         { "id": "cumhuriyet", "name": "Cumhuriyet Meydanı", "lat": 40.8378, "lng": 31.1611 },
         { "id": "sanayi", "name": "Sanayi Sitesi", "lat": 40.8341, "lng": 31.1687 }
       ]
+    },
+    {
+      "id": "hat-3",
+      "lineNumber": "Hat 3",
+      "name": "Kalıcı Konutlar - Millet Bahçesi",
+      "scheduleHours": ["07:10", "07:40", "08:10", "11:30", "14:00", "17:15", "18:45", "20:00"],
+      "stops": [
+        { "id": "kalici-konutlar", "name": "Kalıcı Konutlar", "lat": 40.8462, "lng": 31.1723 },
+        { "id": "aziziye", "name": "Aziziye Mahallesi", "lat": 40.8395, "lng": 31.1595 },
+        { "id": "millet-bahcesi", "name": "Millet Bahçesi", "lat": 40.8438, "lng": 31.1565 }
+      ]
     }
   ],
   "cardBalance": 45.5,
@@ -29,10 +40,14 @@
   "destinationSuggestions": ["Kalıcı Konutlar", "Otogar", "Üniversite Kampüsü", "Cedidiye Mahallesi"],
   "taxiStands": [
     { "id": "taksi-1", "name": "Anıtpark Taksi Durağı", "phone": "0380 524 11 22", "distance": "200m" },
-    { "id": "taksi-2", "name": "Otogar Taksi Durağı", "phone": "0380 524 33 44", "distance": "1.2km" }
+    { "id": "taksi-2", "name": "Otogar Taksi Durağı", "phone": "0380 524 33 44", "distance": "1.2km" },
+    { "id": "taksi-3", "name": "Cedidiye Meydanı Taksi Durağı", "phone": "0380 524 55 66", "distance": "1.6km" },
+    { "id": "taksi-4", "name": "Kalıcı Konutlar Taksi Durağı", "phone": "0380 524 77 88", "distance": "3.4km" }
   ],
   "lostItems": [
     { "id": "kayip-1", "name": "Siyah Cüzdan", "icon": "wallet", "location": "Hat 14", "date": "Dün", "status": "İnceleniyor" },
-    { "id": "kayip-2", "name": "Mavi Şemsiye", "icon": "umbrella", "location": "Hat 1", "date": "2 gün önce", "status": "Sahibini Bekliyor" }
+    { "id": "kayip-2", "name": "Mavi Şemsiye", "icon": "umbrella", "location": "Hat 1", "date": "2 gün önce", "status": "Sahibini Bekliyor" },
+    { "id": "kayip-3", "name": "Gri Sırt Çantası", "icon": "backpack", "location": "Hat 2", "date": "3 gün önce", "status": "Sahibini Bekliyor" },
+    { "id": "kayip-4", "name": "Gözlük Kutusu", "icon": "visibility", "location": "Hat 3", "date": "5 gün önce", "status": "Teslim Edildi" }
   ]
 }

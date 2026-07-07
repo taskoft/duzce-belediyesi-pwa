@@ -1,8 +1,12 @@
 {
   "standings": [
+    { "position": 1, "team": "Erokspor", "points": 52, "isHighlighted": false },
+    { "position": 2, "team": "24Erzincanspor", "points": 48, "isHighlighted": false },
     { "position": 3, "team": "Amed SK", "points": 45, "isHighlighted": false },
     { "position": 4, "team": "Düzcespor", "points": 42, "isHighlighted": true },
-    { "position": 5, "team": "Iğdır FK", "points": 41, "isHighlighted": false }
+    { "position": 5, "team": "Iğdır FK", "points": 41, "isHighlighted": false },
+    { "position": 6, "team": "Bandırmaspor", "points": 39, "isHighlighted": false },
+    { "position": 7, "team": "Sivas Belediyespor", "points": 36, "isHighlighted": false }
   ],
   "nextMatch": {
     "homeTeam": "Düzcespor",
@@ -16,6 +20,8 @@
   "matchHistory": [
     { "id": "m1", "opponent": "Bandırmaspor", "result": "2-1", "outcome": "win", "date": "2026-06-15" },
     { "id": "m2", "opponent": "Sivas Belediyespor", "result": "0-0", "outcome": "draw", "date": "2026-06-08" },
-    { "id": "m3", "opponent": "Kırşehir FSK", "result": "1-2", "outcome": "loss", "date": "2026-06-01" }
+    { "id": "m3", "opponent": "Kırşehir FSK", "result": "1-2", "outcome": "loss", "date": "2026-06-01" },
+    { "id": "m4", "opponent": "Iğdır FK", "result": "3-1", "outcome": "win", "date": "2026-05-25" },
+    { "id": "m5", "opponent": "Amed SK", "result": "1-1", "outcome": "draw", "date": "2026-05-18" }
   ]
 }
