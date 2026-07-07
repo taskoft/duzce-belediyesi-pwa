@@ -37,7 +37,7 @@ export function LiveBusMap({ line, progress }: LiveBusMapProps) {
   const center = routePositions[Math.floor(routePositions.length / 2)] ?? routePositions[0];
 
   return (
-    <div className="relative h-[280px] w-full overflow-hidden border-y border-outline-variant/20">
+    <div className="relative isolate h-[280px] w-full overflow-hidden border-y border-outline-variant/20">
       <MapContainer
         center={center}
         zoom={15}
