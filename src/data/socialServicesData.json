@@ -9,21 +9,21 @@
     {
       "id": "kitap-okuma",
       "title": "Yaşlılara Kitap Okuma Gönüllülüğü",
-      "description": "Huzurevi sakinleriyle haftalık kitap okuma buluşmaları düzenliyoruz.",
+      "description": "Şehrimizdeki huzurevi sakinleriyle her hafta düzenlediğimiz kitap okuma buluşmalarında gönüllülerimiz; roman, şiir ve anı kitaplarını sesli okuyarak yaşlılarımıza hem sosyal etkileşim hem de keyifli vakit geçirme imkânı sunuyor. Kuşaklar arası bağın güçlenmesine katkı sağlayan bu programda haftada en az bir saat gönüllülük yeterli.",
       "category": "yaslilar",
       "spotsAvailable": 6
     },
     {
       "id": "ders-destek",
       "title": "Ortaokul Öğrencilerine Ders Desteği",
-      "description": "Matematik ve fen derslerinde gönüllü öğretmen desteği aranıyor.",
+      "description": "Dezavantajlı mahallelerimizdeki ortaokul öğrencilerine yönelik ücretsiz etüt programımızda matematik ve fen bilimleri derslerinde gönüllü eğitmen desteği arıyoruz. Haftada iki gün, akşam saatlerinde belediye etüt merkezlerinde verilecek derslerle öğrencilerimizin akademik gelişimine doğrudan katkı sağlayabilirsiniz.",
       "category": "egitim",
       "spotsAvailable": 10
     },
     {
       "id": "gida-paketleme",
       "title": "İhtiyaç Sahiplerine Gıda Paketleme",
-      "description": "Belediye deposunda haftalık gıda kolisi hazırlama gönüllülüğü.",
+      "description": "Belediyemizin lojistik deposunda düzenlediğimiz haftalık gıda kolisi hazırlama çalışmasında; temel gıda maddelerinin tartılması, paketlenmesi ve ihtiyaç sahibi ailelere ulaştırılmak üzere sevkiyata hazırlanması aşamalarında gönüllülerimizle birlikte çalışıyoruz. Fiziksel dayanıklılık dışında herhangi bir ön koşul aranmıyor.",
       "category": "gida",
       "spotsAvailable": 15
     }

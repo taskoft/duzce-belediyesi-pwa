@@ -19,7 +19,7 @@
       "id": "guzeldere",
       "name": "Güzeldere Şelalesi",
       "category": "Doğa & Şelaleler",
-      "description": "Doğanın kalbinde huzur dolu bir kaçış noktası.",
+      "description": "Yemyeşil ormanlık alanın ortasında, kayalıklardan dökülen serin sularıyla ziyaretçilerini karşılayan Güzeldere Şelalesi, fotoğraf tutkunları ve doğa yürüyüşçüleri için Düzce'nin en gözde durağı. Çevresindeki piknik alanları ve ahşap seyir terasıyla tüm aile için huzurlu bir kaçış noktası sunuyor.",
       "rating": 4.8,
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD51VLcxwHYjvrQpGYh6essCWV4rYBpcqJVvqNuDHtdYrCSp6glNeHYDTIjlGa697RSaU4ltCWbE0FxXsGMBQwcHHuIQ_20Snz8u0ZismITPErzug_4U8aYfUe38Pval9olNUwvEOAlyXw-di4ZSLeyaiORB9mqM5hq5dx9JS4rLkFCSEtNpN1XpaYA6s51rn_w7CxogMlgQhPuoCNgqoMhMH1zQ0vjxNPMl2u7pgM5eQtCnxPjy70QcQ",
       "openingHours": "7/24 Açık",
@@ -31,7 +31,7 @@
       "id": "purenli",
       "name": "Pürenli Yaylası",
       "category": "Doğa & Şelaleler",
-      "description": "Eşsiz kamp deneyimi ve temiz hava.",
+      "description": "Deniz seviyesinden yüksekte, çam ormanlarıyla çevrili Pürenli Yaylası; serin iklimi ve temiz havasıyla kamp tutkunlarının, doğa fotoğrafçılarının ve şehrin gürültüsünden uzaklaşmak isteyen ziyaretçilerin uğrak noktası. Yayla şenlikleri ve geleneksel süt ürünleriyle otantik bir yayla deneyimi yaşatıyor.",
       "rating": 4.7,
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuA_9htRjxlOLZWcykWrovPzfgeTYfdP7GJBKW9Wgh-arxPWi9lKTcCGRTbH61O6vZgyx1UehFAmKAUrJwYowkvVXYdkABkStC-BoPT_Actq0M1wMtU_77IVd-FHFNXNRrz3h0ukNFrQcGtRuz6-uGxUaQiNxTAzhAKa5n26PKvW0sqpQlOBYNCCZjjpcOOpsd9qPe4yZWlXkug61NFAkP1bmjsqkBNSMC2Hed3wQ5nik4BNNQCMuX374Q",
       "openingHours": "7/24 Açık",
@@ -43,7 +43,7 @@
       "id": "samandere",
       "name": "Samandere Şelalesi",
       "category": "Doğa & Şelaleler",
-      "description": "Anıt ağaçlar ve suyun dinlendirici sesi.",
+      "description": "Gölyaka ilçesinde, yüzlerce yıllık anıt ağaçların gölgesinde akan Samandere Şelalesi, suyun dinlendirici sesi eşliğinde kısa ve orta mesafeli yürüyüş parkurlarıyla ziyaretçilerini doğayla baş başa bırakıyor. Çevresindeki kır kahvesi ve piknik alanlarıyla hafta sonu kaçamakları için ideal bir güzergâh.",
       "rating": 4.6,
       "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBqu0ZFd6e6KW1h8K4YXgE250JypxtF5oywkjxT2lEFhWLXPsDuB3KWQtriMM-jhNTILNAsczF2N54UH-wnLf6p0kXqbijvOr9KzcSvaqDSS1AcorIXRgXgr13LS_oYGbbSeNO6lgZGsr-r3gsOZWUv8bO6cfvmsGPuheKYFEC1qSM6rJ0U6gLVsb4xoGTESyh9tU3ng2NMnFN8NSRpLwoMy73zXjC0wwB4jkXXL7RY2atzQ_SJ-GmviQ",
       "openingHours": "08:00 - 20:00",
@@ -55,7 +55,7 @@
       "id": "konuralp",
       "name": "Konuralp Antik Kenti",
       "category": "Tarihi Mekanlar",
-      "description": "Roma dönemine ait sütunlar ve tarihi kalıntılarıyla açık hava müzesi.",
+      "description": "Antik adıyla Prusias ad Hypium olarak bilinen Konuralp Antik Kenti; Roma dönemine ait tiyatro kalıntıları, sütunlu caddesi ve mozaik döşemeleriyle bölgenin en önemli açık hava müzesi konumunda. Rehberli turlar ve bilgilendirme panolarıyla tarih meraklılarına 2.000 yılı aşkın bir yolculuk sunuyor.",
       "rating": 4.5,
       "imageUrl": "https://placehold.co/600x400/0f4c81/ffffff?text=Konuralp+Antik+Kenti",
       "openingHours": "08:00 - 18:00",
@@ -103,6 +103,258 @@
       "coordinates": { "lat": 40.8751, "lng": 31.2822 },
       "pricePerNight": 1200,
       "availabilityStatus": false
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "hastane-duzce-universitesi",
+      "name": "Düzce Üniversitesi Sağlık Uygulama ve Araştırma Merkezi",
+      "category": "hastane",
+      "district": "Merkez",
+      "openingHours": "7/24 Açık",
+      "address": "Konuralp Yerleşkesi, Konuralp Mah., Düzce",
+      "phone": "0380 542 13 90",
+      "coordinates": { "lat": 40.868, "lng": 31.1381 }
+    },
+    {
+      "id": "hastane-ataturk-devlet",
+      "name": "Düzce Atatürk Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Merkez",
+      "openingHours": "7/24 Açık",
+      "address": "Fevzi Çakmak Mah., Burhan Yeşilyurt Cad., Düzce",
+      "phone": "0380 514 47 47",
+      "coordinates": { "lat": 40.8412, "lng": 31.1523 }
+    },
+    {
+      "id": "hastane-akcakoca-devlet",
+      "name": "Akçakoca Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Akçakoca",
+      "openingHours": "7/24 Açık",
+      "address": "Yeni Mah., Hastane Sok., Akçakoca, Düzce",
+      "phone": "0380 611 40 25",
+      "coordinates": { "lat": 41.0862, "lng": 31.1179 }
+    },
+    {
+      "id": "hastane-golyaka-devlet",
+      "name": "Gölyaka Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Gölyaka",
+      "openingHours": "7/24 Açık",
+      "address": "Cumhuriyet Mah., Sağlık Cad., Gölyaka, Düzce",
+      "phone": "0380 411 20 33",
+      "coordinates": { "lat": 40.7748, "lng": 30.9958 }
+    },
+    {
+      "id": "hastane-cumayeri-devlet",
+      "name": "Cumayeri İlçe Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Cumayeri",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., Hastane Cad., Cumayeri, Düzce",
+      "phone": "0380 741 20 15",
+      "coordinates": { "lat": 40.8496, "lng": 30.8722 }
+    },
+    {
+      "id": "hastane-cilimli-devlet",
+      "name": "Çilimli Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Çilimli",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., Atatürk Cad., Çilimli, Düzce",
+      "phone": "0380 731 20 42",
+      "coordinates": { "lat": 40.9281, "lng": 31.0447 }
+    },
+    {
+      "id": "hastane-gumusova-devlet",
+      "name": "Gümüşova Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Gümüşova",
+      "openingHours": "7/24 Açık",
+      "address": "Yeni Mah., Sağlık Sok., Gümüşova, Düzce",
+      "phone": "0380 761 22 18",
+      "coordinates": { "lat": 40.8578, "lng": 30.9298 }
+    },
+    {
+      "id": "hastane-kaynasli-devlet",
+      "name": "Kaynaşlı Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Kaynaşlı",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., D-100 Kara Yolu Üzeri, Kaynaşlı, Düzce",
+      "phone": "0380 511 21 90",
+      "coordinates": { "lat": 40.7962, "lng": 31.3171 }
+    },
+    {
+      "id": "hastane-yigilca-devlet",
+      "name": "Yığılca Devlet Hastanesi",
+      "category": "hastane",
+      "district": "Yığılca",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., Hükümet Cad., Yığılca, Düzce",
+      "phone": "0380 471 20 27",
+      "coordinates": { "lat": 40.9077, "lng": 31.3891 }
+    },
+    {
+      "id": "taksi-merkez-garaj",
+      "name": "Merkez Garaj Taksi Durağı",
+      "category": "taksi",
+      "district": "Merkez",
+      "openingHours": "7/24 Açık",
+      "address": "İstasyon Mah., Şehirlerarası Otogar Yanı, Düzce",
+      "phone": "0380 523 11 22",
+      "coordinates": { "lat": 40.8451, "lng": 31.1608 }
+    },
+    {
+      "id": "taksi-akcakoca-sahil",
+      "name": "Akçakoca Sahil Taksi Durağı",
+      "category": "taksi",
+      "district": "Akçakoca",
+      "openingHours": "7/24 Açık",
+      "address": "Yalı Mah., Sahil Cad., Akçakoca, Düzce",
+      "phone": "0380 611 15 40",
+      "coordinates": { "lat": 41.0838, "lng": 31.1211 }
+    },
+    {
+      "id": "taksi-golyaka-meydan",
+      "name": "Gölyaka Meydan Taksi Durağı",
+      "category": "taksi",
+      "district": "Gölyaka",
+      "openingHours": "7/24 Açık",
+      "address": "Cumhuriyet Meydanı, Gölyaka, Düzce",
+      "phone": "0380 411 12 30",
+      "coordinates": { "lat": 40.7739, "lng": 30.9971 }
+    },
+    {
+      "id": "taksi-cumayeri-merkez",
+      "name": "Cumayeri Merkez Taksi Durağı",
+      "category": "taksi",
+      "district": "Cumayeri",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., Belediye Cad., Cumayeri, Düzce",
+      "phone": "0380 741 13 05",
+      "coordinates": { "lat": 40.8512, "lng": 30.8698 }
+    },
+    {
+      "id": "taksi-cilimli-merkez",
+      "name": "Çilimli Merkez Taksi Durağı",
+      "category": "taksi",
+      "district": "Çilimli",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., Cumhuriyet Cad., Çilimli, Düzce",
+      "phone": "0380 731 14 20",
+      "coordinates": { "lat": 40.9275, "lng": 31.0463 }
+    },
+    {
+      "id": "taksi-gumusova-merkez",
+      "name": "Gümüşova Merkez Taksi Durağı",
+      "category": "taksi",
+      "district": "Gümüşova",
+      "openingHours": "7/24 Açık",
+      "address": "Yeni Mah., İstasyon Cad., Gümüşova, Düzce",
+      "phone": "0380 761 16 45",
+      "coordinates": { "lat": 40.8596, "lng": 30.9327 }
+    },
+    {
+      "id": "taksi-kaynasli-otogar",
+      "name": "Kaynaşlı Otogar Taksi Durağı",
+      "category": "taksi",
+      "district": "Kaynaşlı",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., Otogar Cad., Kaynaşlı, Düzce",
+      "phone": "0380 511 18 55",
+      "coordinates": { "lat": 40.7981, "lng": 31.3196 }
+    },
+    {
+      "id": "taksi-yigilca-merkez",
+      "name": "Yığılca Merkez Taksi Durağı",
+      "category": "taksi",
+      "district": "Yığılca",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., Hükümet Cad., Yığılca, Düzce",
+      "phone": "0380 471 12 10",
+      "coordinates": { "lat": 40.9083, "lng": 31.3908 }
+    },
+    {
+      "id": "otopark-belediye-kapali",
+      "name": "Düzce Belediyesi Kapalı Otoparkı",
+      "category": "otopark",
+      "district": "Merkez",
+      "openingHours": "07:00 - 23:00",
+      "address": "Cedidiye Mah., Cumhuriyet Cad. No:4, Düzce",
+      "phone": "0380 524 50 12",
+      "coordinates": { "lat": 40.8429, "lng": 31.1571 }
+    },
+    {
+      "id": "otopark-akcakoca-sahil",
+      "name": "Akçakoca Sahil Otoparkı",
+      "category": "otopark",
+      "district": "Akçakoca",
+      "openingHours": "07:00 - 23:00",
+      "address": "Yalı Mah., Sahil Cad., Akçakoca, Düzce",
+      "phone": "0380 611 19 60",
+      "coordinates": { "lat": 41.0851, "lng": 31.1202 }
+    },
+    {
+      "id": "otopark-golyaka-merkez",
+      "name": "Gölyaka Merkez Otoparkı",
+      "category": "otopark",
+      "district": "Gölyaka",
+      "openingHours": "07:00 - 22:00",
+      "address": "Cumhuriyet Mah., Belediye Cad., Gölyaka, Düzce",
+      "phone": "0380 411 15 80",
+      "coordinates": { "lat": 40.7742, "lng": 30.9948 }
+    },
+    {
+      "id": "otopark-cumayeri-belediye",
+      "name": "Cumayeri Belediye Otoparkı",
+      "category": "otopark",
+      "district": "Cumayeri",
+      "openingHours": "07:00 - 22:00",
+      "address": "Merkez Mah., Belediye Cad., Cumayeri, Düzce",
+      "phone": "0380 741 17 25",
+      "coordinates": { "lat": 40.8502, "lng": 30.8715 }
+    },
+    {
+      "id": "otopark-cilimli-belediye",
+      "name": "Çilimli Belediye Otoparkı",
+      "category": "otopark",
+      "district": "Çilimli",
+      "openingHours": "07:00 - 22:00",
+      "address": "Merkez Mah., Atatürk Cad., Çilimli, Düzce",
+      "phone": "0380 731 18 33",
+      "coordinates": { "lat": 40.9264, "lng": 31.0452 }
+    },
+    {
+      "id": "otopark-gumusova-belediye",
+      "name": "Gümüşova Belediye Otoparkı",
+      "category": "otopark",
+      "district": "Gümüşova",
+      "openingHours": "07:00 - 22:00",
+      "address": "Yeni Mah., Cumhuriyet Cad., Gümüşova, Düzce",
+      "phone": "0380 761 21 40",
+      "coordinates": { "lat": 40.8583, "lng": 30.9316 }
+    },
+    {
+      "id": "otopark-kaynasli-otogar",
+      "name": "Kaynaşlı Otogar Otoparkı",
+      "category": "otopark",
+      "district": "Kaynaşlı",
+      "openingHours": "7/24 Açık",
+      "address": "Merkez Mah., D-100 Kara Yolu Üzeri, Kaynaşlı, Düzce",
+      "phone": "0380 511 25 70",
+      "coordinates": { "lat": 40.7969, "lng": 31.3188 }
+    },
+    {
+      "id": "otopark-yigilca-belediye",
+      "name": "Yığılca Belediye Otoparkı",
+      "category": "otopark",
+      "district": "Yığılca",
+      "openingHours": "07:00 - 22:00",
+      "address": "Merkez Mah., Hükümet Cad., Yığılca, Düzce",
+      "phone": "0380 471 16 05",
+      "coordinates": { "lat": 40.9092, "lng": 31.3897 }
     }
   ]
 }

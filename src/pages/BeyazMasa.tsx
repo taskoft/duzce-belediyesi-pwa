@@ -16,7 +16,9 @@ export function BeyazMasa() {
       <main className="absolute inset-0 flex flex-col gap-stack-lg overflow-y-auto px-container-margin pb-[76px] pt-[56px]">
         <div className="pt-stack-md">
           <h2 className="font-headline-lg-mobile text-headline-lg-mobile mb-1 text-on-surface">Beyaz Masa</h2>
-          <p className="font-body-md text-body-md text-on-surface-variant">Talep ve şikayetlerinizi iletin</p>
+          <p className="font-body-md text-body-md text-on-surface-variant">
+            Talep, öneri ve şikayetlerinizi doğrudan ilgili birime iletin; başvurunuzu takip numarasıyla adım adım izleyin.
+          </p>
         </div>
 
         {form.isLoading ? (

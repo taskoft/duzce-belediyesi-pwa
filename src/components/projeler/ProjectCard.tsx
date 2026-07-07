@@ -15,18 +15,26 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
     <button
       type="button"
       onClick={() => onSelect(project)}
-      className="scale-98 flex w-full flex-col gap-2 rounded-2xl bg-surface p-4 text-left shadow-sm transition-shadow hover:shadow-md"
+      className="scale-98 flex w-full flex-col gap-2 overflow-hidden rounded-2xl bg-surface p-0 text-left shadow-sm transition-shadow hover:shadow-md"
     >
-      <div className="flex items-start justify-between gap-2">
-        <h3 className="font-headline-md text-headline-md text-on-surface">{project.title}</h3>
-        <span
-          className={`font-label-sm text-label-sm shrink-0 rounded-full px-2 py-1 ${STATUS_CLASSES[project.status]}`}
-        >
-          {project.status}
-        </span>
+      <img
+        src={project.coverImage}
+        alt={project.title}
+        className="h-36 w-full object-cover"
+        loading="lazy"
+      />
+      <div className="flex flex-col gap-2 p-4 pt-1">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="font-headline-md text-headline-md text-on-surface">{project.title}</h3>
+          <span
+            className={`font-label-sm text-label-sm shrink-0 rounded-full px-2 py-1 ${STATUS_CLASSES[project.status]}`}
+          >
+            {project.status}
+          </span>
+        </div>
+        <p className="font-body-md text-body-md line-clamp-2 text-on-surface-variant">{project.summary}</p>
+        <p className="font-label-sm text-label-sm text-primary">{project.impactMetric}</p>
       </div>
-      <p className="font-body-md text-body-md line-clamp-2 text-on-surface-variant">{project.summary}</p>
-      <p className="font-label-sm text-label-sm text-primary">{project.impactMetric}</p>
     </button>
   );
 }

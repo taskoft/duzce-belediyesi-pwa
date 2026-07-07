@@ -77,23 +77,19 @@ export function BaskanWidget({
             Mesaj Gönder
           </span>
         </button>
-        <div className="grid grid-rows-2 gap-stack-sm">
-          <button
-            type="button"
-            onClick={showComingSoon}
-            className="scale-98 flex items-center justify-between rounded-xl border border-outline-variant/30 bg-surface px-gutter shadow-sm transition-transform"
-          >
-            <span className="font-label-lg text-label-lg text-on-surface">Randevu Al</span>
-            <Icon name="event_available" className="text-outline" />
-          </button>
-          <Link
-            to="/projeler"
-            className="scale-98 flex items-center justify-between rounded-xl border border-outline-variant/30 bg-surface px-gutter shadow-sm transition-transform"
-          >
-            <span className="font-label-lg text-label-lg text-on-surface">Projeler</span>
-            <Icon name="account_tree" className="text-outline" />
-          </Link>
-        </div>
+        <Link
+          to="/projeler"
+          className="scale-98 flex h-28 flex-col justify-between rounded-2xl border border-outline-variant/30 bg-surface p-gutter text-left shadow-sm transition-transform"
+        >
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-container-high text-primary">
+            <Icon name="account_tree" filled />
+          </div>
+          <span className="font-label-lg text-label-lg leading-tight text-on-surface">
+            Belediye
+            <br />
+            Projeleri
+          </span>
+        </Link>
       </div>
 
       <div className="flex flex-col gap-stack-sm">

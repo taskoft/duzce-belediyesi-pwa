@@ -50,6 +50,7 @@ export function InvoiceList({ invoices, selectedIds, onToggle, hasQueried, isQue
               <h3 className="font-label-lg text-label-lg text-on-surface">{invoice.title}</h3>
               <span className="font-headline-md text-headline-md text-primary-container">{invoice.amount} TL</span>
             </div>
+            <p className="font-body-md text-body-md mb-2 text-on-surface-variant">{invoice.description}</p>
             <p
               className={`font-body-md text-body-md flex items-center gap-1 ${
                 invoice.isOverdue ? "text-error-vibrant" : "text-on-surface-variant"

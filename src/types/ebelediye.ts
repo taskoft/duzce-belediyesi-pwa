@@ -1,6 +1,7 @@
 export interface MunicipalInvoice {
   id: string;
   title: string;
+  description: string;
   amount: number;
   dueDate: string;
   isOverdue: boolean;

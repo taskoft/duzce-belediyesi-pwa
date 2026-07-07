@@ -52,12 +52,36 @@ export interface BungalowFacility {
   availabilityStatus: boolean;
 }
 
+export type InfrastructureCategory = "hastane" | "taksi" | "otopark";
+
+export type District =
+  | "Merkez"
+  | "Akçakoca"
+  | "Gölyaka"
+  | "Cumayeri"
+  | "Çilimli"
+  | "Gümüşova"
+  | "Kaynaşlı"
+  | "Yığılca";
+
+export interface InfrastructureLocation {
+  id: string;
+  name: string;
+  category: InfrastructureCategory;
+  district: District;
+  openingHours: string;
+  address: string;
+  phone: string;
+  coordinates: GeoCoordinates;
+}
+
 export interface CityGuideData {
   emergencyNumbers: EmergencyNumber[];
   directory: DirectoryEntry[];
   pharmacies: Pharmacy[];
   destinations: Destination[];
   bungalows: BungalowFacility[];
+  infrastructure: InfrastructureLocation[];
 }
 
-export type KentRehberiTab = "corporate" | "tourism";
+export type KentRehberiTab = "corporate" | "tourism" | "infrastructure";

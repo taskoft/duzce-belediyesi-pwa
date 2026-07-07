@@ -21,7 +21,9 @@ export function SosyalHizmetler() {
       <main className="absolute inset-0 flex flex-col gap-stack-lg overflow-y-auto px-container-margin pb-[76px] pt-[56px]">
         <div className="pt-stack-md">
           <h2 className="font-headline-lg-mobile text-headline-lg-mobile mb-1 text-on-surface">Sosyal Hizmetler</h2>
-          <p className="font-body-md text-body-md text-on-surface-variant">Dayanışma ve destek kampanyaları</p>
+          <p className="font-body-md text-body-md text-on-surface-variant">
+            Gönüllülük fırsatlarına katılın, Askıda Fatura dayanışmasına destek olun; birlikte güçlenen bir şehir inşa edelim.
+          </p>
         </div>
 
         {isLoading ? (

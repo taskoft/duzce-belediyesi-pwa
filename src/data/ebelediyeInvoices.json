@@ -2,6 +2,7 @@
   {
     "id": "cevre-temizlik-vergisi",
     "title": "Çevre Temizlik Vergisi",
+    "description": "Katı atık toplama, cadde temizliği ve çevre sağlığı hizmetlerinin finansmanı amacıyla yıllık olarak tahakkuk ettirilen zorunlu belediye vergisidir.",
     "amount": 240,
     "dueDate": "15.06.2024",
     "isOverdue": false
@@ -9,6 +10,7 @@
   {
     "id": "e-imar-belge-ucreti",
     "title": "E-İmar Belge Ücreti",
+    "description": "İmar durum belgesi, yapı ruhsatı ve zemin etüdü başvurularının dijital ortamda değerlendirilip onaylanması karşılığında alınan hizmet bedelidir.",
     "amount": 150,
     "dueDate": "20.06.2024",
     "isOverdue": true

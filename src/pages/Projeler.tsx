@@ -17,6 +17,11 @@ export function Projeler() {
     open(<ProjectDetailModal project={project} onClose={close} />);
   };
 
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.status === b.status) return 0;
+    return a.status === "Devam Ediyor" ? -1 : 1;
+  });
+
   return (
     <>
       <Header trailing={<ProfileLink />} />
@@ -31,7 +36,7 @@ export function Projeler() {
           <PageLoader />
         ) : (
           <div className="flex flex-col gap-stack-md px-container-margin pb-stack-lg">
-            {projects.map((project) => (
+            {sortedProjects.map((project) => (
               <ProjectCard key={project.id} project={project} onSelect={handleSelect} />
             ))}
           </div>
