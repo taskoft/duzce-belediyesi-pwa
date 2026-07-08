@@ -3,6 +3,7 @@ import { Icon } from "@/components/common/Icon";
 import { useToast } from "@/hooks/useToast";
 import { useModal } from "@/hooks/useModal";
 import { MayorMessageForm } from "@/components/belediye/MayorMessageForm";
+import mayorPhoto from "@/assets/mayor-photo.jpg";
 import type { Mayor, CorporateStructureEntry } from "@/types/belediye";
 
 interface BaskanWidgetProps {
@@ -34,7 +35,11 @@ export function BaskanWidget({
       <div className="overflow-hidden rounded-2xl bg-surface shadow-sm">
         <div className="h-24 w-full bg-gradient-to-br from-primary to-primary-container" />
         <div className="-mt-12 flex flex-col items-center px-gutter pb-gutter">
-          <div className="mb-stack-sm h-24 w-24 rounded-full border-4 border-surface bg-surface-container-highest shadow-sm" />
+          <img
+            src={mayorPhoto}
+            alt={mayor.name}
+            className="mb-stack-sm h-24 w-24 rounded-full border-4 border-surface object-cover shadow-sm"
+          />
           <h2 className="font-headline-md text-headline-md text-center text-on-surface">{mayor.name}</h2>
           <p className="font-body-md text-body-md mt-1 text-center font-medium text-primary">{mayor.title}</p>
 

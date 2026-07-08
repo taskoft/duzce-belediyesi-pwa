@@ -1,4 +1,5 @@
 import logoEmblem from "@/assets/logo-emblem.png";
+import mayorPhoto from "@/assets/mayor-photo.jpg";
 
 export function OnboardingVisionStep() {
   return (
@@ -11,7 +12,11 @@ export function OnboardingVisionStep() {
       </h2>
 
       <div className="mb-4 flex w-full flex-col items-center rounded-2xl bg-surface-container-low p-stack-md">
-        <div className="mb-3 h-16 w-16 rounded-full border-2 border-primary bg-surface-container-highest" />
+        <img
+          src={mayorPhoto}
+          alt="Dr. Faruk Özlü"
+          className="mb-3 h-16 w-16 rounded-full border-2 border-primary object-cover"
+        />
         <p className="font-label-lg text-label-lg text-on-surface">Dr. Faruk Özlü</p>
         <p className="font-label-sm text-label-sm text-on-surface-variant">T.C. Düzce Belediyesi Başkanı</p>
 
