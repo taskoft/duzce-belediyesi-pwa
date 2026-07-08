@@ -17,7 +17,13 @@ interface SidebarState {
   isOpen: boolean;
 }
 
+interface OnboardingState {
+  isVisible: boolean;
+  currentStep: number;
+}
+
 const TEXT_SCALE_STORAGE_KEY = "duzce-pwa:large-text";
+const ONBOARDING_TOTAL_STEPS = 3;
 
 interface UIContextValue {
   toast: ToastState;
@@ -32,6 +38,11 @@ interface UIContextValue {
   toggleSidebar: () => void;
   isLargeText: boolean;
   toggleTextScale: () => void;
+  onboarding: OnboardingState;
+  onboardingTotalSteps: number;
+  goToNextOnboardingStep: () => void;
+  skipOnboarding: () => void;
+  restartOnboarding: () => void;
 }
 
 const TOAST_AUTO_HIDE_MS = 3200;
@@ -51,6 +62,11 @@ const initialSidebarState: SidebarState = {
   isOpen: false,
 };
 
+const initialOnboardingState: OnboardingState = {
+  isVisible: true,
+  currentStep: 0,
+};
+
 export const UIContext = createContext<UIContextValue | undefined>(undefined);
 
 export function UIProvider({ children }: { children: ReactNode }) {
@@ -67,6 +83,24 @@ export function UIProvider({ children }: { children: ReactNode }) {
 
   const toggleTextScale = useCallback(() => {
     setIsLargeText((prev) => !prev);
+  }, []);
+
+  const [onboarding, setOnboarding] = useState<OnboardingState>(initialOnboardingState);
+
+  const skipOnboarding = useCallback(() => {
+    setOnboarding((prev) => ({ ...prev, isVisible: false }));
+  }, []);
+
+  const goToNextOnboardingStep = useCallback(() => {
+    setOnboarding((prev) =>
+      prev.currentStep >= ONBOARDING_TOTAL_STEPS - 1
+        ? { ...prev, isVisible: false }
+        : { ...prev, currentStep: prev.currentStep + 1 },
+    );
+  }, []);
+
+  const restartOnboarding = useCallback(() => {
+    setOnboarding({ isVisible: true, currentStep: 0 });
   }, []);
 
   const hideToast = useCallback(() => {
@@ -115,6 +149,11 @@ export function UIProvider({ children }: { children: ReactNode }) {
       toggleSidebar,
       isLargeText,
       toggleTextScale,
+      onboarding,
+      onboardingTotalSteps: ONBOARDING_TOTAL_STEPS,
+      goToNextOnboardingStep,
+      skipOnboarding,
+      restartOnboarding,
     }),
     [
       toast,
@@ -129,6 +168,10 @@ export function UIProvider({ children }: { children: ReactNode }) {
       toggleSidebar,
       isLargeText,
       toggleTextScale,
+      onboarding,
+      goToNextOnboardingStep,
+      skipOnboarding,
+      restartOnboarding,
     ],
   );
 

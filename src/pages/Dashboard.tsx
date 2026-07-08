@@ -7,7 +7,6 @@ import { GreetingBanner } from "@/components/dashboard/GreetingBanner";
 import { MenuGrid } from "@/components/dashboard/MenuGrid";
 import { NewsFeed } from "@/components/dashboard/NewsFeed";
 import { BottomNav } from "@/components/dashboard/BottomNav";
-import { OnboardingOverlay } from "@/components/dashboard/OnboardingOverlay";
 import { NAVIGATION_LINKS } from "@/data/navigationLinks";
 
 export function Dashboard() {
@@ -48,7 +47,6 @@ export function Dashboard() {
       </main>
 
       <BottomNav />
-      <OnboardingOverlay />
     </>
   );
 }

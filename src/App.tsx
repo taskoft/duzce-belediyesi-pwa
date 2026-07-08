@@ -3,6 +3,7 @@ import { MobileViewport } from "@/components/common/MobileViewport";
 import { Modal } from "@/components/common/Modal";
 import { Toast } from "@/components/common/Toast";
 import { Sidebar } from "@/components/common/Sidebar";
+import { OnboardingOverlay } from "@/components/dashboard/OnboardingOverlay";
 import { Dashboard } from "@/pages/Dashboard";
 import { EBelediye } from "@/pages/EBelediye";
 import { Transportation } from "@/pages/Transportation";
@@ -42,6 +43,7 @@ export function App() {
       <Modal />
       <Toast />
       <Sidebar />
+      <OnboardingOverlay />
     </MobileViewport>
   );
 }

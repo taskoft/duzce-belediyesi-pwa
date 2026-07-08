@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
+import { useOnboarding } from "@/hooks/useOnboarding";
 
 interface BottomNavItem {
   id: string;
@@ -33,10 +34,26 @@ function SideNavLink({ item }: { item: BottomNavItem }) {
   );
 }
 
+function OnboardingTriggerButton() {
+  const { restart } = useOnboarding();
+
+  return (
+    <button
+      type="button"
+      onClick={restart}
+      aria-label="Tanıtımı Göster"
+      className="flex h-12 w-12 items-center justify-center rounded-full text-on-surface-variant/40 transition-colors duration-150 hover:bg-surface-container-highest"
+    >
+      <Icon name="tour" />
+    </button>
+  );
+}
+
 export function BottomNav() {
   return (
     <nav className="absolute bottom-0 z-40 w-full pb-safe">
       <div className="relative flex h-component-height-lg items-center justify-around border-t border-outline-variant/20 bg-surface/90 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] backdrop-blur-md dark:bg-inverse-surface/90">
+        <OnboardingTriggerButton />
         {LEADING_NAV_ITEMS.map((item) => (
           <SideNavLink key={item.id} item={item} />
         ))}
