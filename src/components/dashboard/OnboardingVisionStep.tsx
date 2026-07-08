@@ -21,8 +21,7 @@ export function OnboardingVisionStep() {
         <p className="font-label-lg text-label-lg text-on-surface">Dr. Faruk Özlü</p>
         <p className="font-label-sm text-label-sm text-on-surface-variant">T.C. Düzce Belediyesi Başkanı</p>
 
-        <img src={mayorSignature} alt="Dr. Faruk Özlü imzası" className="mt-3 h-10 w-auto object-contain" />
-        <span className="font-label-sm text-[10px] uppercase tracking-wider text-outline">Dijital İmza</span>
+        <img src={mayorSignature} alt="Dr. Faruk Özlü imzası" className="mt-3 h-16 w-auto object-contain" />
       </div>
 
       <p className="font-body-lg text-body-lg mb-8 px-2 text-center italic text-on-surface-variant">
