@@ -1,5 +1,6 @@
 import logoEmblem from "@/assets/logo-emblem.png";
 import mayorPhoto from "@/assets/mayor-photo.jpg";
+import mayorSignature from "@/assets/mayor-signature.png";
 
 export function OnboardingVisionStep() {
   return (
@@ -20,17 +21,7 @@ export function OnboardingVisionStep() {
         <p className="font-label-lg text-label-lg text-on-surface">Dr. Faruk Özlü</p>
         <p className="font-label-sm text-label-sm text-on-surface-variant">T.C. Düzce Belediyesi Başkanı</p>
 
-        <svg
-          viewBox="0 0 160 48"
-          className="mt-3 h-10 w-40 text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          aria-hidden="true"
-        >
-          <path d="M6 34 C 18 10, 30 10, 36 26 S 54 40, 62 20 S 78 8, 86 28 S 102 42, 112 18 C 118 8, 128 8, 134 22 L 150 12" />
-        </svg>
+        <img src={mayorSignature} alt="Dr. Faruk Özlü imzası" className="mt-3 h-10 w-auto object-contain" />
         <span className="font-label-sm text-[10px] uppercase tracking-wider text-outline">Dijital İmza</span>
       </div>
 
