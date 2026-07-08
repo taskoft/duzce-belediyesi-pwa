@@ -1,10 +1,10 @@
-import { Icon } from "@/components/common/Icon";
+import logoEmblem from "@/assets/logo-emblem.png";
 
 export function OnboardingVisionStep() {
   return (
     <>
-      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary-fixed">
-        <Icon name="account_balance" filled className="text-[36px] text-primary" />
+      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary-fixed p-2.5">
+        <img src={logoEmblem} alt="Düzce Belediyesi" className="h-full w-full object-contain" />
       </div>
       <h2 className="font-headline-lg-mobile text-headline-lg-mobile mb-3 font-bold text-on-surface">
         Kurumsal Vizyon

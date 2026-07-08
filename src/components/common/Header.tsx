@@ -3,6 +3,7 @@ import { Button } from "@/components/common/Button";
 import { Icon } from "@/components/common/Icon";
 import { useSidebar } from "@/hooks/useSidebar";
 import { useWeather } from "@/hooks/useWeather";
+import logoEmblem from "@/assets/logo-emblem.png";
 
 interface HeaderProps {
   leading?: ReactNode;
@@ -41,9 +42,12 @@ export function Header({
       <div className="flex h-component-height-lg items-center justify-between px-container-margin">
         {leading}
 
-        <h1 className="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary-fixed">
-          {title}
-        </h1>
+        <div className="flex items-center gap-2">
+          <img src={logoEmblem} alt="" className="h-7 w-7 object-contain" />
+          <h1 className="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary-fixed">
+            {title}
+          </h1>
+        </div>
 
         {trailing}
       </div>

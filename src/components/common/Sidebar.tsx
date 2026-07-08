@@ -8,6 +8,7 @@ import { useSidebar } from "@/hooks/useSidebar";
 import { useModal } from "@/hooks/useModal";
 import { NAVIGATION_LINKS } from "@/data/navigationLinks";
 import { PRIVACY_POLICY_TEXT, TERMS_OF_USE_TEXT } from "@/data/legalContent";
+import logoEmblem from "@/assets/logo-emblem.png";
 
 export function Sidebar() {
   const { isOpen, close } = useSidebar();
@@ -58,8 +59,8 @@ export function Sidebar() {
       >
         <div className="flex h-component-height-lg items-center justify-between gap-3 border-b border-outline-variant/20 px-container-margin">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-container text-on-primary-container">
-              <Icon name="account_balance" filled />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-container p-1">
+              <img src={logoEmblem} alt="Düzce Belediyesi" className="h-full w-full object-contain" />
             </div>
             <div>
               <p className="font-label-lg text-label-lg text-on-surface">Düzce Belediyesi</p>
