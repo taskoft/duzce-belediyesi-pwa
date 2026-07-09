@@ -32,6 +32,8 @@ export interface Destination {
   description: string;
   rating: number;
   imageUrl: string;
+  images: string[];
+  featured?: boolean;
   openingHours: string;
   phone: string;
   address: string;

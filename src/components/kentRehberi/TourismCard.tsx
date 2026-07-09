@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { CardImageCarousel } from "@/components/common/CardImageCarousel";
 import { useToast } from "@/hooks/useToast";
 import type { Destination } from "@/types/cityGuide";
 
@@ -34,8 +35,7 @@ export function TourismCard({ destination, isFavorite, onToggleFavorite }: Touri
 
   return (
     <article className="overflow-hidden rounded-2xl bg-surface shadow-sm">
-      <div className="relative h-48 w-full">
-        <img src={destination.imageUrl} alt={destination.name} className="h-full w-full object-cover" />
+      <CardImageCarousel images={destination.images} alt={destination.name} heightClassName="h-48">
         <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-surface/90 px-2 py-1 shadow-sm backdrop-blur-sm">
           <Icon name="star" filled className="text-[14px] text-tertiary-container" />
           <span className="font-label-sm text-label-sm text-on-surface">{destination.rating}</span>
@@ -43,7 +43,13 @@ export function TourismCard({ destination, isFavorite, onToggleFavorite }: Touri
         <span className="font-label-sm text-label-sm absolute left-3 top-3 rounded-full bg-surface/90 px-2 py-1 text-on-surface shadow-sm backdrop-blur-sm">
           {destination.openingHours}
         </span>
-      </div>
+        {destination.featured && (
+          <span className="font-label-sm text-label-sm absolute bottom-2 left-3 flex items-center gap-1 rounded-full bg-tertiary-container px-2 py-1 text-on-tertiary-container shadow-sm">
+            <Icon name="star" filled className="text-[14px]" />
+            Öne Çıkan
+          </span>
+        )}
+      </CardImageCarousel>
       <div className="p-4">
         <div className="mb-1 flex items-start justify-between gap-2">
           <h3 className="font-headline-md text-headline-md text-on-surface">{destination.name}</h3>

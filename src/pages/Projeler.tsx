@@ -18,8 +18,9 @@ export function Projeler() {
   };
 
   const sortedProjects = [...projects].sort((a, b) => {
+    if (!!a.featured !== !!b.featured) return a.featured ? -1 : 1;
     if (a.status === b.status) return 0;
-    return a.status === "Devam Ediyor" ? -1 : 1;
+    return a.status === "Tamamlandı" ? -1 : 1;
   });
 
   return (

@@ -19,10 +19,14 @@ export function TourismGrid({ destinations, bungalows, culturalEvents }: Tourism
     open(<BungalowBookingWidget bungalow={bungalow} onClose={close} />);
   };
 
+  const sortedDestinations = [...destinations].sort(
+    (a, b) => Number(!!b.featured) - Number(!!a.featured),
+  );
+
   return (
     <div className="flex flex-col gap-stack-lg">
       <div className="flex flex-col gap-stack-md">
-        {destinations.map((destination) => (
+        {sortedDestinations.map((destination) => (
           <TourismCard
             key={destination.id}
             destination={destination}

@@ -9,4 +9,5 @@ export interface MunicipalProject {
   impactMetric: string;
   coverImage: string;
   images: string[];
+  featured?: boolean;
 }

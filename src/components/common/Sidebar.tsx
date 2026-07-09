@@ -6,6 +6,7 @@ import { ExchangeRateTicker } from "@/components/common/ExchangeRateTicker";
 import { LegalInfoModal } from "@/components/common/LegalInfoModal";
 import { useSidebar } from "@/hooks/useSidebar";
 import { useModal } from "@/hooks/useModal";
+import { useOnboarding } from "@/hooks/useOnboarding";
 import { NAVIGATION_LINKS } from "@/data/navigationLinks";
 import { PRIVACY_POLICY_TEXT, TERMS_OF_USE_TEXT } from "@/data/legalContent";
 import logoEmblem from "@/assets/logo-emblem.png";
@@ -13,7 +14,13 @@ import logoEmblem from "@/assets/logo-emblem.png";
 export function Sidebar() {
   const { isOpen, close } = useSidebar();
   const { open: openModal, close: closeModal } = useModal();
+  const { restart: restartOnboarding } = useOnboarding();
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  const openOnboarding = () => {
+    close();
+    restartOnboarding();
+  };
 
   const openPrivacyPolicy = () => {
     close();
@@ -59,7 +66,7 @@ export function Sidebar() {
       >
         <div className="flex h-component-height-lg items-center justify-between gap-3 border-b border-outline-variant/20 px-container-margin">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-container p-1">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-fixed p-1.5">
               <img src={logoEmblem} alt="Düzce Belediyesi" className="h-full w-full object-contain" />
             </div>
             <div>
@@ -101,6 +108,15 @@ export function Sidebar() {
               )}
             </NavLink>
           ))}
+
+          <button
+            type="button"
+            onClick={openOnboarding}
+            className="flex items-center gap-3 rounded-xl px-3 py-3 font-label-lg text-label-lg text-on-surface transition-colors hover:bg-surface-container-low"
+          >
+            <Icon name="tour" />
+            Tanıtımı Göster
+          </button>
         </div>
 
         <div className="flex shrink-0 items-center justify-center gap-4 border-t border-outline-variant/20 px-3 py-3">
