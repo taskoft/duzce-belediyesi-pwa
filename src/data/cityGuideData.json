@@ -30,7 +30,8 @@
       "openingHours": "7/24 Açık",
       "phone": "0380 523 10 10",
       "address": "Aydınpınar Köyü, Düzce",
-      "coordinates": { "lat": 40.7861, "lng": 31.0956 }
+      "coordinates": { "lat": 40.7861, "lng": 31.0956 },
+      "bungalowId": "bungalow-2"
     },
     {
       "id": "purenli",
@@ -47,7 +48,8 @@
       "openingHours": "7/24 Açık",
       "phone": "0380 523 20 20",
       "address": "Pürenli Yaylası, Kaynaşlı, Düzce",
-      "coordinates": { "lat": 40.8763, "lng": 31.2841 }
+      "coordinates": { "lat": 40.8763, "lng": 31.2841 },
+      "bungalowId": "bungalow-3"
     },
     {
       "id": "samandere",
@@ -64,7 +66,8 @@
       "openingHours": "08:00 - 20:00",
       "phone": "0380 523 30 30",
       "address": "Samandere Köyü, Gölyaka, Düzce",
-      "coordinates": { "lat": 40.7452, "lng": 31.0327 }
+      "coordinates": { "lat": 40.7452, "lng": 31.0327 },
+      "bungalowId": "bungalow-1"
     },
     {
       "id": "konuralp",

@@ -38,6 +38,7 @@ export interface Destination {
   phone: string;
   address: string;
   coordinates: GeoCoordinates;
+  bungalowId?: string;
 }
 
 export interface BungalowFacility {

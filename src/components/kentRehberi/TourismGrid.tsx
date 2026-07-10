@@ -1,5 +1,6 @@
 import { TourismCard } from "@/components/kentRehberi/TourismCard";
 import { BungalowBookingWidget } from "@/components/kentRehberi/BungalowBookingWidget";
+import { DestinationDetailModal } from "@/components/kentRehberi/DestinationDetailModal";
 import { CulturalEventsList } from "@/components/kentRehberi/CulturalEventsList";
 import { useFavorites } from "@/hooks/useFavorites";
 import { useModal } from "@/hooks/useModal";
@@ -19,6 +20,13 @@ export function TourismGrid({ destinations, bungalows, culturalEvents }: Tourism
     open(<BungalowBookingWidget bungalow={bungalow} onClose={close} />);
   };
 
+  const openDestination = (destination: Destination) => {
+    const linkedBungalow = destination.bungalowId
+      ? bungalows.find((bungalow) => bungalow.id === destination.bungalowId)
+      : undefined;
+    open(<DestinationDetailModal destination={destination} bungalow={linkedBungalow} onClose={close} />);
+  };
+
   const sortedDestinations = [...destinations].sort(
     (a, b) => Number(!!b.featured) - Number(!!a.featured),
   );
@@ -32,6 +40,7 @@ export function TourismGrid({ destinations, bungalows, culturalEvents }: Tourism
             destination={destination}
             isFavorite={isFavorite(destination.id)}
             onToggleFavorite={toggleFavorite}
+            onSelect={openDestination}
           />
         ))}
       </div>

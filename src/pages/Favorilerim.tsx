@@ -4,10 +4,12 @@ import { PageLoader } from "@/components/common/PageLoader";
 import { Icon } from "@/components/common/Icon";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { TourismCard } from "@/components/kentRehberi/TourismCard";
+import { DestinationDetailModal } from "@/components/kentRehberi/DestinationDetailModal";
 import { useAsyncData } from "@/hooks/useAsyncData";
 import { useFavorites } from "@/hooks/useFavorites";
+import { useModal } from "@/hooks/useModal";
 import cityGuideDataFallback from "@/data/cityGuideData.json";
-import type { CityGuideData } from "@/types/cityGuide";
+import type { CityGuideData, Destination } from "@/types/cityGuide";
 
 export function Favorilerim() {
   const { data: cityGuideData, isLoading } = useAsyncData<CityGuideData>(
@@ -15,10 +17,18 @@ export function Favorilerim() {
     cityGuideDataFallback as CityGuideData,
   );
   const { favorites, isFavorite, toggleFavorite } = useFavorites();
+  const { open, close } = useModal();
 
   const favoriteDestinations = cityGuideData.destinations.filter((destination) =>
     favorites.includes(destination.id),
   );
+
+  const openDestination = (destination: Destination) => {
+    const linkedBungalow = destination.bungalowId
+      ? cityGuideData.bungalows.find((bungalow) => bungalow.id === destination.bungalowId)
+      : undefined;
+    open(<DestinationDetailModal destination={destination} bungalow={linkedBungalow} onClose={close} />);
+  };
 
   return (
     <>
@@ -49,6 +59,7 @@ export function Favorilerim() {
                 destination={destination}
                 isFavorite={isFavorite(destination.id)}
                 onToggleFavorite={toggleFavorite}
+                onSelect={openDestination}
               />
             ))}
           </div>

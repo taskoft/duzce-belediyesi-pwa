@@ -7,9 +7,10 @@ interface TourismCardProps {
   destination: Destination;
   isFavorite: boolean;
   onToggleFavorite: (id: string) => void;
+  onSelect: (destination: Destination) => void;
 }
 
-export function TourismCard({ destination, isFavorite, onToggleFavorite }: TourismCardProps) {
+export function TourismCard({ destination, isFavorite, onToggleFavorite, onSelect }: TourismCardProps) {
   const { show: showToast } = useToast();
 
   const handleShare = async () => {
@@ -49,40 +50,40 @@ export function TourismCard({ destination, isFavorite, onToggleFavorite }: Touri
             Öne Çıkan
           </span>
         )}
+        <button
+          type="button"
+          onClick={() => onToggleFavorite(destination.id)}
+          aria-label={isFavorite ? "Favorilerden çıkar" : "Favorilere ekle"}
+          className="scale-98 absolute bottom-2 right-3 rounded-full bg-surface/90 p-1.5 text-error-vibrant shadow-sm backdrop-blur-sm transition-transform"
+        >
+          <Icon name="favorite" filled={isFavorite} className="text-[18px]" />
+        </button>
       </CardImageCarousel>
-      <div className="p-4">
-        <div className="mb-1 flex items-start justify-between gap-2">
-          <h3 className="font-headline-md text-headline-md text-on-surface">{destination.name}</h3>
-          <button
-            type="button"
-            onClick={() => onToggleFavorite(destination.id)}
-            aria-label={isFavorite ? "Favorilerden çıkar" : "Favorilere ekle"}
-            className="scale-98 shrink-0 rounded-full p-1 text-error-vibrant transition-transform"
-          >
-            <Icon name="favorite" filled={isFavorite} />
-          </button>
-        </div>
+
+      <button type="button" onClick={() => onSelect(destination)} className="block w-full p-4 text-left">
+        <h3 className="font-headline-md text-headline-md mb-1 text-on-surface">{destination.name}</h3>
         <p className="font-body-md text-body-md mb-1 text-on-surface-variant">{destination.description}</p>
-        <p className="font-label-sm text-label-sm mb-4 text-outline">{destination.address}</p>
-        <div className="flex gap-2">
-          <button
-            type="button"
-            onClick={handleShare}
-            className="scale-98 flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border border-outline-variant/40 font-label-sm text-label-sm text-on-surface transition-transform hover:bg-surface-container-low"
-          >
-            <Icon name="share" className="text-[16px]" />
-            Paylaş
-          </button>
-          <a
-            href={`https://www.google.com/maps/dir/?api=1&destination=${destination.coordinates.lat},${destination.coordinates.lng}`}
-            target="_blank"
-            rel="noreferrer"
-            className="scale-98 flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border-2 border-primary font-label-lg text-label-lg text-primary transition-transform hover:bg-primary-fixed/30"
-          >
-            <Icon name="directions" className="text-[18px]" />
-            Yol Tarifi
-          </a>
-        </div>
+        <p className="font-label-sm text-label-sm text-outline">{destination.address}</p>
+      </button>
+
+      <div className="flex gap-2 px-4 pb-4">
+        <button
+          type="button"
+          onClick={handleShare}
+          className="scale-98 flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border border-outline-variant/40 font-label-sm text-label-sm text-on-surface transition-transform hover:bg-surface-container-low"
+        >
+          <Icon name="share" className="text-[16px]" />
+          Paylaş
+        </button>
+        <a
+          href={`https://www.google.com/maps/dir/?api=1&destination=${destination.coordinates.lat},${destination.coordinates.lng}`}
+          target="_blank"
+          rel="noreferrer"
+          className="scale-98 flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border-2 border-primary font-label-lg text-label-lg text-primary transition-transform hover:bg-primary-fixed/30"
+        >
+          <Icon name="directions" className="text-[18px]" />
+          Yol Tarifi
+        </a>
       </div>
     </article>
   );
