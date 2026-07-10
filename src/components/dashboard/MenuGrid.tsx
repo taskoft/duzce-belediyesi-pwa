@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { NAVIGATION_LINKS } from "@/data/navigationLinks";
 
 const MENU_ITEM_IDS = ["belediye", "e-belediye", "kent-rehberi", "projeler", "ulasim", "sosyal-hizmetler"];
@@ -19,9 +19,8 @@ export function MenuGrid() {
             to={item.path}
             className="scale-98 flex flex-col items-start gap-2 rounded-xl border border-transparent bg-surface p-stack-md shadow-sm transition-shadow hover:border-outline-variant/30 hover:shadow-md active:bg-surface-container-low"
           >
-            <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.accentBg} ${item.accentColor}`}>
-              <Icon name={item.icon} filled />
-            </div>
+            <IconBadge name={item.icon} tone={item.tone} />
+
             <span className="font-label-lg text-label-lg text-on-surface">{item.label}</span>
           </Link>
         ))}

@@ -1,6 +1,6 @@
 import { Header } from "@/components/common/Header";
 import { ProfileLink } from "@/components/common/ProfileLink";
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { TransitTabs } from "@/components/transportation/TransitTabs";
@@ -80,9 +80,7 @@ export function Transportation() {
                   onClick={() => open(<HesKoduForm onClose={close} />)}
                   className="scale-98 flex flex-col justify-between rounded-2xl border border-outline-variant/30 bg-surface p-4 text-left shadow-sm transition-transform"
                 >
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-error-container">
-                    <Icon name="qr_code_scanner" className="text-on-error-container" />
-                  </div>
+                  <IconBadge name="qr_code_scanner" tone="rose" className="mb-3" />
                   <div>
                     <h3 className="font-label-lg text-label-lg mb-1 text-on-surface">Kart Tanımlama</h3>
                     <p className="font-label-sm text-label-sm text-outline">Ulaşım kartı eşleştir</p>

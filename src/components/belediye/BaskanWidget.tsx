@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
+import { IconBadge, type IconTone } from "@/components/common/IconBadge";
 import { useToast } from "@/hooks/useToast";
 import { useModal } from "@/hooks/useModal";
 import { MayorMessageForm } from "@/components/belediye/MayorMessageForm";
 import mayorPhoto from "@/assets/mayor-photo.jpg";
 import type { Mayor, CorporateStructureEntry } from "@/types/belediye";
+
+const CORPORATE_TONES: Record<string, IconTone> = {
+  meclis: "blue",
+  encumen: "indigo",
+  mudurlukler: "cyan",
+  "baskan-yardimcilari": "violet",
+  istirakler: "emerald",
+  "stratejik-plan": "amber",
+};
 
 interface BaskanWidgetProps {
   mayor: Mayor;
@@ -45,7 +55,7 @@ export function BaskanWidget({
 
           <div className="mt-stack-md w-full rounded-xl bg-surface-container-low p-gutter">
             <div className="mb-2 flex items-center gap-2">
-              <Icon name="format_quote" filled className="text-primary" />
+              <IconBadge name="format_quote" tone="blue" size="sm" />
               <span className="font-label-lg text-label-lg text-primary-container">Başkanın Mesajı</span>
             </div>
             <p
@@ -73,9 +83,7 @@ export function BaskanWidget({
           onClick={openMessageForm}
           className="scale-98 flex h-28 flex-col justify-between rounded-2xl bg-primary p-gutter text-left shadow-sm transition-transform"
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-on-primary/20">
-            <Icon name="mail" filled className="text-on-primary" />
-          </div>
+          <IconBadge name="mail" tone="sky" size="sm" />
           <span className="font-label-lg text-label-lg leading-tight text-on-primary">
             Başkana
             <br />
@@ -86,9 +94,7 @@ export function BaskanWidget({
           to="/projeler"
           className="scale-98 flex h-28 flex-col justify-between rounded-2xl border border-outline-variant/30 bg-surface p-gutter text-left shadow-sm transition-transform"
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-container-high text-primary">
-            <Icon name="account_tree" filled />
-          </div>
+          <IconBadge name="account_tree" tone="violet" size="sm" />
           <span className="font-label-lg text-label-lg leading-tight text-on-surface">
             Belediye
             <br />
@@ -107,9 +113,7 @@ export function BaskanWidget({
               onClick={showComingSoon}
               className="scale-98 flex w-40 flex-none flex-col gap-3 rounded-2xl border border-outline-variant/20 bg-surface p-gutter text-left shadow-sm transition-transform"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-container-high text-primary">
-                <Icon name={entry.icon} />
-              </div>
+              <IconBadge name={entry.icon} tone={CORPORATE_TONES[entry.id] ?? "blue"} />
               <div>
                 <span className="font-label-lg text-label-lg block text-on-surface">{entry.label}</span>
                 <span className="font-label-sm text-label-sm mt-1 block text-outline">{entry.sublabel}</span>

@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { formatDistanceKm } from "@/utils/formatters";
 import type { Pharmacy } from "@/types/eczane";
 
@@ -21,9 +22,7 @@ export function PharmacyCardList({ pharmacies }: PharmacyCardListProps) {
         <div key={pharmacy.id} className="rounded-2xl bg-surface p-4 shadow-sm">
           <div className="mb-2 flex items-start justify-between gap-2">
             <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-error-container/40 text-error">
-                <Icon name="local_pharmacy" filled />
-              </div>
+              <IconBadge name="local_pharmacy" tone="red" />
               <div>
                 <h3 className="font-label-lg text-label-lg text-on-surface">{pharmacy.name}</h3>
                 <span className="font-label-sm text-label-sm text-primary">Nöbetçi</span>

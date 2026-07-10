@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import type { TenderNotice } from "@/types/belediye";
 
 interface IhaleTableProps {
@@ -18,9 +19,7 @@ export function IhaleTable({ notices }: IhaleTableProps) {
             key={notice.id}
             className="scale-98 flex items-start gap-4 rounded-2xl border border-outline-variant/20 bg-surface p-gutter shadow-sm transition-transform"
           >
-            <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-container/10">
-              <Icon name="gavel" className="text-primary" />
-            </div>
+            <IconBadge name="gavel" tone="orange" size="lg" className="mt-1" />
             <div className="flex-1">
               <div className="mb-1 flex items-start justify-between gap-2">
                 <span className="font-label-sm text-[10px] rounded-full bg-surface-container-high px-2 py-0.5 uppercase tracking-wider text-on-surface-variant">

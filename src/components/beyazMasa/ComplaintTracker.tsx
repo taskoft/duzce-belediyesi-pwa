@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { Button } from "@/components/common/Button";
 import type { TrackedComplaint } from "@/types/beyazMasa";
 
@@ -18,7 +19,7 @@ export function ComplaintTracker({
   return (
     <section className="flex flex-col gap-stack-md rounded-2xl border border-surface-container-low bg-surface p-4 shadow-sm">
       <div className="flex items-center gap-2">
-        <Icon name="pin_drop" className="text-primary" />
+        <IconBadge name="pin_drop" tone="rose" size="sm" />
         <h2 className="font-headline-md text-headline-md text-on-surface">Başvuru Sorgula</h2>
       </div>
 

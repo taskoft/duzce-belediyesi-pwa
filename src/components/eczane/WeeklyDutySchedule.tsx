@@ -1,4 +1,4 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import type { DutyScheduleEntry } from "@/types/eczane";
 
 interface WeeklyDutyScheduleProps {
@@ -13,7 +13,7 @@ export function WeeklyDutySchedule({ schedule }: WeeklyDutyScheduleProps) {
   return (
     <div className="mx-container-margin mb-stack-md flex flex-col gap-2 rounded-2xl bg-surface p-4 shadow-sm">
       <div className="mb-1 flex items-center gap-2">
-        <Icon name="calendar_month" className="text-primary" />
+        <IconBadge name="calendar_month" tone="violet" size="sm" />
         <h3 className="font-label-lg text-label-lg text-on-surface">Haftalık Nöbet Takvimi</h3>
       </div>
       {schedule.map((entry) => {

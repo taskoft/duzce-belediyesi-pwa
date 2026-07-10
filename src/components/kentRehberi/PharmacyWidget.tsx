@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { useToast } from "@/hooks/useToast";
 import type { Pharmacy } from "@/types/cityGuide";
 
@@ -21,7 +22,7 @@ export function PharmacyWidget({ pharmacies }: PharmacyWidgetProps) {
   return (
     <div className="flex flex-col gap-stack-sm">
       <div className="flex items-center gap-2 rounded-xl bg-error-container p-3 text-on-error-container">
-        <Icon name="local_pharmacy" filled />
+        <IconBadge name="local_pharmacy" tone="red" size="sm" />
         <p className="font-label-lg text-label-lg">Bugünün Nöbetçi Eczaneleri</p>
       </div>
 

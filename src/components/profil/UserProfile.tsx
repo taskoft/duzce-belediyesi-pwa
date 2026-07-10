@@ -1,4 +1,4 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import type { CitizenProfile, SavedCard, WorkflowHistoryEntry } from "@/types/profile";
 
 interface UserProfileProps {
@@ -32,9 +32,7 @@ export function UserProfile({ citizen, savedCards, workflowHistory }: UserProfil
         </h3>
         {savedCards.map((card) => (
           <div key={card.id} className="flex items-center gap-4 rounded-2xl bg-surface p-4 shadow-sm">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-container/20 text-primary">
-              <Icon name="credit_card" filled />
-            </div>
+            <IconBadge name="credit_card" tone="indigo" />
             <div className="min-w-0 flex-1">
               <h4 className="font-label-lg text-label-lg text-on-surface">{card.label}</h4>
               <p className="font-body-md text-body-md text-on-surface-variant">{card.maskedNumber}</p>
@@ -52,7 +50,7 @@ export function UserProfile({ citizen, savedCards, workflowHistory }: UserProfil
         </h3>
         {workflowHistory.map((entry) => (
           <div key={entry.id} className="flex items-start gap-3 rounded-2xl bg-surface p-4 shadow-sm">
-            <Icon name="history" className="mt-1 text-on-surface-variant" />
+            <IconBadge name="history" tone="slate" size="sm" className="mt-1" />
             <div className="min-w-0 flex-1">
               <h4 className="font-label-lg text-label-lg text-on-surface">{entry.title}</h4>
               <p className="font-body-md text-body-md text-on-surface-variant">{entry.detail}</p>

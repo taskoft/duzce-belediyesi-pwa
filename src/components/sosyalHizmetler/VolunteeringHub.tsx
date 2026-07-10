@@ -1,5 +1,12 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge, type IconTone } from "@/components/common/IconBadge";
 import type { VolunteerCategory, VolunteerOpportunity } from "@/types/socialServices";
+
+const CATEGORY_TONES: Record<string, IconTone> = {
+  egitim: "blue",
+  gida: "emerald",
+  yaslilar: "violet",
+  afet: "orange",
+};
 
 interface VolunteeringHubProps {
   categories: VolunteerCategory[];
@@ -20,9 +27,10 @@ export function VolunteeringHub({ categories, opportunities, appliedIds, onApply
         return (
           <div key={opportunity.id} className="flex flex-col gap-3 rounded-2xl bg-surface p-4 shadow-sm">
             <div className="flex items-start gap-3">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-container/20 text-primary">
-                <Icon name={category?.icon ?? "volunteer_activism"} filled />
-              </div>
+              <IconBadge
+                name={category?.icon ?? "volunteer_activism"}
+                tone={CATEGORY_TONES[opportunity.category] ?? "rose"}
+              />
               <div className="min-w-0 flex-1">
                 <h3 className="font-label-lg text-label-lg text-on-surface">{opportunity.title}</h3>
                 <p className="font-body-md text-body-md mt-1 text-on-surface-variant">{opportunity.description}</p>

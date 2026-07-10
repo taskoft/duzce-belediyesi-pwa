@@ -1,4 +1,4 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { usePrayerTimes } from "@/hooks/usePrayerTimes";
 
 const PRAYER_LABELS: { key: "Fajr" | "Sunrise" | "Dhuhr" | "Asr" | "Maghrib" | "Isha"; label: string }[] = [
@@ -16,7 +16,7 @@ export function PrayerTimesTicker() {
   return (
     <div className="flex flex-col gap-2 border-t border-outline-variant/20 px-3 py-3">
       <div className="flex items-center gap-2">
-        <Icon name="mosque" className="text-primary" />
+        <IconBadge name="mosque" tone="teal" size="sm" />
         <span className="font-label-sm text-label-sm text-on-surface-variant">Düzce Namaz Vakitleri</span>
       </div>
       {isLoading ? (

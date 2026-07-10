@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { Button } from "@/components/common/Button";
 
 interface SuggestionFormProps {
@@ -21,7 +22,7 @@ export function SuggestionForm({
   return (
     <section className="flex flex-col gap-stack-md rounded-2xl bg-surface p-4 shadow-sm">
       <div className="flex items-center gap-2">
-        <Icon name="lightbulb" filled className="text-primary" />
+        <IconBadge name="lightbulb" tone="amber" size="sm" />
         <h2 className="font-headline-md text-headline-md text-on-surface">Sosyal Sorumluluk Önerisi</h2>
       </div>
 

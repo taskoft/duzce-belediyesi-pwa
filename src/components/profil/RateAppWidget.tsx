@@ -37,7 +37,7 @@ export function RateAppWidget() {
               <Icon
                 name="star"
                 filled={starValue <= rating}
-                className={`text-[32px] ${starValue <= rating ? "text-tertiary-container" : "text-outline-variant"}`}
+                className={`text-[32px] ${starValue <= rating ? "text-amber-400" : "text-outline-variant"}`}
               />
             </button>
           );

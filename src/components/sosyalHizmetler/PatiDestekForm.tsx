@@ -1,4 +1,4 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { FileUploadBox } from "@/components/common/FileUploadBox";
 
 interface PatiDestekFormProps {
@@ -20,9 +20,7 @@ export function PatiDestekForm({
     <div className="relative flex flex-col gap-4 overflow-hidden rounded-2xl bg-surface p-4 shadow-sm">
       <div className="pointer-events-none absolute -right-4 -top-4 h-24 w-24 rounded-full bg-tertiary-fixed opacity-30" />
       <div className="flex items-start gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-tertiary-container text-on-tertiary-container shadow-sm">
-          <Icon name="pets" filled />
-        </div>
+        <IconBadge name="pets" tone="orange" size="lg" />
         <div className="z-10 flex flex-col gap-1">
           <h4 className="font-label-lg text-label-lg text-on-surface">Pati Destek</h4>
           <p className="font-body-md text-body-md text-outline">Sokak hayvanları için mama ve tedavi talebi.</p>

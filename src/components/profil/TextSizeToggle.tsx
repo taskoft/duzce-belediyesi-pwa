@@ -1,4 +1,4 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { useTextScale } from "@/hooks/useTextScale";
 
 export function TextSizeToggle() {
@@ -11,7 +11,7 @@ export function TextSizeToggle() {
       </h3>
       <div className="flex items-center justify-between rounded-2xl bg-surface p-4 shadow-sm">
         <div className="flex items-center gap-3">
-          <Icon name="format_size" className="text-primary" />
+          <IconBadge name="format_size" tone="violet" size="sm" />
           <div>
             <p className="font-body-md text-body-md text-on-surface">Büyük Yazı Boyutu</p>
             <p className="font-label-sm text-label-sm text-outline">Uygulama genelinde metinleri büyütür</p>

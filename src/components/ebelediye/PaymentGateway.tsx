@@ -67,7 +67,7 @@ export function PaymentGateway({
 
           {isSuccess ? (
             <div className="flex flex-col items-center gap-3 py-8 text-center">
-              <Icon name="check_circle" filled className="text-[56px] text-primary-container" />
+              <Icon name="check_circle" filled className="text-[56px] text-green-500" />
               <p className="font-headline-md text-headline-md text-on-surface">Ödeme Başarılı</p>
               <p className="font-body-md text-body-md text-on-surface-variant">
                 Ödemeniz başarıyla gerçekleştirilmiştir.

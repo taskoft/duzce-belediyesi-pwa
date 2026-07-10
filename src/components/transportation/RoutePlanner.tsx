@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { useToast } from "@/hooks/useToast";
 
 interface RoutePlannerProps {
@@ -29,7 +30,7 @@ export function RoutePlanner({ defaultOrigin, destinationSuggestions }: RoutePla
     <section className="relative overflow-hidden rounded-2xl border border-outline-variant/30 bg-surface p-4 shadow-sm">
       <div className="pointer-events-none absolute right-0 top-0 -z-10 h-32 w-32 rounded-bl-full bg-primary-container/5" />
       <div className="mb-4 flex items-center gap-2">
-        <Icon name="directions_bus" filled className="text-primary" />
+        <IconBadge name="directions_bus" tone="amber" size="sm" />
         <h3 className="font-label-lg text-label-lg text-on-surface">Nasıl Giderim?</h3>
       </div>
 

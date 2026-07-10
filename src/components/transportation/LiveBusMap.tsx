@@ -26,7 +26,7 @@ function interpolatePosition(line: BusLine, progress: number): [number, number] 
 
 const busIcon = L.divIcon({
   className: "",
-  html: '<div class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-[#00355f] text-white shadow-lg"><span class="material-symbols-outlined text-[18px]">directions_bus</span></div>',
+  html: '<div class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-lg"><span class="material-symbols-outlined text-[18px]">directions_bus</span></div>',
   iconSize: [36, 36],
   iconAnchor: [18, 18],
 });

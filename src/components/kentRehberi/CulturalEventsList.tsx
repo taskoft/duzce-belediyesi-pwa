@@ -1,4 +1,4 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import type { CulturalEvent } from "@/types/cityGuide";
 
 interface CulturalEventsListProps {
@@ -12,9 +12,7 @@ export function CulturalEventsList({ events }: CulturalEventsListProps) {
       <div className="flex flex-col gap-stack-sm">
         {events.map((event) => (
           <div key={event.id} className="flex items-start gap-3 rounded-2xl bg-surface p-4 shadow-sm">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-container/20 text-primary">
-              <Icon name="celebration" filled />
-            </div>
+            <IconBadge name="celebration" tone="fuchsia" />
             <div className="min-w-0 flex-1">
               <span className="font-label-sm text-label-sm rounded-full bg-surface-container-high px-2 py-0.5 uppercase tracking-wider text-on-surface-variant">
                 {event.category}

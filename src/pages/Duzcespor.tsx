@@ -1,6 +1,6 @@
 import { Header } from "@/components/common/Header";
 import { ProfileLink } from "@/components/common/ProfileLink";
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { StandingsTable } from "@/components/duzcespor/StandingsTable";
@@ -23,7 +23,7 @@ export function Duzcespor() {
 
       <main className="absolute inset-0 flex flex-col gap-stack-lg overflow-y-auto px-container-margin pb-[76px] pt-[56px]">
         <div className="flex items-center gap-2 pt-stack-md">
-          <Icon name="sports_soccer" filled className="text-[#DC2626]" />
+          <IconBadge name="sports_soccer" tone="red" size="sm" />
           <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Düzcespor Portalı</h2>
         </div>
 

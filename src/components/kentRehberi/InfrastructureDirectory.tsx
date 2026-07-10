@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@/components/common/Icon";
+import { IconBadge, type IconTone } from "@/components/common/IconBadge";
 import type { District, InfrastructureCategory, InfrastructureLocation } from "@/types/cityGuide";
 
 interface InfrastructureDirectoryProps {
@@ -17,11 +18,11 @@ const DISTRICTS: District[] = [
   "Yığılca",
 ];
 
-const CATEGORY_META: Record<InfrastructureCategory, { label: string; icon: string }> = {
-  hastane: { label: "Hastaneler", icon: "local_hospital" },
-  taksi: { label: "Taksi Durakları", icon: "local_taxi" },
-  otopark: { label: "Otoparklar", icon: "local_parking" },
-  muhtarlik: { label: "Muhtarlıklar", icon: "badge" },
+const CATEGORY_META: Record<InfrastructureCategory, { label: string; icon: string; tone: IconTone }> = {
+  hastane: { label: "Hastaneler", icon: "local_hospital", tone: "red" },
+  taksi: { label: "Taksi Durakları", icon: "local_taxi", tone: "amber" },
+  otopark: { label: "Otoparklar", icon: "local_parking", tone: "blue" },
+  muhtarlik: { label: "Muhtarlıklar", icon: "badge", tone: "violet" },
 };
 
 type DistrictFilter = District | "all";
@@ -65,7 +66,7 @@ export function InfrastructureDirectory({ locations }: InfrastructureDirectoryPr
         return (
           <section key={category} className="flex flex-col gap-stack-sm">
             <div className="flex items-center gap-2">
-              <Icon name={CATEGORY_META[category].icon} filled className="text-primary" />
+              <IconBadge name={CATEGORY_META[category].icon} tone={CATEGORY_META[category].tone} size="sm" />
               <h3 className="font-headline-md text-headline-md text-on-surface">{CATEGORY_META[category].label}</h3>
             </div>
 

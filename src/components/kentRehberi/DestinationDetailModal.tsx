@@ -107,7 +107,7 @@ export function DestinationDetailModal({ destination, bungalow, onClose }: Desti
       <div className="mb-2 flex items-start justify-between gap-2">
         <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">{destination.name}</h2>
         <div className="flex shrink-0 items-center gap-1 rounded-full bg-surface-container-low px-2 py-1">
-          <Icon name="star" filled className="text-[14px] text-tertiary-container" />
+          <Icon name="star" filled className="text-[14px] text-amber-400" />
           <span className="font-label-sm text-label-sm text-on-surface">{destination.rating}</span>
         </div>
       </div>
@@ -115,15 +115,15 @@ export function DestinationDetailModal({ destination, bungalow, onClose }: Desti
 
       <div className="mb-4 flex flex-col gap-2 rounded-xl bg-surface-container-low p-3">
         <div className="flex items-center gap-2">
-          <Icon name="schedule" className="text-[18px] text-primary" />
+          <Icon name="schedule" filled className="text-[18px] text-sky-500" />
           <span className="font-label-lg text-label-lg text-on-surface">{destination.openingHours}</span>
         </div>
         <div className="flex items-center gap-2">
-          <Icon name="location_on" className="text-[18px] text-primary" />
+          <Icon name="location_on" filled className="text-[18px] text-red-500" />
           <span className="font-body-md text-body-md text-on-surface-variant">{destination.address}</span>
         </div>
         <a href={`tel:${destination.phone}`} className="flex items-center gap-2">
-          <Icon name="call" className="text-[18px] text-primary" />
+          <Icon name="call" filled className="text-[18px] text-green-600" />
           <span className="font-body-md text-body-md text-primary">{destination.phone}</span>
         </a>
       </div>
@@ -131,7 +131,7 @@ export function DestinationDetailModal({ destination, bungalow, onClose }: Desti
       {bungalow && (
         <div className="mb-4 rounded-xl border border-primary/20 bg-primary-fixed/30 p-3">
           <div className="mb-2 flex items-center gap-2">
-            <Icon name="cottage" filled className="text-primary" />
+            <Icon name="cottage" filled className="text-emerald-600" />
             <span className="font-label-lg text-label-lg text-on-surface">Bu bölgede konaklama</span>
           </div>
           <p className="font-body-md text-body-md mb-3 text-on-surface-variant">

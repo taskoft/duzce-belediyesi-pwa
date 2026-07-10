@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { Button } from "@/components/common/Button";
 import { Spinner } from "@/components/common/Spinner";
 import { FileUploadBox } from "@/components/common/FileUploadBox";
@@ -34,7 +35,7 @@ export function ComplaintForm({
   if (status === "submitted" && submittedCode) {
     return (
       <section className="flex flex-col items-center gap-3 rounded-2xl bg-surface p-6 text-center shadow-sm">
-        <Icon name="check_circle" filled className="text-[48px] text-primary" />
+        <Icon name="check_circle" filled className="text-[48px] text-green-500" />
         <h2 className="font-headline-md text-headline-md text-on-surface">Talebiniz Alındı</h2>
         <p className="font-body-md text-body-md text-on-surface-variant">
           Takip numaranız: <span className="font-bold text-primary">#{submittedCode}</span>
@@ -49,7 +50,7 @@ export function ComplaintForm({
   return (
     <section className="flex flex-col gap-stack-md rounded-2xl border border-surface-container-low bg-surface p-4 shadow-sm">
       <div className="mb-1 flex items-center gap-2">
-        <Icon name="edit_document" className="text-primary" />
+        <IconBadge name="edit_document" tone="cyan" size="sm" />
         <h2 className="font-headline-md text-headline-md text-on-surface">Beyaz Masa Talep Formu</h2>
       </div>
 

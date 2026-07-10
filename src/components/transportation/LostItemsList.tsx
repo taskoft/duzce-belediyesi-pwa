@@ -1,4 +1,4 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import type { LostItem } from "@/types/transportation";
 
 interface LostItemsListProps {
@@ -10,7 +10,7 @@ export function LostItemsList({ items }: LostItemsListProps) {
     <div className="rounded-2xl border border-outline-variant/30 bg-surface p-4 shadow-sm">
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Icon name="find_in_page" className="text-tertiary" />
+          <IconBadge name="find_in_page" tone="teal" size="sm" />
           <h3 className="font-label-lg text-label-lg text-on-surface">Kayıp Eşyalar</h3>
         </div>
         <button type="button" className="font-label-sm text-label-sm text-primary">
@@ -21,9 +21,7 @@ export function LostItemsList({ items }: LostItemsListProps) {
         {items.map((item) => (
           <div key={item.id} className="flex items-center justify-between rounded-lg bg-background-subtle p-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded bg-surface-variant">
-                <Icon name={item.icon} className="text-[16px] text-on-surface-variant" />
-              </div>
+              <IconBadge name={item.icon} tone="slate" size="sm" />
               <div>
                 <p className="font-label-sm text-label-sm text-on-surface">{item.name}</p>
                 <p className="text-[10px] text-outline">

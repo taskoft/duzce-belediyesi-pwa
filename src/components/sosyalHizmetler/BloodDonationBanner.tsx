@@ -1,11 +1,10 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 
 export function BloodDonationBanner() {
   return (
     <div className="flex items-center gap-4 rounded-2xl border-l-4 border-error-vibrant bg-error-container p-stack-md shadow-sm">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-error-vibrant/10">
-        <Icon name="bloodtype" filled className="text-error-vibrant" />
-      </div>
+      <IconBadge name="bloodtype" tone="red" size="lg" />
       <div className="flex-1">
         <h3 className="font-label-lg text-label-lg mb-1 text-on-error-container">Kan Bağışı Kampanyası</h3>
         <p className="font-body-sm text-body-sm text-on-error-container/80">

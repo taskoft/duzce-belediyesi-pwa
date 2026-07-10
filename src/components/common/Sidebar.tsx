@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { PrayerTimesTicker } from "@/components/common/PrayerTimesTicker";
 import { ExchangeRateTicker } from "@/components/common/ExchangeRateTicker";
 import { LegalInfoModal } from "@/components/common/LegalInfoModal";
@@ -93,18 +94,10 @@ export function Sidebar() {
                 }`
               }
             >
-              {({ isActive }) => (
-                <>
-                  <span
-                    className={`flex h-8 w-8 items-center justify-center rounded-lg ${
-                      isActive ? "bg-surface/20 text-on-primary-container" : `${link.accentBg} ${link.accentColor}`
-                    }`}
-                  >
-                    <Icon name={link.icon} filled={isActive} className="text-[20px]" />
-                  </span>
-                  {link.label}
-                </>
-              )}
+              <>
+                <IconBadge name={link.icon} tone={link.tone} size="sm" />
+                {link.label}
+              </>
             </NavLink>
           ))}
         </div>

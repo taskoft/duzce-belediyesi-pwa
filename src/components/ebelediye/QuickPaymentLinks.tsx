@@ -1,9 +1,15 @@
-import { Icon } from "@/components/common/Icon";
+import { IconBadge, type IconTone } from "@/components/common/IconBadge";
 import type { QuickPaymentLink } from "@/types/ebelediye";
 
 interface QuickPaymentLinksProps {
   links: QuickPaymentLink[];
 }
+
+const LINK_TONES: Record<string, IconTone> = {
+  elektrik: "amber",
+  su: "sky",
+  dogalgaz: "orange",
+};
 
 export function QuickPaymentLinks({ links }: QuickPaymentLinksProps) {
   return (
@@ -16,9 +22,7 @@ export function QuickPaymentLinks({ links }: QuickPaymentLinksProps) {
             href={`tel:${link.phone}`}
             className="scale-98 flex flex-col items-center gap-2 rounded-2xl bg-surface p-3 text-center shadow-sm transition-transform"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-container/20 text-primary">
-              <Icon name={link.icon} filled />
-            </div>
+            <IconBadge name={link.icon} tone={LINK_TONES[link.id] ?? "indigo"} />
             <span className="font-label-sm text-label-sm leading-tight text-on-surface">{link.label}</span>
           </a>
         ))}

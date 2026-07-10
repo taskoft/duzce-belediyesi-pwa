@@ -1,4 +1,5 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import type { StadiumInfo } from "@/types/duzcespor";
 
 interface StadiumInfoCardProps {
@@ -9,7 +10,7 @@ export function StadiumInfoCard({ stadium }: StadiumInfoCardProps) {
   return (
     <div className="flex flex-col gap-2 rounded-xl border border-surface-container-low bg-background-subtle p-4">
       <div className="flex items-center gap-2">
-        <Icon name="stadium" className="text-[#DC2626]" />
+        <IconBadge name="stadium" tone="red" size="sm" />
         <span className="font-label-lg text-label-lg font-semibold text-on-surface">{stadium.name}</span>
       </div>
       <p className="font-body-md text-body-md text-on-surface-variant">{stadium.address}</p>

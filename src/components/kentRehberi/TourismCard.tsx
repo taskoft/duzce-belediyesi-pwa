@@ -38,7 +38,7 @@ export function TourismCard({ destination, isFavorite, onToggleFavorite, onSelec
     <article className="overflow-hidden rounded-2xl bg-surface shadow-sm">
       <CardImageCarousel images={destination.images} alt={destination.name} heightClassName="h-48">
         <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-surface/90 px-2 py-1 shadow-sm backdrop-blur-sm">
-          <Icon name="star" filled className="text-[14px] text-tertiary-container" />
+          <Icon name="star" filled className="text-[14px] text-amber-400" />
           <span className="font-label-sm text-label-sm text-on-surface">{destination.rating}</span>
         </div>
         <span className="font-label-sm text-label-sm absolute left-3 top-3 rounded-full bg-surface/90 px-2 py-1 text-on-surface shadow-sm backdrop-blur-sm">

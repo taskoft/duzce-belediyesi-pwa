@@ -1,10 +1,11 @@
+import type { IconTone } from "@/components/common/IconBadge";
+
 export interface MenuItem {
   id: string;
   label: string;
   icon: string;
   path: string;
-  accentColor: string;
-  accentBg: string;
+  tone: IconTone;
 }
 
 export type NewsCategory = "Haberler" | "Duyuru";

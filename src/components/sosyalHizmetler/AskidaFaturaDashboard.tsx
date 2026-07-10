@@ -1,7 +1,14 @@
 import { Icon } from "@/components/common/Icon";
+import { IconBadge, type IconTone } from "@/components/common/IconBadge";
 import { Button } from "@/components/common/Button";
 import { Spinner } from "@/components/common/Spinner";
 import type { AskidaFaturaInvoice } from "@/types/socialServices";
+
+const INVOICE_TONES: Record<string, IconTone> = {
+  water_drop: "sky",
+  bolt: "amber",
+  local_fire_department: "orange",
+};
 
 interface AskidaFaturaDashboardProps {
   invoices: AskidaFaturaInvoice[];
@@ -35,18 +42,14 @@ export function AskidaFaturaDashboard({
 
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-2 rounded-2xl bg-surface p-4 shadow-sm">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-error-container/30">
-            <Icon name="receipt_long" filled className="text-secondary-container text-sm" />
-          </div>
+          <IconBadge name="receipt_long" tone="rose" size="sm" />
           <div>
             <p className="font-display-lg text-display-lg text-on-surface">{pendingCount}</p>
             <p className="font-label-sm text-label-sm text-outline">Bekleyen Fatura</p>
           </div>
         </div>
         <div className="flex flex-col gap-2 rounded-2xl bg-surface p-4 shadow-sm">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-container-highest/50">
-            <Icon name="water_drop" filled className="text-sm text-primary" />
-          </div>
+          <IconBadge name="water_drop" tone="sky" size="sm" />
           <div>
             <p className="font-display-lg text-display-lg text-on-surface">{paidThisMonth}</p>
             <p className="font-label-sm text-label-sm text-outline">Ödenen (Bu Ay)</p>
@@ -77,9 +80,7 @@ export function AskidaFaturaDashboard({
                   onChange={() => onToggle(invoice.id)}
                   className="h-5 w-5 rounded border-2 border-outline text-primary-container focus:ring-primary-container"
                 />
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container-low text-primary">
-                  <Icon name={invoice.icon} />
-                </div>
+                <IconBadge name={invoice.icon} tone={INVOICE_TONES[invoice.icon] ?? "blue"} />
                 <div className="flex flex-col">
                   <span className="font-label-lg text-label-lg text-on-surface">{invoice.type}</span>
                   <span className="font-body-md text-body-md text-outline">{invoice.neighborhood}</span>

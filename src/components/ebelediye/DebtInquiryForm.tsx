@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@/components/common/Icon";
+import { IconBadge } from "@/components/common/IconBadge";
 import { Button } from "@/components/common/Button";
 
 interface DebtInquiryFormProps {
@@ -24,7 +25,7 @@ export function DebtInquiryForm({ tcId, onTcIdChange, isTcIdValid, isQuerying, o
       <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary-container opacity-10 blur-2xl" />
 
       <h2 className="font-headline-md text-headline-md mb-stack-md flex items-center gap-2 text-on-surface">
-        <Icon name="search" filled className="text-primary" />
+        <IconBadge name="search" tone="indigo" size="sm" />
         Borç Sorgulama
       </h2>
 
@@ -48,7 +49,7 @@ export function DebtInquiryForm({ tcId, onTcIdChange, isTcIdValid, isQuerying, o
               }`}
             />
             {isTcIdValid && (
-              <Icon name="check_circle" filled className="absolute right-4 top-1/2 -translate-y-1/2 text-primary" />
+              <Icon name="check_circle" filled className="absolute right-4 top-1/2 -translate-y-1/2 text-green-500" />
             )}
           </div>
           {showError && <p className="font-label-sm text-label-sm mt-1 ml-1 text-error">11 haneli sayı giriniz.</p>}

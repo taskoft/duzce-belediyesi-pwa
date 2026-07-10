@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
+import { ICON_TONE_CLASSES } from "@/components/common/IconBadge";
 import { NAVIGATION_LINKS } from "@/data/navigationLinks";
 import type { MenuItem } from "@/types/dashboard";
 
@@ -21,8 +22,10 @@ function SideNavLink({ item }: { item: MenuItem }) {
       aria-label={item.id}
       className={({ isActive }) =>
         `flex h-14 w-14 items-center justify-center rounded-full transition-colors duration-150 ${
-          isActive ? item.accentBg : "hover:bg-surface-container-highest"
-        } ${isActive ? item.accentColor : "text-on-surface-variant/40"}`
+          isActive
+            ? `${ICON_TONE_CLASSES[item.tone]} text-white shadow-md`
+            : "text-on-surface-variant/40 hover:bg-surface-container-highest"
+        }`
       }
     >
       {({ isActive }) => <Icon name={item.icon} filled={isActive} className="text-[28px]" />}
