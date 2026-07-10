@@ -7,6 +7,7 @@ import { NotificationPreferences } from "@/components/profil/NotificationPrefere
 import { TextSizeToggle } from "@/components/profil/TextSizeToggle";
 import { RateAppWidget } from "@/components/profil/RateAppWidget";
 import { AboutSection } from "@/components/profil/AboutSection";
+import { OnboardingReplayButton } from "@/components/profil/OnboardingReplayButton";
 import { LogoutButton } from "@/components/profil/LogoutButton";
 import { useAsyncData } from "@/hooks/useAsyncData";
 import profileDataFallback from "@/data/profileData.json";
@@ -34,6 +35,7 @@ export function Profil() {
             <TextSizeToggle />
             <RateAppWidget />
             <AboutSection />
+            <OnboardingReplayButton />
             <LogoutButton />
           </>
         )}
