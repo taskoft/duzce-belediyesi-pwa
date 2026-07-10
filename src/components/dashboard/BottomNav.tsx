@@ -1,31 +1,28 @@
 import { NavLink } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
+import { NAVIGATION_LINKS } from "@/data/navigationLinks";
+import type { MenuItem } from "@/types/dashboard";
 
-interface BottomNavItem {
-  id: string;
-  icon: string;
-  path: string;
+function findNavLink(id: string): MenuItem {
+  const link = NAVIGATION_LINKS.find((navLink) => navLink.id === id);
+  if (!link) {
+    throw new Error(`Navigation link not found: ${id}`);
+  }
+  return link;
 }
 
-const LEADING_NAV_ITEMS: BottomNavItem[] = [
-  { id: "duzcespor", icon: "sports_soccer", path: "/duzcespor" },
-  { id: "eczane", icon: "medical_services", path: "/eczane" },
-];
+const LEADING_NAV_ITEMS = [findNavLink("duzcespor"), findNavLink("eczane")];
+const TRAILING_NAV_ITEMS = [findNavLink("beyaz-masa"), findNavLink("profil")];
 
-const TRAILING_NAV_ITEMS: BottomNavItem[] = [
-  { id: "beyaz-masa", icon: "support_agent", path: "/beyaz-masa" },
-  { id: "profil", icon: "person", path: "/profil" },
-];
-
-function SideNavLink({ item }: { item: BottomNavItem }) {
+function SideNavLink({ item }: { item: MenuItem }) {
   return (
     <NavLink
       to={item.path}
       aria-label={item.id}
       className={({ isActive }) =>
-        `flex h-14 w-14 items-center justify-center rounded-full transition-colors duration-150 hover:bg-surface-container-highest ${
-          isActive ? "text-primary dark:text-primary-fixed" : "text-on-surface-variant/40"
-        }`
+        `flex h-14 w-14 items-center justify-center rounded-full transition-colors duration-150 ${
+          isActive ? item.accentBg : "hover:bg-surface-container-highest"
+        } ${isActive ? item.accentColor : "text-on-surface-variant/40"}`
       }
     >
       {({ isActive }) => <Icon name={item.icon} filled={isActive} className="text-[28px]" />}

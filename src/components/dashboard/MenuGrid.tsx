@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
-import type { MenuItem } from "@/types/dashboard";
+import { NAVIGATION_LINKS } from "@/data/navigationLinks";
 
-const MENU_ITEMS: MenuItem[] = [
-  { id: "belediye", label: "Belediye", icon: "account_balance", path: "/belediye" },
-  { id: "e-belediye", label: "E-Belediye", icon: "laptop_mac", path: "/e-belediye" },
-  { id: "kent-rehberi", label: "Kent Rehberi", icon: "map", path: "/kent-rehberi" },
-  { id: "projeler", label: "Projeler", icon: "architecture", path: "/projeler" },
-  { id: "ulasim", label: "Ulaşım", icon: "directions_bus", path: "/ulasim" },
-  { id: "sosyal-hizmetler", label: "Sosyal Hizmetler", icon: "volunteer_activism", path: "/sosyal-hizmetler" },
-];
+const MENU_ITEM_IDS = ["belediye", "e-belediye", "kent-rehberi", "projeler", "ulasim", "sosyal-hizmetler"];
+
+const MENU_ITEMS = MENU_ITEM_IDS.flatMap((id) => NAVIGATION_LINKS.filter((link) => link.id === id));
 
 export function MenuGrid() {
   return (
@@ -24,7 +19,7 @@ export function MenuGrid() {
             to={item.path}
             className="scale-98 flex flex-col items-start gap-2 rounded-xl border border-transparent bg-surface p-stack-md shadow-sm transition-shadow hover:border-outline-variant/30 hover:shadow-md active:bg-surface-container-low"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-fixed text-primary">
+            <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.accentBg} ${item.accentColor}`}>
               <Icon name={item.icon} filled />
             </div>
             <span className="font-label-lg text-label-lg text-on-surface">{item.label}</span>

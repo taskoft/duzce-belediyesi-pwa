@@ -86,7 +86,7 @@ export function Sidebar() {
               end={link.path === "/"}
               onClick={close}
               className={({ isActive }) =>
-                `flex items-center gap-3 rounded-xl px-3 py-3 font-label-lg text-label-lg transition-colors ${
+                `flex items-center gap-3 rounded-xl px-3 py-2.5 font-label-lg text-label-lg transition-colors ${
                   isActive
                     ? "bg-primary-container text-on-primary-container"
                     : "text-on-surface hover:bg-surface-container-low"
@@ -95,7 +95,13 @@ export function Sidebar() {
             >
               {({ isActive }) => (
                 <>
-                  <Icon name={link.icon} filled={isActive} />
+                  <span
+                    className={`flex h-8 w-8 items-center justify-center rounded-lg ${
+                      isActive ? "bg-surface/20 text-on-primary-container" : `${link.accentBg} ${link.accentColor}`
+                    }`}
+                  >
+                    <Icon name={link.icon} filled={isActive} className="text-[20px]" />
+                  </span>
                   {link.label}
                 </>
               )}

@@ -3,6 +3,8 @@ export interface MenuItem {
   label: string;
   icon: string;
   path: string;
+  accentColor: string;
+  accentBg: string;
 }
 
 export type NewsCategory = "Haberler" | "Duyuru";

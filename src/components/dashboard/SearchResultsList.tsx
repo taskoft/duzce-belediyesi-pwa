@@ -30,7 +30,7 @@ export function SearchResultsList({ results, query }: SearchResultsListProps) {
           to={item.path}
           className="scale-98 flex items-center gap-3 rounded-xl bg-surface p-stack-md shadow-sm transition-transform"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-fixed text-primary">
+          <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.accentBg} ${item.accentColor}`}>
             <Icon name={item.icon} filled />
           </div>
           <span className="font-label-lg text-label-lg text-on-surface">{item.label}</span>
