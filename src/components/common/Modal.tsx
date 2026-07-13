@@ -4,7 +4,7 @@ import { useModal } from "@/hooks/useModal";
 const CLOSE_TRANSITION_MS = 300;
 
 export function Modal() {
-  const { isOpen, content } = useModal();
+  const { isOpen, content, close } = useModal();
   const [isMounted, setIsMounted] = useState(isOpen);
 
   useEffect(() => {
@@ -22,11 +22,15 @@ export function Modal() {
 
   return (
     <div
+      onClick={close}
       className={`absolute inset-0 z-50 flex items-center justify-center bg-ink-base/40 backdrop-blur-sm px-container-margin transition-opacity duration-300 ease-in-out ${
         isOpen ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     >
-      <div className="flex w-full max-w-[340px] flex-col items-center rounded-[24px] bg-surface p-stack-lg text-center shadow-lg">
+      <div
+        onClick={(event) => event.stopPropagation()}
+        className="flex max-h-[calc(100%-2rem)] w-full max-w-[340px] flex-col items-center overflow-y-auto overflow-x-hidden rounded-[24px] bg-surface p-stack-lg text-center shadow-lg"
+      >
         {content}
       </div>
     </div>
