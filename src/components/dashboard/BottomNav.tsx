@@ -16,6 +16,22 @@ const LEADING_NAV_ITEMS = [findNavLink("duzcespor"), findNavLink("eczane")];
 const TRAILING_NAV_ITEMS = [findNavLink("beyaz-masa"), findNavLink("profil")];
 
 function SideNavLink({ item }: { item: MenuItem }) {
+  if (item.image) {
+    return (
+      <NavLink
+        to={item.path}
+        aria-label={item.id}
+        className={({ isActive }) =>
+          `flex h-14 w-14 items-center justify-center rounded-full transition-all duration-150 ${
+            isActive ? "bg-surface-container-highest" : "opacity-50 grayscale hover:bg-surface-container-highest"
+          }`
+        }
+      >
+        <img src={item.image} alt="" aria-hidden="true" className="h-9 w-9 rounded-full object-cover" />
+      </NavLink>
+    );
+  }
+
   return (
     <NavLink
       to={item.path}

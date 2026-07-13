@@ -46,7 +46,7 @@ export function TourismGrid({ destinations, bungalows, culturalEvents }: Tourism
       </div>
 
       <section className="flex flex-col gap-stack-sm">
-        <h3 className="font-headline-md text-headline-md text-on-surface">Bungalov Tesisleri</h3>
+        <h3 className="font-headline-md text-headline-md text-on-surface">Konaklama Tesisleri</h3>
         <div className="flex flex-col gap-stack-sm">
           {bungalows.map((bungalow) => (
             <div key={bungalow.id} className="flex items-center gap-3 rounded-2xl bg-surface p-3 shadow-sm">

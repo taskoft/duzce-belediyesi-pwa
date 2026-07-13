@@ -1,6 +1,5 @@
 import { Header } from "@/components/common/Header";
 import { ProfileLink } from "@/components/common/ProfileLink";
-import { IconBadge } from "@/components/common/IconBadge";
 import { PageLoader } from "@/components/common/PageLoader";
 import { BottomNav } from "@/components/dashboard/BottomNav";
 import { StandingsTable } from "@/components/duzcespor/StandingsTable";
@@ -9,6 +8,7 @@ import { TeamRoster } from "@/components/duzcespor/TeamRoster";
 import { StadiumInfoCard } from "@/components/duzcespor/StadiumInfoCard";
 import { useAsyncData } from "@/hooks/useAsyncData";
 import duzcesporDataFallback from "@/data/duzcesporData.json";
+import duzcesporIcon from "../../assets/icons/duzce-spor.png";
 import type { DuzcesporData } from "@/types/duzcespor";
 
 export function Duzcespor() {
@@ -23,7 +23,7 @@ export function Duzcespor() {
 
       <main className="absolute inset-0 flex flex-col gap-stack-lg overflow-y-auto px-container-margin pb-[76px] pt-[56px]">
         <div className="flex items-center gap-2 pt-stack-md">
-          <IconBadge name="sports_soccer" tone="red" size="sm" />
+          <img src={duzcesporIcon} alt="" aria-hidden="true" className="h-8 w-8 object-contain" />
           <h2 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Düzcespor Portalı</h2>
         </div>
 

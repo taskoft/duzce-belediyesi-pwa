@@ -17,6 +17,7 @@ export function DestinationDetailModal({ destination, bungalow, onClose }: Desti
   const { open } = useModal();
   const { show: showToast } = useToast();
   const totalImages = destination.images.length;
+  const isAccommodation = destination.category === "Konaklama";
 
   const showPrevImage = () => {
     setActiveImageIndex((prev) => (prev === 0 ? totalImages - 1 : prev - 1));
@@ -131,15 +132,21 @@ export function DestinationDetailModal({ destination, bungalow, onClose }: Desti
       {bungalow && (
         <div className="mb-4 rounded-xl border border-primary/20 bg-primary-fixed/30 p-3">
           <div className="mb-2 flex items-center gap-2">
-            <Icon name="cottage" filled className="text-emerald-600" />
-            <span className="font-label-lg text-label-lg text-on-surface">Bu bölgede konaklama</span>
+            <Icon name={isAccommodation ? "hotel" : "cottage"} filled className="text-emerald-600" />
+            <span className="font-label-lg text-label-lg text-on-surface">
+              {isAccommodation ? "Oda Rezervasyonu" : "Bu bölgede konaklama"}
+            </span>
           </div>
           <p className="font-body-md text-body-md mb-3 text-on-surface-variant">
             {bungalow.name} · {bungalow.pricePerNight} TL / gece
           </p>
           <Button variant="primary" fullWidth onClick={openBooking} disabled={!bungalow.availabilityStatus}>
             <Icon name="event_available" className="text-[18px]" />
-            {bungalow.availabilityStatus ? "Randevu Al" : "Şu An Müsait Değil"}
+            {bungalow.availabilityStatus
+              ? isAccommodation
+                ? "Rezervasyon Yap"
+                : "Randevu Al"
+              : "Şu An Müsait Değil"}
           </Button>
         </div>
       )}

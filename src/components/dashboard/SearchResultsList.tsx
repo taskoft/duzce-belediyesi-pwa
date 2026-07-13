@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
-import { IconBadge } from "@/components/common/IconBadge";
+import { ModuleIcon } from "@/components/common/ModuleIcon";
 import type { MenuItem } from "@/types/dashboard";
 
 interface SearchResultsListProps {
@@ -31,7 +31,7 @@ export function SearchResultsList({ results, query }: SearchResultsListProps) {
           to={item.path}
           className="scale-98 flex items-center gap-3 rounded-xl bg-surface p-stack-md shadow-sm transition-transform"
         >
-          <IconBadge name={item.icon} tone={item.tone} />
+          <ModuleIcon item={item} />
 
           <span className="font-label-lg text-label-lg text-on-surface">{item.label}</span>
         </Link>

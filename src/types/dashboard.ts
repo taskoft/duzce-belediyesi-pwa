@@ -6,6 +6,10 @@ export interface MenuItem {
   icon: string;
   path: string;
   tone: IconTone;
+  image?: string;
+  imageFit?: "cover" | "contain";
+  imageZoom?: number;
+  imagePosition?: string;
 }
 
 export type NewsCategory = "Haberler" | "Duyuru";

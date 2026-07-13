@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Icon } from "@/components/common/Icon";
-import { IconBadge } from "@/components/common/IconBadge";
+import { ModuleIcon } from "@/components/common/ModuleIcon";
 import { PrayerTimesTicker } from "@/components/common/PrayerTimesTicker";
 import { ExchangeRateTicker } from "@/components/common/ExchangeRateTicker";
 import { LegalInfoModal } from "@/components/common/LegalInfoModal";
@@ -95,7 +95,7 @@ export function Sidebar() {
               }
             >
               <>
-                <IconBadge name={link.icon} tone={link.tone} size="sm" />
+                <ModuleIcon item={link} size="sm" />
                 {link.label}
               </>
             </NavLink>

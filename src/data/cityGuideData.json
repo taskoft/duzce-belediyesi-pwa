@@ -86,6 +86,24 @@
       "phone": "0380 512 40 40",
       "address": "Konuralp Mah., Düzce",
       "coordinates": { "lat": 40.8677, "lng": 31.1144 }
+    },
+    {
+      "id": "ramada-otel",
+      "name": "Ramada By Wyndham Düzce",
+      "category": "Konaklama",
+      "description": "Düzce Belediye Başkanı Dr. Faruk Özlü'nün uzun süredir şehre kazandırmayı hayal ettiği uluslararası marka otel hayali gerçek oldu. Başkan Özlü'nün öncülüğünde, Wyndham Hotels & Resorts ile Düzceli iş insanı Muhittin Coşkun arasında imzalanan anlaşmayla Kültür Mahallesi Akasya Sokak'ta 4 yıldızlı Ramada By Wyndham Düzce hayata geçti. İmza töreninde konuşan Başkan Özlü, 'Hızla büyüyen şehrimize yakışan, iş insanlarını ve misafirlerimizi ağırlayacak nitelikli bir otele ihtiyacımız vardı. Bu değerli projeyi Düzce'ye kazandıran Wyndham'a ve yatırımcımıza teşekkür ediyorum' diyerek otelin şehir turizmi için bir dönüm noktası olduğunu vurguladı. Başkan Özlü'nün girişimleri sayesinde şehre kazandırılan otel; suit, double, twin, üç kişilik ve engelli odalarıyla toplam 200 oda ve yaklaşık 400 yatak kapasitesine sahip. Restoran, kafe ve toplantı salonlarıyla hem konaklama hem de kongre turizmine hizmet veren tesis, Konuralp Antik Kenti, Güzeldere Şelalesi ve Akçakoca sahiline yakın konumuyla Düzce'yi keşfetmek isteyen ziyaretçiler için konforlu bir merkez sunuyor.",
+      "rating": 4.7,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ramada_Encore_by_Wyndham_Gebze.jpg/500px-Ramada_Encore_by_Wyndham_Gebze.jpg",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ramada_Encore_by_Wyndham_Gebze.jpg/500px-Ramada_Encore_by_Wyndham_Gebze.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Leonardo_Royal_Hotel_Frankfurt_room.jpg/500px-Leonardo_Royal_Hotel_Frankfurt_room.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kimpton_Da_An_Premium_Room.jpg/500px-Kimpton_Da_An_Premium_Room.jpg"
+      ],
+      "openingHours": "7/24 Açık",
+      "phone": "0380 524 40 40",
+      "address": "Kültür Mah., Akasya Sok., Düzce",
+      "coordinates": { "lat": 40.8438, "lng": 31.1565 },
+      "bungalowId": "bungalow-ramada"
     }
   ],
   "bungalows": [
@@ -127,6 +145,19 @@
       "coordinates": { "lat": 40.8751, "lng": 31.2822 },
       "pricePerNight": 1200,
       "availabilityStatus": false
+    },
+    {
+      "id": "bungalow-ramada",
+      "name": "Ramada By Wyndham Düzce",
+      "category": "Konaklama",
+      "description": "Şehir merkezinde 4 yıldızlı konfor; restoran, kafe ve toplantı salonlarıyla iş ve konaklama turizmi.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ramada_Encore_by_Wyndham_Gebze.jpg/500px-Ramada_Encore_by_Wyndham_Gebze.jpg",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 524 40 40",
+      "address": "Kültür Mah., Akasya Sok., Düzce",
+      "coordinates": { "lat": 40.8438, "lng": 31.1565 },
+      "pricePerNight": 2500,
+      "availabilityStatus": true
     }
   ],
   "infrastructure": [
