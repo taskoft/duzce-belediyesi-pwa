@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Icon } from "@/components/common/Icon";
 import { Button } from "@/components/common/Button";
+import { ExpandableText } from "@/components/common/ExpandableText";
 import { BungalowBookingWidget } from "@/components/kentRehberi/BungalowBookingWidget";
 import { useModal } from "@/hooks/useModal";
 import { useToast } from "@/hooks/useToast";
@@ -112,7 +113,13 @@ export function DestinationDetailModal({ destination, bungalow, onClose }: Desti
           <span className="font-label-sm text-label-sm text-on-surface">{destination.rating}</span>
         </div>
       </div>
-      <p className="font-body-lg text-body-lg mb-4 text-on-surface-variant">{destination.description}</p>
+      <div className="mb-4">
+        <ExpandableText
+          text={destination.description}
+          clampLines={4}
+          className="font-body-lg text-body-lg text-on-surface-variant"
+        />
+      </div>
 
       <div className="mb-4 flex flex-col gap-2 rounded-xl bg-surface-container-low p-3">
         <div className="flex items-center gap-2">

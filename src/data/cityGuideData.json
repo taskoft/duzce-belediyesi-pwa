@@ -104,6 +104,42 @@
       "address": "Kültür Mah., Akasya Sok., Düzce",
       "coordinates": { "lat": 40.8438, "lng": 31.1565 },
       "bungalowId": "bungalow-ramada"
+    },
+    {
+      "id": "dedeman-otel",
+      "name": "Dedeman Düzce",
+      "category": "Konaklama",
+      "description": "Düzce Belediye Başkanı Dr. Faruk Özlü'nün turizmi şehrin geleceği için 'stratejik bir alan' olarak tanımladığı vizyonun ürünü olan Dedeman Düzce; Başkan Özlü ile Dedeman Yönetim Kurulu Başkanı Ergün Demiray, Yönetim Kurulu Üyesi Banu Dedeman, yatırımcı Halil Uzun ve Düzce Ticaret ve Sanayi Odası Başkanı Erdoğan Bıyık'ın katılımıyla imzalanan protokolle hayata geçiriliyor. İmza töreninde konuşan Başkan Özlü, 'Yaylaları, şelaleleri, tarihi ve sahiliyle büyük bir turizm potansiyeline sahip şehrimiz için markalı oteller önemli bir ihtiyaç. Güçlenen konaklama altyapımızla artık misafirlerimiz komşu illere gitmek zorunda kalmayacak; bu değerli yatırıma verdiğim önemi özellikle vurgulamak isterim' diyerek projeye sahip çıktı. Başkan Özlü'nün girişimleriyle şehre kazandırılan ve Düzce'nin altıncı markalı oteli olacak Dedeman Düzce; 72 odası, toplantı salonları, restoranı ve kafe konseptiyle iş dünyasına yönelik fonksiyonel bir şehir oteli olarak tasarlandı. 2027 yılında kapılarını açması planlanan otel, şehir merkezindeki konumuyla hem iş seyahatleri hem de Konuralp Antik Kenti ve Güzeldere Şelalesi gibi durakları keşfetmek isteyen ziyaretçiler için konforlu bir merkez sunacak.",
+      "rating": 4.6,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Antalya_Dedeman_Hotel_%C4%B1n_2013_01.jpg/500px-Antalya_Dedeman_Hotel_%C4%B1n_2013_01.jpg",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Antalya_Dedeman_Hotel_%C4%B1n_2013_01.jpg/500px-Antalya_Dedeman_Hotel_%C4%B1n_2013_01.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Modern_hotel_room_with_large_window_and_stylish_furnishings_near_a_city_center_during_daytime.jpg/500px-Modern_hotel_room_with_large_window_and_stylish_furnishings_near_a_city_center_during_daytime.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Red_Roof_NextGen_Room.jpg/500px-Red_Roof_NextGen_Room.jpg"
+      ],
+      "openingHours": "7/24 Açık",
+      "phone": "0380 524 60 60",
+      "address": "Şehir Merkezi, Düzce",
+      "coordinates": { "lat": 40.8412, "lng": 31.1583 },
+      "bungalowId": "bungalow-dedeman"
+    },
+    {
+      "id": "hampton-otel",
+      "name": "Hampton by Hilton Düzce",
+      "category": "Konaklama",
+      "description": "Düzce Belediye Başkanı Dr. Faruk Özlü'nün şehre uluslararası bir marka oteli kazandırmak için yürüttüğü çalışmaların sonucunda hayata geçen Hampton by Hilton Düzce; Başkan Özlü ile Hampton by Hilton Bolu'nun da sahibi olan iş insanı Necip Çarıkçı, Yatırım Direktörü Funda Eratıcı ve Düzce Ticaret ve Sanayi Odası Başkanı Erdoğan Bıyık'ın katılımıyla imzalandı. Başkan Özlü, 'Düzce'mize kazandırmak için üstün çalışmalar yaptığımız bu yatırıma imzaları attık; katkıda bulunan herkese teşekkür ediyorum' sözleriyle projenin şehir turizmi için önemine dikkat çekti. Onun öncülüğünde Kuyumcu Hacıali Mahallesi'nde, Kuzey Çevre Yolu yakınındaki Bahçeşehir bağlantı yolu üzerinde toplam 15.826 metrekarelik alanda yükselen otel; 120 oda, 164 kişilik restoran, çok amaçlı salonlar, spor salonu ve otoparkın yanı sıra 1.200 metrekarelik kongre merkezi ile 1.200 metrekarelik bahçe düğün alanıyla hem konaklama hem de kongre ve davet turizmine hizmet edecek. Eylül ayında inşasına başlanan otelin 2026 yılı ortasında açılması hedefleniyor; Akçakoca sahili ve Konuralp'e yakın konumuyla Düzce'yi ziyaret edenlerin yeni cazibe noktası olacak.",
+      "rating": 4.7,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Hampton_by_Hilton_Amsterdam_Centre_East.jpg/500px-Hampton_by_Hilton_Amsterdam_Centre_East.jpg",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Hampton_by_Hilton_Amsterdam_Centre_East.jpg/500px-Hampton_by_Hilton_Amsterdam_Centre_East.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Leonardo_Royal_Hotel_Frankfurt_room.jpg/500px-Leonardo_Royal_Hotel_Frankfurt_room.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kimpton_Da_An_Premium_Room.jpg/500px-Kimpton_Da_An_Premium_Room.jpg"
+      ],
+      "openingHours": "7/24 Açık",
+      "phone": "0380 524 70 70",
+      "address": "Kuyumcu Hacıali Mah., Bahçeşehir Bağlantı Yolu, Düzce",
+      "coordinates": { "lat": 40.8563, "lng": 31.1624 },
+      "bungalowId": "bungalow-hampton"
     }
   ],
   "bungalows": [
@@ -157,6 +193,32 @@
       "address": "Kültür Mah., Akasya Sok., Düzce",
       "coordinates": { "lat": 40.8438, "lng": 31.1565 },
       "pricePerNight": 2500,
+      "availabilityStatus": true
+    },
+    {
+      "id": "bungalow-dedeman",
+      "name": "Dedeman Düzce",
+      "category": "Konaklama",
+      "description": "Şehir merkezinde iş dünyasına yönelik şehir oteli; toplantı salonları, restoran ve kafe konseptiyle konforlu konaklama.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Antalya_Dedeman_Hotel_%C4%B1n_2013_01.jpg/500px-Antalya_Dedeman_Hotel_%C4%B1n_2013_01.jpg",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 524 60 60",
+      "address": "Şehir Merkezi, Düzce",
+      "coordinates": { "lat": 40.8412, "lng": 31.1583 },
+      "pricePerNight": 2200,
+      "availabilityStatus": true
+    },
+    {
+      "id": "bungalow-hampton",
+      "name": "Hampton by Hilton Düzce",
+      "category": "Konaklama",
+      "description": "Uluslararası marka konforu; 120 oda, restoran, kongre merkezi ve düğün alanıyla konaklama ve davet turizmi.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Hampton_by_Hilton_Amsterdam_Centre_East.jpg/500px-Hampton_by_Hilton_Amsterdam_Centre_East.jpg",
+      "openingHours": "7/24 Açık",
+      "phone": "0380 524 70 70",
+      "address": "Kuyumcu Hacıali Mah., Bahçeşehir Bağlantı Yolu, Düzce",
+      "coordinates": { "lat": 40.8563, "lng": 31.1624 },
+      "pricePerNight": 1950,
       "availabilityStatus": true
     }
   ],

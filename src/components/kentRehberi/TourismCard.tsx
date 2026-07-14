@@ -1,5 +1,6 @@
 import { Icon } from "@/components/common/Icon";
 import { CardImageCarousel } from "@/components/common/CardImageCarousel";
+import { ExpandableText } from "@/components/common/ExpandableText";
 import { useToast } from "@/hooks/useToast";
 import type { Destination } from "@/types/cityGuide";
 
@@ -60,11 +61,21 @@ export function TourismCard({ destination, isFavorite, onToggleFavorite, onSelec
         </button>
       </CardImageCarousel>
 
-      <button type="button" onClick={() => onSelect(destination)} className="block w-full p-4 text-left">
-        <h3 className="font-headline-md text-headline-md mb-1 text-on-surface">{destination.name}</h3>
-        <p className="font-body-md text-body-md mb-1 text-on-surface-variant">{destination.description}</p>
-        <p className="font-label-sm text-label-sm text-outline">{destination.address}</p>
-      </button>
+      <div className="p-4 text-left">
+        <button
+          type="button"
+          onClick={() => onSelect(destination)}
+          className="mb-1 block w-full text-left"
+        >
+          <h3 className="font-headline-md text-headline-md text-on-surface">{destination.name}</h3>
+        </button>
+        <ExpandableText
+          text={destination.description}
+          clampLines={2}
+          className="font-body-md text-body-md text-on-surface-variant"
+        />
+        <p className="font-label-sm text-label-sm mt-1 text-outline">{destination.address}</p>
+      </div>
 
       <div className="flex gap-2 px-4 pb-4">
         <button
